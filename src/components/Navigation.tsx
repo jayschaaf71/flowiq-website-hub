@@ -24,9 +24,11 @@ const Navigation = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
-              <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                FlowIQ
-              </div>
+              <img 
+                src="/lovable-uploads/1dc3e303-8477-4a7e-813e-189d1d0aa011.png" 
+                alt="FlowIQ" 
+                className="h-8 w-auto"
+              />
             </Link>
           </div>
 
