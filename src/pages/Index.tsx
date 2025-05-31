@@ -9,22 +9,22 @@ import { ArrowRight, Brain, Zap, Shield, TrendingUp } from "lucide-react";
 const Index = () => {
   const features = [
     {
-      icon: <Brain className="h-8 w-8 text-blue-600" />,
+      icon: <Brain className="h-8 w-8 text-blue-700" />,
       title: "AI-Powered Intelligence",
       description: "Advanced machine learning algorithms that adapt to your practice's unique needs and workflows."
     },
     {
-      icon: <Zap className="h-8 w-8 text-purple-600" />,
+      icon: <Zap className="h-8 w-8 text-indigo-600" />,
       title: "Instant Automation",
       description: "Automate repetitive tasks and streamline operations with intelligent workflow automation."
     },
     {
-      icon: <Shield className="h-8 w-8 text-green-600" />,
+      icon: <Shield className="h-8 w-8 text-blue-600" />,
       title: "Enterprise Security",
       description: "Bank-level security protocols ensure your data and client information remain protected."
     },
     {
-      icon: <TrendingUp className="h-8 w-8 text-orange-600" />,
+      icon: <TrendingUp className="h-8 w-8 text-slate-600" />,
       title: "Scalable Growth",
       description: "Grow your practice efficiently with systems that scale seamlessly as you expand."
     }
@@ -35,12 +35,12 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-20 pb-32">
+      <section className="bg-gradient-to-br from-blue-50 via-slate-50 to-indigo-50 pt-20 pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               The AI Operating System for{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-700 to-indigo-600 bg-clip-text text-transparent">
                 Professional Practices
               </span>
             </h1>
@@ -51,7 +51,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg"
+                className="bg-gradient-to-r from-blue-700 to-indigo-600 hover:from-blue-800 hover:to-indigo-700 text-white px-8 py-3 text-lg"
                 onClick={() => window.open('https://calendly.com', '_blank')}
               >
                 Book a Demo
@@ -87,7 +87,7 @@ const Index = () => {
             {features.map((feature, index) => (
               <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader className="text-center">
-                  <div className="mx-auto mb-4 p-3 bg-gray-50 rounded-full w-fit">
+                  <div className="mx-auto mb-4 p-3 bg-slate-50 rounded-full w-fit">
                     {feature.icon}
                   </div>
                   <CardTitle className="text-xl">{feature.title}</CardTitle>
@@ -104,7 +104,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-br from-blue-700 to-indigo-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Practice?
@@ -114,7 +114,7 @@ const Index = () => {
           </p>
           <Button 
             size="lg" 
-            className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
+            className="bg-white text-blue-700 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
             onClick={() => window.open('https://calendly.com', '_blank')}
           >
             Schedule Your Demo Today

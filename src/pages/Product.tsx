@@ -8,22 +8,22 @@ import { Check, ArrowRight, Cpu, Database, Cloud, Settings } from "lucide-react"
 const Product = () => {
   const features = [
     {
-      icon: <Cpu className="h-6 w-6 text-blue-600" />,
+      icon: <Cpu className="h-6 w-6 text-blue-700" />,
       title: "Intelligent Process Automation",
       description: "Automate complex workflows with AI that learns and adapts to your practice patterns."
     },
     {
-      icon: <Database className="h-6 w-6 text-purple-600" />,
+      icon: <Database className="h-6 w-6 text-indigo-600" />,
       title: "Unified Data Management",
       description: "Centralize all your practice data in one secure, intelligent platform."
     },
     {
-      icon: <Cloud className="h-6 w-6 text-green-600" />,
+      icon: <Cloud className="h-6 w-6 text-blue-600" />,
       title: "Cloud-Native Architecture",
       description: "Access your AI operating system from anywhere with enterprise-grade reliability."
     },
     {
-      icon: <Settings className="h-6 w-6 text-orange-600" />,
+      icon: <Settings className="h-6 w-6 text-slate-600" />,
       title: "Customizable Workflows",
       description: "Tailor FlowIQ to match your unique practice requirements and preferences."
     }
@@ -43,7 +43,7 @@ const Product = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-20 pb-16">
+      <section className="bg-gradient-to-br from-blue-50 via-slate-50 to-indigo-50 pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -55,7 +55,7 @@ const Product = () => {
             </p>
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg"
+              className="bg-gradient-to-r from-blue-700 to-indigo-600 hover:from-blue-800 hover:to-indigo-700 text-white px-8 py-3 text-lg"
               onClick={() => window.open('https://calendly.com', '_blank')}
             >
               Book a Demo
@@ -114,8 +114,8 @@ const Product = () => {
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
-                      <Check className="h-4 w-4 text-green-600" />
+                    <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
+                      <Check className="h-4 w-4 text-blue-700" />
                     </div>
                     <span className="text-gray-700">{benefit}</span>
                   </div>
@@ -124,7 +124,7 @@ const Product = () => {
             </div>
             <div className="lg:pl-8">
               <Card className="border-none shadow-2xl">
-                <CardHeader className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-t-lg">
+                <CardHeader className="bg-gradient-to-br from-blue-700 to-indigo-600 text-white rounded-t-lg">
                   <CardTitle className="text-2xl text-center">Ready to Get Started?</CardTitle>
                 </CardHeader>
                 <CardContent className="p-8">
@@ -132,7 +132,7 @@ const Product = () => {
                     See FlowIQ in action with a personalized demo tailored to your practice.
                   </p>
                   <Button 
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3"
+                    className="w-full bg-gradient-to-r from-blue-700 to-indigo-600 hover:from-blue-800 hover:to-indigo-700 text-white py-3"
                     onClick={() => window.open('https://calendly.com', '_blank')}
                   >
                     Schedule Your Demo
