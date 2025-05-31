@@ -32,7 +32,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <p className="text-gray-300 mb-2">Ready to transform your practice?</p>
             <button 
-              className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white px-4 py-2 rounded-md font-medium transition-all duration-200"
+              className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-4 py-2 rounded-md font-medium transition-all duration-200"
               onClick={() => window.open('https://calendly.com', '_blank')}
             >
               Book a Demo

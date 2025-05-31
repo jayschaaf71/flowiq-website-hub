@@ -13,17 +13,17 @@ const About = () => {
       description: "We continuously push the boundaries of AI technology to deliver cutting-edge solutions."
     },
     {
-      icon: <Users className="h-8 w-8 text-purple-600" />,
+      icon: <Users className="h-8 w-8 text-teal-600" />,
       title: "Partnership",
       description: "We build lasting relationships with our clients, working together towards shared success."
     },
     {
-      icon: <Award className="h-8 w-8 text-green-600" />,
+      icon: <Award className="h-8 w-8 text-cyan-600" />,
       title: "Excellence",
       description: "We maintain the highest standards in everything we do, from product development to customer service."
     },
     {
-      icon: <Globe className="h-8 w-8 text-orange-600" />,
+      icon: <Globe className="h-8 w-8 text-slate-600" />,
       title: "Impact",
       description: "We're committed to making a positive difference in how professional practices operate worldwide."
     }
@@ -41,7 +41,7 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-20 pb-16">
+      <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -74,7 +74,7 @@ const About = () => {
               </p>
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3"
+                className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-8 py-3"
                 onClick={() => window.open('https://calendly.com', '_blank')}
               >
                 Learn How We Can Help
@@ -82,11 +82,11 @@ const About = () => {
               </Button>
             </div>
             <div className="lg:pl-8">
-              <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg p-8">
+              <div className="bg-gradient-to-br from-blue-100 to-teal-100 rounded-lg p-8">
                 <div className="grid grid-cols-2 gap-6">
                   {stats.map((stat, index) => (
                     <div key={index} className="text-center">
-                      <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                      <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent mb-2">
                         {stat.number}
                       </div>
                       <div className="text-gray-600 font-medium">{stat.label}</div>
@@ -146,7 +146,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="border-none shadow-lg text-center">
               <CardHeader>
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-teal-100 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Users className="h-12 w-12 text-blue-600" />
                 </div>
                 <CardTitle>Industry Veterans</CardTitle>
@@ -158,8 +158,8 @@ const About = () => {
             
             <Card className="border-none shadow-lg text-center">
               <CardHeader>
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Lightbulb className="h-12 w-12 text-purple-600" />
+                <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-teal-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Lightbulb className="h-12 w-12 text-teal-600" />
                 </div>
                 <CardTitle>AI Innovators</CardTitle>
               </CardHeader>
@@ -170,8 +170,8 @@ const About = () => {
             
             <Card className="border-none shadow-lg text-center">
               <CardHeader>
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Award className="h-12 w-12 text-green-600" />
+                <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-teal-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Award className="h-12 w-12 text-cyan-600" />
                 </div>
                 <CardTitle>Proven Track Record</CardTitle>
               </CardHeader>
@@ -184,7 +184,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-br from-blue-600 to-teal-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Join Our Success Story?

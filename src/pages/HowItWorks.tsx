@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -18,7 +19,7 @@ const HowItWorks = () => {
       ]
     },
     {
-      icon: <Cog className="h-12 w-12 text-indigo-600" />,
+      icon: <Cog className="h-12 w-12 text-teal-600" />,
       title: "2. Implementation & Integration",
       description: "Our expert team seamlessly integrates FlowIQ with your existing systems and processes.",
       details: [
@@ -29,7 +30,7 @@ const HowItWorks = () => {
       ]
     },
     {
-      icon: <Rocket className="h-12 w-12 text-blue-600" />,
+      icon: <Rocket className="h-12 w-12 text-cyan-600" />,
       title: "3. Optimization & Growth",
       description: "Watch your practice transform as FlowIQ continuously learns and optimizes your operations.",
       details: [
@@ -46,7 +47,7 @@ const HowItWorks = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-slate-50 to-indigo-50 pt-20 pb-16">
+      <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -80,7 +81,7 @@ const HowItWorks = () => {
                     <CardContent className="space-y-3">
                       {step.details.map((detail, detailIndex) => (
                         <div key={detailIndex} className="flex items-center space-x-3">
-                          <div className="w-2 h-2 bg-gradient-to-r from-blue-700 to-indigo-600 rounded-full"></div>
+                          <div className="w-2 h-2 bg-gradient-to-r from-blue-700 to-teal-600 rounded-full"></div>
                           <span className="text-gray-700">{detail}</span>
                         </div>
                       ))}
@@ -88,9 +89,9 @@ const HowItWorks = () => {
                   </Card>
                 </div>
                 <div className="flex-1">
-                  <div className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-lg p-8 h-64 flex items-center justify-center">
+                  <div className="bg-gradient-to-br from-blue-100 to-teal-100 rounded-lg p-8 h-64 flex items-center justify-center">
                     <div className="text-center">
-                      <div className="text-6xl font-bold bg-gradient-to-r from-blue-700 to-indigo-600 bg-clip-text text-transparent mb-4">
+                      <div className="text-6xl font-bold bg-gradient-to-r from-blue-700 to-teal-600 bg-clip-text text-transparent mb-4">
                         {index + 1}
                       </div>
                       <p className="text-gray-600">Step {index + 1}</p>
@@ -128,7 +129,7 @@ const HowItWorks = () => {
             
             <Card className="text-center border-none shadow-lg">
               <CardHeader>
-                <CardTitle className="text-4xl font-bold text-indigo-600 mb-2">Week 3-4</CardTitle>
+                <CardTitle className="text-4xl font-bold text-teal-600 mb-2">Week 3-4</CardTitle>
                 <CardDescription className="text-lg">Integration & Training</CardDescription>
               </CardHeader>
               <CardContent>
@@ -138,7 +139,7 @@ const HowItWorks = () => {
             
             <Card className="text-center border-none shadow-lg">
               <CardHeader>
-                <CardTitle className="text-4xl font-bold text-blue-600 mb-2">Week 5+</CardTitle>
+                <CardTitle className="text-4xl font-bold text-cyan-600 mb-2">Week 5+</CardTitle>
                 <CardDescription className="text-lg">Optimization & Growth</CardDescription>
               </CardHeader>
               <CardContent>
@@ -150,7 +151,7 @@ const HowItWorks = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-700 to-indigo-600">
+      <section className="py-20 bg-gradient-to-br from-blue-600 to-teal-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Start Your Transformation?

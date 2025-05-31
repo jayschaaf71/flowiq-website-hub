@@ -17,19 +17,19 @@ const Contact = () => {
       details: "+1 (555) 123-4567"
     },
     {
-      icon: <Mail className="h-6 w-6 text-purple-600" />,
+      icon: <Mail className="h-6 w-6 text-teal-600" />,
       title: "Email",
       description: "Send us a message",
       details: "hello@flowiq.ai"
     },
     {
-      icon: <MapPin className="h-6 w-6 text-green-600" />,
+      icon: <MapPin className="h-6 w-6 text-cyan-600" />,
       title: "Office",
       description: "Visit our headquarters",
       details: "123 Innovation Drive, Tech City, TC 12345"
     },
     {
-      icon: <Clock className="h-6 w-6 text-orange-600" />,
+      icon: <Clock className="h-6 w-6 text-slate-600" />,
       title: "Hours",
       description: "We're here to help",
       details: "Mon-Fri: 9AM-6PM EST"
@@ -47,7 +47,7 @@ const Contact = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-20 pb-16">
+      <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -59,7 +59,7 @@ const Contact = () => {
             </p>
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg"
+              className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-8 py-3 text-lg"
               onClick={() => window.open('https://calendly.com', '_blank')}
             >
               Book a Demo
@@ -105,21 +105,21 @@ const Contact = () => {
               </p>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-teal-600 rounded-full mt-2"></div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Quick Response</h4>
                     <p className="text-gray-600">We respond to all inquiries within 24 hours</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-teal-600 rounded-full mt-2"></div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Expert Guidance</h4>
                     <p className="text-gray-600">Connect directly with our solution experts</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-teal-600 rounded-full mt-2"></div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Personalized Demo</h4>
                     <p className="text-gray-600">Get a demo tailored to your practice</p>
@@ -175,7 +175,7 @@ const Contact = () => {
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3"
+                    className="w-full bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white py-3"
                   >
                     Send Message
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -188,7 +188,7 @@ const Contact = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-br from-blue-600 to-teal-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Prefer to Talk Directly?
