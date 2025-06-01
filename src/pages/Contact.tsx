@@ -1,4 +1,5 @@
 
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -33,7 +34,7 @@ const Contact = () => {
       icon: <Mail className="h-6 w-6 text-teal-600" />,
       title: "Email",
       description: "Send us a message",
-      details: "jason@flowiq.ai"
+      details: "jason@flow-iq.ai"
     },
     {
       icon: <MapPin className="h-6 w-6 text-cyan-600" />,
@@ -294,3 +295,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
