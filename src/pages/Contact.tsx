@@ -1,5 +1,3 @@
-
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -109,7 +107,7 @@ const Contact = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-8 py-3 text-lg"
-              onClick={() => window.open('https://your-calendly-link.com', '_blank')}
+              onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
               Book a Demo
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -281,7 +279,7 @@ const Contact = () => {
           <Button 
             size="lg" 
             className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
-            onClick={() => window.open('https://your-calendly-link.com', '_blank')} // REPLACE WITH YOUR CALENDLY LINK
+            onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
           >
             Schedule a Call
             <ArrowRight className="ml-2 h-5 w-5" />
@@ -295,4 +293,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

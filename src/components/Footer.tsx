@@ -33,7 +33,7 @@ const Footer = () => {
             <p className="text-gray-300 mb-2">Ready to transform your practice?</p>
             <button 
               className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-4 py-2 rounded-md font-medium transition-all duration-200"
-              onClick={() => window.open('https://calendly.com', '_blank')}
+              onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
               Book a Demo
             </button>
