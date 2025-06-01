@@ -1,0 +1,31 @@
+
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+
+const ProductHero = () => {
+  return (
+    <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 pt-20 pb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            FlowIQ Product Suite
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Six powerful AI agents working together to automate your practice operations. 
+            From scheduling to insurance verification to business intelligence - FlowIQ handles it all.
+          </p>
+          <Button 
+            size="lg" 
+            className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-8 py-3 text-lg"
+            onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
+          >
+            Book a Demo
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProductHero;
