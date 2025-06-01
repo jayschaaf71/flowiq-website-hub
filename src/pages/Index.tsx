@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Testimonials from "@/components/Testimonials";
 import { ArrowRight, MessageSquare, Shield, Calendar, Star, BarChart3, FileText } from "lucide-react";
 
 const Index = () => {
@@ -111,6 +112,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 to-teal-600">
