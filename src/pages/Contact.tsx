@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -22,30 +21,31 @@ const Contact = () => {
   });
   const { toast } = useToast();
 
+  // UPDATE THESE VALUES WITH YOUR ACTUAL CONTACT INFORMATION
   const contactInfo = [
     {
       icon: <Phone className="h-6 w-6 text-blue-600" />,
       title: "Phone",
       description: "Speak with our team",
-      details: "+1 (888) 555-FLOW"
+      details: "+1 (555) 123-4567" // REPLACE WITH YOUR PHONE NUMBER
     },
     {
       icon: <Mail className="h-6 w-6 text-teal-600" />,
       title: "Email",
       description: "Send us a message",
-      details: "hello@flowiq.ai"
+      details: "contact@yourbusiness.com" // REPLACE WITH YOUR EMAIL
     },
     {
       icon: <MapPin className="h-6 w-6 text-cyan-600" />,
       title: "Office",
       description: "Visit our headquarters",
-      details: "San Francisco, CA"
+      details: "Your City, State" // REPLACE WITH YOUR LOCATION
     },
     {
       icon: <Clock className="h-6 w-6 text-slate-600" />,
       title: "Hours",
       description: "We're here to help",
-      details: "Mon-Fri: 9AM-6PM PST"
+      details: "Mon-Fri: 9AM-5PM EST" // REPLACE WITH YOUR HOURS
     }
   ];
 
@@ -108,7 +108,7 @@ const Contact = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-8 py-3 text-lg"
-              onClick={() => window.open('https://calendly.com/flowiq-demo', '_blank')}
+              onClick={() => window.open('https://your-calendly-link.com', '_blank')} // REPLACE WITH YOUR CALENDLY LINK
             >
               Book a Demo
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -280,7 +280,7 @@ const Contact = () => {
           <Button 
             size="lg" 
             className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
-            onClick={() => window.open('https://calendly.com/flowiq-demo', '_blank')}
+            onClick={() => window.open('https://your-calendly-link.com', '_blank')} // REPLACE WITH YOUR CALENDLY LINK
           >
             Schedule a Call
             <ArrowRight className="ml-2 h-5 w-5" />
