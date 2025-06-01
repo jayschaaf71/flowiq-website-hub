@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, ArrowRight, MessageSquare, Shield, Calendar, Star, FileText } from "lucide-react";
+import { Check, ArrowRight, MessageSquare, Shield, Calendar, Star, FileText, BarChart3 } from "lucide-react";
 
 const Product = () => {
   const features = [
@@ -31,6 +31,11 @@ const Product = () => {
       icon: <FileText className="h-6 w-6 text-purple-600" />,
       title: "ClaimsIQ - Automated Claims Processing",
       description: "Streamlined insurance claims submission and follow-up with automated status tracking and denial management."
+    },
+    {
+      icon: <BarChart3 className="h-6 w-6 text-emerald-600" />,
+      title: "InsightIQ - Business Intelligence Dashboard",
+      description: "AI-powered analytics and reporting that analyzes trends across appointments, revenue, patient satisfaction, and operational efficiency for data-driven decisions."
     }
   ];
 
@@ -56,8 +61,8 @@ const Product = () => {
               FlowIQ Product Suite
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Five powerful AI agents working together to automate your practice operations. 
-              From scheduling to insurance verification to claims processing - FlowIQ handles it all.
+              Six powerful AI agents working together to automate your practice operations. 
+              From scheduling to insurance verification to business intelligence - FlowIQ handles it all.
             </p>
             <Button 
               size="lg" 
@@ -76,11 +81,11 @@ const Product = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Five AI Agents, Infinite Possibilities
+              Six AI Agents, Infinite Possibilities
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Each FlowIQ agent specializes in a critical aspect of practice management, 
-              working together to create a seamless patient experience.
+              working together to create a seamless patient experience and operational excellence.
             </p>
           </div>
           
@@ -114,12 +119,12 @@ const Product = () => {
               Comprehensive Practice Automation
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From the moment a patient discovers your practice to their post-visit follow-up, 
+              From the moment a patient discovers your practice to comprehensive business insights, 
               FlowIQ ensures every touchpoint is optimized.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <Card className="border-none shadow-lg">
               <CardHeader className="text-center">
                 <MessageSquare className="h-12 w-12 text-blue-600 mx-auto mb-4" />
@@ -216,6 +221,56 @@ const Product = () => {
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
                   <span className="text-gray-700">Revenue optimization</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-lg">
+              <CardHeader className="text-center">
+                <Star className="h-12 w-12 text-slate-600 mx-auto mb-4" />
+                <CardTitle className="text-xl">Reputation Management</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-slate-600 rounded-full mt-2"></div>
+                  <span className="text-gray-700">Post-visit review requests</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-slate-600 rounded-full mt-2"></div>
+                  <span className="text-gray-700">Smart timing optimization</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-slate-600 rounded-full mt-2"></div>
+                  <span className="text-gray-700">Platform integration</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-slate-600 rounded-full mt-2"></div>
+                  <span className="text-gray-700">Reputation monitoring</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-lg">
+              <CardHeader className="text-center">
+                <BarChart3 className="h-12 w-12 text-emerald-600 mx-auto mb-4" />
+                <CardTitle className="text-xl">Business Intelligence</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-emerald-600 rounded-full mt-2"></div>
+                  <span className="text-gray-700">Appointment trend analysis</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-emerald-600 rounded-full mt-2"></div>
+                  <span className="text-gray-700">Revenue insights</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-emerald-600 rounded-full mt-2"></div>
+                  <span className="text-gray-700">Patient satisfaction metrics</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-emerald-600 rounded-full mt-2"></div>
+                  <span className="text-gray-700">Operational efficiency reports</span>
                 </div>
               </CardContent>
             </Card>
