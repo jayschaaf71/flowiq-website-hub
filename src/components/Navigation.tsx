@@ -23,12 +23,25 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
-              <img 
-                src="/lovable-uploads/1dc3e303-8477-4a7e-813e-189d1d0aa011.png" 
-                alt="FlowIQ" 
-                className="h-8 w-auto"
-              />
+            <Link to="/" className="flex-shrink-0 group">
+              <div className="flex items-center space-x-3 transition-all duration-300 group-hover:scale-105">
+                <div className="relative">
+                  <img 
+                    src="/lovable-uploads/1dc3e303-8477-4a7e-813e-189d1d0aa011.png" 
+                    alt="FlowIQ" 
+                    className="h-10 w-auto transition-all duration-300 group-hover:brightness-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-teal-600/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="hidden sm:block">
+                  <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
+                    FlowIQ
+                  </span>
+                  <div className="text-xs text-gray-500 font-medium tracking-wide">
+                    AI Operating System
+                  </div>
+                </div>
+              </div>
             </Link>
           </div>
 
