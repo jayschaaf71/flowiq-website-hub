@@ -6,15 +6,28 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { ArrowRight, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { ArrowRight, Phone, Mail, MapPin, Clock, CheckCircle } from "lucide-react";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    company: "",
+    phone: "",
+    message: ""
+  });
+  const { toast } = useToast();
+
   const contactInfo = [
     {
       icon: <Phone className="h-6 w-6 text-blue-600" />,
       title: "Phone",
       description: "Speak with our team",
-      details: "+1 (555) 123-4567"
+      details: "+1 (888) 555-FLOW"
     },
     {
       icon: <Mail className="h-6 w-6 text-teal-600" />,
@@ -26,20 +39,55 @@ const Contact = () => {
       icon: <MapPin className="h-6 w-6 text-cyan-600" />,
       title: "Office",
       description: "Visit our headquarters",
-      details: "123 Innovation Drive, Tech City, TC 12345"
+      details: "San Francisco, CA"
     },
     {
       icon: <Clock className="h-6 w-6 text-slate-600" />,
       title: "Hours",
       description: "We're here to help",
-      details: "Mon-Fri: 9AM-6PM EST"
+      details: "Mon-Fri: 9AM-6PM PST"
     }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted");
+    setIsSubmitting(true);
+
+    try {
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      toast({
+        title: "Message sent successfully!",
+        description: "We'll get back to you within 24 hours.",
+      });
+
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        company: "",
+        phone: "",
+        message: ""
+      });
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -60,7 +108,7 @@ const Contact = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-8 py-3 text-lg"
-              onClick={() => window.open('https://calendly.com', '_blank')}
+              onClick={() => window.open('https://calendly.com/flowiq-demo', '_blank')}
             >
               Book a Demo
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -105,21 +153,21 @@ const Contact = () => {
               </p>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-teal-600 rounded-full mt-2"></div>
+                  <CheckCircle className="w-5 h-5 text-green-600 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Quick Response</h4>
                     <p className="text-gray-600">We respond to all inquiries within 24 hours</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-teal-600 rounded-full mt-2"></div>
+                  <CheckCircle className="w-5 h-5 text-green-600 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Expert Guidance</h4>
                     <p className="text-gray-600">Connect directly with our solution experts</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-teal-600 rounded-full mt-2"></div>
+                  <CheckCircle className="w-5 h-5 text-green-600 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Personalized Demo</h4>
                     <p className="text-gray-600">Get a demo tailored to your practice</p>
@@ -140,27 +188,57 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="firstName">First Name</Label>
-                      <Input id="firstName" placeholder="John" required />
+                      <Input 
+                        id="firstName" 
+                        placeholder="John" 
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        required 
+                      />
                     </div>
                     <div>
                       <Label htmlFor="lastName">Last Name</Label>
-                      <Input id="lastName" placeholder="Doe" required />
+                      <Input 
+                        id="lastName" 
+                        placeholder="Doe" 
+                        value={formData.lastName}
+                        onChange={handleInputChange}
+                        required 
+                      />
                     </div>
                   </div>
                   
                   <div>
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="john@example.com" required />
+                    <Input 
+                      id="email" 
+                      type="email" 
+                      placeholder="john@example.com" 
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required 
+                    />
                   </div>
                   
                   <div>
                     <Label htmlFor="company">Company</Label>
-                    <Input id="company" placeholder="Your Practice Name" />
+                    <Input 
+                      id="company" 
+                      placeholder="Your Practice Name" 
+                      value={formData.company}
+                      onChange={handleInputChange}
+                    />
                   </div>
                   
                   <div>
                     <Label htmlFor="phone">Phone</Label>
-                    <Input id="phone" type="tel" placeholder="+1 (555) 123-4567" />
+                    <Input 
+                      id="phone" 
+                      type="tel" 
+                      placeholder="+1 (555) 123-4567" 
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                    />
                   </div>
                   
                   <div>
@@ -169,16 +247,19 @@ const Contact = () => {
                       id="message" 
                       placeholder="Tell us about your practice and how we can help..."
                       rows={4}
+                      value={formData.message}
+                      onChange={handleInputChange}
                       required
                     />
                   </div>
                   
                   <Button 
                     type="submit" 
+                    disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white py-3"
                   >
-                    Send Message
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                    {!isSubmitting && <ArrowRight className="ml-2 h-5 w-5" />}
                   </Button>
                 </form>
               </CardContent>
@@ -199,7 +280,7 @@ const Contact = () => {
           <Button 
             size="lg" 
             className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
-            onClick={() => window.open('https://calendly.com', '_blank')}
+            onClick={() => window.open('https://calendly.com/flowiq-demo', '_blank')}
           >
             Schedule a Call
             <ArrowRight className="ml-2 h-5 w-5" />
