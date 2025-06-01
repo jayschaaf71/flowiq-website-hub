@@ -1,9 +1,8 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Target, Cog, Rocket, MessageSquare, Shield, Calendar, Star, FileText, CheckCircle, Users, Settings, BarChart } from "lucide-react";
+import { ArrowRight, Target, Cog, Rocket, MessageSquare, Shield, Calendar, Star, FileText, CheckCircle, Users, Settings, BarChart, BarChart3 } from "lucide-react";
 
 const HowItWorks = () => {
   const implementationSteps = [
@@ -101,6 +100,18 @@ const HowItWorks = () => {
         "Submits to appropriate insurance payers",
         "Tracks claim status and follows up",
         "Manages denials and resubmissions"
+      ]
+    },
+    {
+      icon: <BarChart3 className="h-8 w-8 text-emerald-600" />,
+      title: "InsightIQ",
+      description: "Business Intelligence Dashboard",
+      workflow: [
+        "Collects data from all practice systems",
+        "Analyzes trends in appointments and revenue",
+        "Tracks patient satisfaction metrics",
+        "Identifies operational inefficiencies",
+        "Generates actionable insights and reports"
       ]
     }
   ];
@@ -211,7 +222,7 @@ const HowItWorks = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {aiAgentWorkflows.map((agent, index) => (
               <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>

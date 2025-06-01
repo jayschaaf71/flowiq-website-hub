@@ -1,9 +1,10 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ArrowRight, MessageSquare, Shield, Calendar, Star } from "lucide-react";
+import { ArrowRight, MessageSquare, Shield, Calendar, Star, BarChart3 } from "lucide-react";
 
 const Index = () => {
   const features = [
@@ -26,6 +27,11 @@ const Index = () => {
       icon: <Star className="h-8 w-8 text-slate-600" />,
       title: "FollowIQ",
       description: "Automated review requests and referral generation to grow your practice reputation and patient base."
+    },
+    {
+      icon: <BarChart3 className="h-8 w-8 text-emerald-600" />,
+      title: "InsightIQ",
+      description: "AI-powered business intelligence dashboard that analyzes trends and provides data-driven insights for your practice."
     }
   ];
 
@@ -45,7 +51,7 @@ const Index = () => {
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Transform your practice with FlowIQ's specialized AI agents. 
-              Automate scheduling, insurance verification, appointment reminders, and patient follow-up seamlessly.
+              Automate scheduling, insurance verification, appointment reminders, patient follow-up, and business intelligence seamlessly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -74,7 +80,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Four AI Agents, One Powerful System
+              Five AI Agents, One Powerful System
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Each FlowIQ agent specializes in automating a critical aspect of your practice operations, 
@@ -82,7 +88,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader className="text-center">
