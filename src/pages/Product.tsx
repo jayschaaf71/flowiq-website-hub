@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, ArrowRight, MessageSquare, Shield, Calendar, Star } from "lucide-react";
+import { Check, ArrowRight, MessageSquare, Shield, Calendar, Star, FileText } from "lucide-react";
 
 const Product = () => {
   const features = [
@@ -19,13 +19,18 @@ const Product = () => {
     },
     {
       icon: <Calendar className="h-6 w-6 text-cyan-600" />,
-      title: "Smart Appointment Reminders",
+      title: "AppointmentIQ - Smart Reminders & Recovery",
       description: "Automated appointment reminders via SMS, email, and voice with smart timing and no-show recovery automation."
     },
     {
       icon: <Star className="h-6 w-6 text-slate-600" />,
       title: "FollowIQ - Review Request Automation",
       description: "Automated post-visit review requests with smart timing and direct links to major review platforms for reputation management."
+    },
+    {
+      icon: <FileText className="h-6 w-6 text-purple-600" />,
+      title: "ClaimsIQ - Automated Claims Processing",
+      description: "Streamlined insurance claims submission and follow-up with automated status tracking and denial management."
     }
   ];
 
@@ -34,6 +39,7 @@ const Product = () => {
     "Eliminate insurance verification delays with pre-appointment automation",
     "Decrease no-show rates by 50% with intelligent reminder systems",
     "Increase online reviews by 300% with automated follow-up campaigns",
+    "Accelerate claims processing with automated submission and tracking",
     "Ensure HIPAA compliance with SOC 2 certified security practices",
     "Integrate seamlessly with existing practice management systems"
   ];
@@ -50,8 +56,8 @@ const Product = () => {
               FlowIQ Product Suite
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Four powerful AI agents working together to automate your practice operations. 
-              From scheduling to insurance verification to patient follow-up - FlowIQ handles it all.
+              Five powerful AI agents working together to automate your practice operations. 
+              From scheduling to insurance verification to claims processing - FlowIQ handles it all.
             </p>
             <Button 
               size="lg" 
@@ -70,7 +76,7 @@ const Product = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Four AI Agents, Infinite Possibilities
+              Five AI Agents, Infinite Possibilities
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Each FlowIQ agent specializes in a critical aspect of practice management, 
@@ -78,7 +84,7 @@ const Product = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
@@ -86,7 +92,7 @@ const Product = () => {
                     <div className="p-2 bg-gray-50 rounded-lg">
                       {feature.icon}
                     </div>
-                    <CardTitle className="text-xl">{feature.title}</CardTitle>
+                    <CardTitle className="text-lg">{feature.title}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -113,7 +119,7 @@ const Product = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             <Card className="border-none shadow-lg">
               <CardHeader className="text-center">
                 <MessageSquare className="h-12 w-12 text-blue-600 mx-auto mb-4" />
@@ -166,8 +172,8 @@ const Product = () => {
             
             <Card className="border-none shadow-lg">
               <CardHeader className="text-center">
-                <Star className="h-12 w-12 text-cyan-600 mx-auto mb-4" />
-                <CardTitle className="text-xl">Patient Retention</CardTitle>
+                <Calendar className="h-12 w-12 text-cyan-600 mx-auto mb-4" />
+                <CardTitle className="text-xl">Appointment Management</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-start space-x-3">
@@ -185,6 +191,31 @@ const Product = () => {
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-cyan-600 rounded-full mt-2"></div>
                   <span className="text-gray-700">Referral generation</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-lg">
+              <CardHeader className="text-center">
+                <FileText className="h-12 w-12 text-purple-600 mx-auto mb-4" />
+                <CardTitle className="text-xl">Claims Processing</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
+                  <span className="text-gray-700">Automated claims submission</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
+                  <span className="text-gray-700">Status tracking</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
+                  <span className="text-gray-700">Denial management</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
+                  <span className="text-gray-700">Revenue optimization</span>
                 </div>
               </CardContent>
             </Card>

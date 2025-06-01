@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -20,7 +19,7 @@ const Index = () => {
     },
     {
       icon: <Calendar className="h-8 w-8 text-cyan-600" />,
-      title: "Smart Reminders",
+      title: "AppointmentIQ",
       description: "Intelligent appointment reminders with no-show recovery to maximize your schedule efficiency."
     },
     {
@@ -45,7 +44,7 @@ const Index = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Transform your practice with FlowIQ's four specialized AI agents. 
+              Transform your practice with FlowIQ's specialized AI agents. 
               Automate scheduling, insurance verification, appointment reminders, and patient follow-up seamlessly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
