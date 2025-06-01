@@ -4,29 +4,29 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ArrowRight, Brain, Zap, Shield, TrendingUp } from "lucide-react";
+import { ArrowRight, MessageSquare, Shield, Calendar, Star } from "lucide-react";
 
 const Index = () => {
   const features = [
     {
-      icon: <Brain className="h-8 w-8 text-blue-600" />,
-      title: "AI-Powered Intelligence",
-      description: "Advanced machine learning algorithms that adapt to your practice's unique needs and workflows."
+      icon: <MessageSquare className="h-8 w-8 text-blue-600" />,
+      title: "ReceptionIQ",
+      description: "AI-powered scheduling assistant that handles website chats, phone calls, and appointment booking 24/7."
     },
     {
-      icon: <Zap className="h-8 w-8 text-teal-600" />,
-      title: "Instant Automation",
-      description: "Automate repetitive tasks and streamline operations with intelligent workflow automation."
+      icon: <Shield className="h-8 w-8 text-teal-600" />,
+      title: "VerifyIQ",
+      description: "Automated insurance verification agent that checks eligibility and estimates patient responsibility before appointments."
     },
     {
-      icon: <Shield className="h-8 w-8 text-cyan-600" />,
-      title: "Enterprise Security",
-      description: "Bank-level security protocols ensure your data and client information remain protected."
+      icon: <Calendar className="h-8 w-8 text-cyan-600" />,
+      title: "Smart Reminders",
+      description: "Intelligent appointment reminders with no-show recovery to maximize your schedule efficiency."
     },
     {
-      icon: <TrendingUp className="h-8 w-8 text-slate-600" />,
-      title: "Scalable Growth",
-      description: "Grow your practice efficiently with systems that scale seamlessly as you expand."
+      icon: <Star className="h-8 w-8 text-slate-600" />,
+      title: "FollowIQ",
+      description: "Automated review requests and referral generation to grow your practice reputation and patient base."
     }
   ];
 
@@ -45,8 +45,8 @@ const Index = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Transform your practice with FlowIQ's intelligent automation platform. 
-              Streamline operations, enhance productivity, and scale your business with AI-powered solutions.
+              Transform your practice with FlowIQ's four specialized AI agents. 
+              Automate scheduling, insurance verification, appointment reminders, and patient follow-up seamlessly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -75,11 +75,11 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose FlowIQ?
+              Four AI Agents, One Powerful System
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Built specifically for professional practices, FlowIQ combines cutting-edge AI with 
-              industry expertise to deliver unparalleled results.
+              Each FlowIQ agent specializes in automating a critical aspect of your practice operations, 
+              working together to deliver exceptional patient experiences.
             </p>
           </div>
           
@@ -110,7 +110,7 @@ const Index = () => {
             Ready to Transform Your Practice?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals who have already revolutionized their operations with FlowIQ.
+            Join thousands of professionals who have already revolutionized their operations with FlowIQ's AI agents.
           </p>
           <Button 
             size="lg" 
