@@ -38,7 +38,7 @@ const Navigation = () => {
                     FlowIQ
                   </span>
                   <div className="text-xs text-gray-500 font-medium tracking-wide">
-                    AI Operating System
+                    The AI Business Operating System
                   </div>
                 </div>
               </div>
