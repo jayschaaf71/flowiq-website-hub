@@ -7,11 +7,14 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <img 
-              src="/lovable-uploads/1dc3e303-8477-4a7e-813e-189d1d0aa011.png" 
-              alt="FlowIQ" 
-              className="h-8 w-auto mb-4"
-            />
+            <div className="mb-4">
+              <span className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+                FlowIQ
+              </span>
+              <div className="text-sm text-gray-400 font-medium tracking-wide">
+                The AI Business Operating System
+              </div>
+            </div>
             <p className="text-gray-300 mb-4 max-w-md">
               The AI Operating System for Professional Practices. Streamline your operations, 
               enhance productivity, and scale your business with intelligent automation.
