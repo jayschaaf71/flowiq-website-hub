@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
-import { ArrowRight, MessageSquare, Shield, Calendar, Star, BarChart3, FileText, Play } from "lucide-react";
+import { ArrowRight, MessageSquare, Shield, Calendar, Star, BarChart3, FileText, Play, Brain } from "lucide-react";
 
 const Index = () => {
   const features = [
@@ -59,7 +59,15 @@ const Index = () => {
               Transform your practice with FlowIQ's specialized AI agents. 
               Automate scheduling, insurance verification, appointment reminders, patient follow-up, claims processing, and business intelligence seamlessly.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white px-8 py-3 text-lg font-semibold"
+                onClick={() => window.open('https://calendly.com/jason-flow-iq/ai-assessment', '_blank')}
+              >
+                <Brain className="mr-2 h-5 w-5" />
+                Book Free AI Assessment
+              </Button>
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-3 text-lg"
@@ -76,6 +84,8 @@ const Index = () => {
                 Book a Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
                 variant="outline" 
@@ -135,6 +145,14 @@ const Index = () => {
             Join thousands of professionals who have already revolutionized their operations with FlowIQ's AI agents.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              size="lg" 
+              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg font-semibold"
+              onClick={() => window.open('https://calendly.com/jason-flow-iq/ai-assessment', '_blank')}
+            >
+              <Brain className="mr-2 h-5 w-5" />
+              Book Free AI Assessment
+            </Button>
             <Button 
               size="lg" 
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg font-semibold"

@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Play } from "lucide-react";
+import { Menu, X, Play, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
@@ -54,6 +54,14 @@ const Navigation = () => {
             ))}
             <Button 
               variant="outline"
+              className="border-orange-600 text-orange-700 hover:bg-orange-50"
+              onClick={() => window.open('https://calendly.com/jason-flow-iq/ai-assessment', '_blank')}
+            >
+              <Brain className="mr-1 h-4 w-4" />
+              AI Assessment
+            </Button>
+            <Button 
+              variant="outline"
               className="border-green-600 text-green-700 hover:bg-green-50"
               onClick={() => window.open('https://remarkable-flan-7ac120.netlify.app', '_blank')}
             >
@@ -98,6 +106,17 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 py-2 space-y-2">
+                <Button 
+                  variant="outline"
+                  className="w-full border-orange-600 text-orange-700 hover:bg-orange-50"
+                  onClick={() => {
+                    window.open('https://calendly.com/jason-flow-iq/ai-assessment', '_blank');
+                    setIsOpen(false);
+                  }}
+                >
+                  <Brain className="mr-1 h-4 w-4" />
+                  Free AI Assessment
+                </Button>
                 <Button 
                   variant="outline"
                   className="w-full border-green-600 text-green-700 hover:bg-green-50"
