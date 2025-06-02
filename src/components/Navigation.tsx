@@ -55,7 +55,7 @@ const Navigation = () => {
             <Button 
               variant="outline"
               className="border-orange-600 text-orange-700 hover:bg-orange-50"
-              onClick={() => window.open('https://calendly.com/jason-flow-iq/ai-assessment', '_blank')}
+              onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
               <Brain className="mr-1 h-4 w-4" />
               AI Assessment
@@ -110,7 +110,7 @@ const Navigation = () => {
                   variant="outline"
                   className="w-full border-orange-600 text-orange-700 hover:bg-orange-50"
                   onClick={() => {
-                    window.open('https://calendly.com/jason-flow-iq/ai-assessment', '_blank');
+                    window.open('https://calendly.com/jason-flow-iq', '_blank');
                     setIsOpen(false);
                   }}
                 >
