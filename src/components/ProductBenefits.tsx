@@ -49,7 +49,7 @@ const ProductBenefits = () => {
                 <div className="space-y-3">
                   <Button 
                     className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white py-3"
-                    onClick={() => window.open('https://flowiqhealth.com', '_blank')}
+                    onClick={() => window.open('https://remarkable-flan-7ac120.netlify.app', '_blank')}
                   >
                     <Play className="mr-2 h-5 w-5" />
                     Try Live Demo

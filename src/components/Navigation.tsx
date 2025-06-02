@@ -55,7 +55,7 @@ const Navigation = () => {
             <Button 
               variant="outline"
               className="border-green-600 text-green-700 hover:bg-green-50"
-              onClick={() => window.open('https://flowiqhealth.com', '_blank')}
+              onClick={() => window.open('https://remarkable-flan-7ac120.netlify.app', '_blank')}
             >
               <Play className="mr-1 h-4 w-4" />
               Demo
@@ -102,7 +102,7 @@ const Navigation = () => {
                   variant="outline"
                   className="w-full border-green-600 text-green-700 hover:bg-green-50"
                   onClick={() => {
-                    window.open('https://flowiqhealth.com', '_blank');
+                    window.open('https://remarkable-flan-7ac120.netlify.app', '_blank');
                     setIsOpen(false);
                   }}
                 >
