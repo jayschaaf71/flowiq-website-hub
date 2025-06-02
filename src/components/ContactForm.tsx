@@ -1,54 +1,57 @@
 
-import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
+const contactFormSchema = z.object({
+  firstName: z.string().min(2, "First name must be at least 2 characters"),
+  lastName: z.string().min(2, "Last name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email address"),
+  phone: z.string().optional(),
+  practiceType: z.string().optional(),
+  practiceSize: z.string().optional(),
+  currentChallenge: z.string().optional(),
+  timeline: z.string().optional(),
+  inquiryType: z.string().min(1, "Please select an inquiry type"),
+  message: z.string().optional()
+});
+
+type ContactFormValues = z.infer<typeof contactFormSchema>;
+
 const ContactForm = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    practiceType: "",
-    practiceSize: "",
-    currentChallenge: "",
-    timeline: "",
-    inquiryType: "demo",
-    message: ""
-  });
   const { toast } = useToast();
+  
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      practiceType: "",
+      practiceSize: "",
+      currentChallenge: "",
+      timeline: "",
+      inquiryType: "demo",
+      message: ""
+    }
+  });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { id, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [id]: value
-    }));
-  };
-
-  const handleSelectChange = (field: string, value: string) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
+  const onSubmit = async (data: ContactFormValues) => {
     try {
       // Simulate form submission with qualification logic
       await new Promise(resolve => setTimeout(resolve, 1500));
       
-      const isQualifiedLead = formData.practiceType && formData.practiceSize && formData.currentChallenge;
+      const isQualifiedLead = data.practiceType && data.practiceSize && data.currentChallenge;
       
       toast({
         title: "Message sent successfully!",
@@ -58,26 +61,13 @@ const ContactForm = () => {
       });
 
       // Reset form
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        practiceType: "",
-        practiceSize: "",
-        currentChallenge: "",
-        timeline: "",
-        inquiryType: "demo",
-        message: ""
-      });
+      form.reset();
     } catch (error) {
       toast({
         title: "Error sending message",
         description: "Please try again or contact us directly at jason@flow-iq.ai",
         variant: "destructive"
       });
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -125,167 +115,232 @@ const ContactForm = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <Label htmlFor="firstName">First Name *</Label>
-                <Input 
-                  id="firstName" 
-                  placeholder="John" 
-                  value={formData.firstName}
-                  onChange={handleInputChange}
-                  required 
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <FormField
+                  control={form.control}
+                  name="firstName"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>First Name *</FormLabel>
+                      <FormControl>
+                        <Input placeholder="John" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="lastName"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Last Name *</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Doe" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
               </div>
-              <div>
-                <Label htmlFor="lastName">Last Name *</Label>
-                <Input 
-                  id="lastName" 
-                  placeholder="Doe" 
-                  value={formData.lastName}
-                  onChange={handleInputChange}
-                  required 
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email *</FormLabel>
+                      <FormControl>
+                        <Input type="email" placeholder="john@yourpractice.com" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Phone</FormLabel>
+                      <FormControl>
+                        <Input type="tel" placeholder="+1 (555) 123-4567" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
               </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <Label htmlFor="email">Email *</Label>
-                <Input 
-                  id="email" 
-                  type="email" 
-                  placeholder="john@yourpractice.com" 
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required 
-                />
-              </div>
-              <div>
-                <Label htmlFor="phone">Phone</Label>
-                <Input 
-                  id="phone" 
-                  type="tel" 
-                  placeholder="+1 (555) 123-4567" 
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
 
-            <div>
-              <Label htmlFor="inquiryType">What can we help you with? *</Label>
-              <Select value={formData.inquiryType} onValueChange={(value) => handleSelectChange('inquiryType', value)} required>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select inquiry type" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="demo">Schedule a personalized demo</SelectItem>
-                  <SelectItem value="pricing">Get pricing information</SelectItem>
-                  <SelectItem value="integration">Discuss integration with existing systems</SelectItem>
-                  <SelectItem value="support">Technical support question</SelectItem>
-                  <SelectItem value="partnership">Partnership opportunity</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <Label htmlFor="practiceType">Practice Type</Label>
-                <Select value={formData.practiceType} onValueChange={(value) => handleSelectChange('practiceType', value)}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select practice type" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="dental">Dental Practice</SelectItem>
-                    <SelectItem value="medical">Medical Practice</SelectItem>
-                    <SelectItem value="therapy">Physical/Occupational Therapy</SelectItem>
-                    <SelectItem value="mental-health">Mental Health</SelectItem>
-                    <SelectItem value="veterinary">Veterinary</SelectItem>
-                    <SelectItem value="chiropractic">Chiropractic</SelectItem>
-                    <SelectItem value="dermatology">Dermatology</SelectItem>
-                    <SelectItem value="other">Other Healthcare</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <div>
-                <Label htmlFor="practiceSize">Practice Size</Label>
-                <Select value={formData.practiceSize} onValueChange={(value) => handleSelectChange('practiceSize', value)}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select practice size" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="solo">Solo practitioner</SelectItem>
-                    <SelectItem value="small">2-5 providers</SelectItem>
-                    <SelectItem value="medium">6-15 providers</SelectItem>
-                    <SelectItem value="large">16+ providers</SelectItem>
-                    <SelectItem value="enterprise">Multi-location enterprise</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-
-            <div>
-              <Label htmlFor="currentChallenge">What's your biggest operational challenge?</Label>
-              <Select value={formData.currentChallenge} onValueChange={(value) => handleSelectChange('currentChallenge', value)}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select your main challenge" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="scheduling">Appointment scheduling and management</SelectItem>
-                  <SelectItem value="no-shows">High no-show rates</SelectItem>
-                  <SelectItem value="insurance">Insurance verification delays</SelectItem>
-                  <SelectItem value="phone-calls">Too many phone calls disrupting workflow</SelectItem>
-                  <SelectItem value="follow-up">Patient follow-up and retention</SelectItem>
-                  <SelectItem value="reviews">Getting more positive reviews</SelectItem>
-                  <SelectItem value="staff-time">Staff spending too much time on admin tasks</SelectItem>
-                  <SelectItem value="after-hours">Handling inquiries after hours</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div>
-              <Label htmlFor="timeline">When are you looking to implement a solution?</Label>
-              <Select value={formData.timeline} onValueChange={(value) => handleSelectChange('timeline', value)}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select timeline" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="immediately">Immediately</SelectItem>
-                  <SelectItem value="1-month">Within 1 month</SelectItem>
-                  <SelectItem value="3-months">Within 3 months</SelectItem>
-                  <SelectItem value="6-months">Within 6 months</SelectItem>
-                  <SelectItem value="exploring">Just exploring options</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            
-            <div>
-              <Label htmlFor="message">Additional Details</Label>
-              <Textarea 
-                id="message" 
-                placeholder="Tell us more about your specific needs, questions, or what you'd like to see in a demo..."
-                rows={4}
-                value={formData.message}
-                onChange={handleInputChange}
+              <FormField
+                control={form.control}
+                name="inquiryType"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>What can we help you with? *</FormLabel>
+                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select inquiry type" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="demo">Schedule a personalized demo</SelectItem>
+                        <SelectItem value="pricing">Get pricing information</SelectItem>
+                        <SelectItem value="integration">Discuss integration with existing systems</SelectItem>
+                        <SelectItem value="support">Technical support question</SelectItem>
+                        <SelectItem value="partnership">Partnership opportunity</SelectItem>
+                        <SelectItem value="other">Other</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
-            </div>
-            
-            <Button 
-              type="submit" 
-              disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white py-3"
-            >
-              {isSubmitting ? "Sending..." : "Send Message & Get Personalized Response"}
-              {!isSubmitting && <ArrowRight className="ml-2 h-5 w-5" />}
-            </Button>
-            
-            <p className="text-sm text-gray-500 text-center">
-              We'll respond within 4 hours with personalized information based on your practice details.
-            </p>
-          </form>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <FormField
+                  control={form.control}
+                  name="practiceType"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Practice Type</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select practice type" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="dental">Dental Practice</SelectItem>
+                          <SelectItem value="medical">Medical Practice</SelectItem>
+                          <SelectItem value="therapy">Physical/Occupational Therapy</SelectItem>
+                          <SelectItem value="mental-health">Mental Health</SelectItem>
+                          <SelectItem value="veterinary">Veterinary</SelectItem>
+                          <SelectItem value="chiropractic">Chiropractic</SelectItem>
+                          <SelectItem value="dermatology">Dermatology</SelectItem>
+                          <SelectItem value="other">Other Healthcare</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="practiceSize"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Practice Size</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select practice size" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="solo">Solo practitioner</SelectItem>
+                          <SelectItem value="small">2-5 providers</SelectItem>
+                          <SelectItem value="medium">6-15 providers</SelectItem>
+                          <SelectItem value="large">16+ providers</SelectItem>
+                          <SelectItem value="enterprise">Multi-location enterprise</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+
+              <FormField
+                control={form.control}
+                name="currentChallenge"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>What's your biggest operational challenge?</FormLabel>
+                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select your main challenge" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="scheduling">Appointment scheduling and management</SelectItem>
+                        <SelectItem value="no-shows">High no-show rates</SelectItem>
+                        <SelectItem value="insurance">Insurance verification delays</SelectItem>
+                        <SelectItem value="phone-calls">Too many phone calls disrupting workflow</SelectItem>
+                        <SelectItem value="follow-up">Patient follow-up and retention</SelectItem>
+                        <SelectItem value="reviews">Getting more positive reviews</SelectItem>
+                        <SelectItem value="staff-time">Staff spending too much time on admin tasks</SelectItem>
+                        <SelectItem value="after-hours">Handling inquiries after hours</SelectItem>
+                        <SelectItem value="other">Other</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="timeline"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>When are you looking to implement a solution?</FormLabel>
+                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select timeline" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="immediately">Immediately</SelectItem>
+                        <SelectItem value="1-month">Within 1 month</SelectItem>
+                        <SelectItem value="3-months">Within 3 months</SelectItem>
+                        <SelectItem value="6-months">Within 6 months</SelectItem>
+                        <SelectItem value="exploring">Just exploring options</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Additional Details</FormLabel>
+                    <FormControl>
+                      <Textarea 
+                        placeholder="Tell us more about your specific needs, questions, or what you'd like to see in a demo..."
+                        rows={4}
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <Button 
+                type="submit" 
+                disabled={form.formState.isSubmitting}
+                className="w-full bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white py-3"
+              >
+                {form.formState.isSubmitting ? "Sending..." : "Send Message & Get Personalized Response"}
+                {!form.formState.isSubmitting && <ArrowRight className="ml-2 h-5 w-5" />}
+              </Button>
+              
+              <p className="text-sm text-gray-500 text-center">
+                We'll respond within 4 hours with personalized information based on your practice details.
+              </p>
+            </form>
+          </Form>
         </CardContent>
       </Card>
     </div>
