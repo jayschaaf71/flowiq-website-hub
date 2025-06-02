@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
@@ -53,6 +53,14 @@ const Navigation = () => {
               </Link>
             ))}
             <Button 
+              variant="outline"
+              className="border-green-600 text-green-700 hover:bg-green-50"
+              onClick={() => window.open('https://flowiqhealth.com', '_blank')}
+            >
+              <Play className="mr-1 h-4 w-4" />
+              Demo
+            </Button>
+            <Button 
               className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white"
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
@@ -89,7 +97,18 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="px-3 py-2">
+              <div className="px-3 py-2 space-y-2">
+                <Button 
+                  variant="outline"
+                  className="w-full border-green-600 text-green-700 hover:bg-green-50"
+                  onClick={() => {
+                    window.open('https://flowiqhealth.com', '_blank');
+                    setIsOpen(false);
+                  }}
+                >
+                  <Play className="mr-1 h-4 w-4" />
+                  Try Demo
+                </Button>
                 <Button 
                   className="w-full bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white"
                   onClick={() => {

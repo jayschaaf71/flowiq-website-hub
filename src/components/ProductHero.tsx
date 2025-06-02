@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 
 const ProductHero = () => {
   return (
@@ -14,14 +14,24 @@ const ProductHero = () => {
             Six powerful AI agents working together to automate your practice operations. 
             From scheduling to insurance verification to business intelligence - FlowIQ handles it all.
           </p>
-          <Button 
-            size="lg" 
-            className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-8 py-3 text-lg"
-            onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
-          >
-            Book a Demo
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-3 text-lg"
+              onClick={() => window.open('https://flowiqhealth.com', '_blank')}
+            >
+              <Play className="mr-2 h-5 w-5" />
+              Try Live Demo
+            </Button>
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-8 py-3 text-lg"
+              onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
+            >
+              Book a Demo
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
         </div>
       </div>
     </section>

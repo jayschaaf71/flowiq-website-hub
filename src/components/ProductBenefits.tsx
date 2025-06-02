@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, Play } from "lucide-react";
 
 const ProductBenefits = () => {
   const benefits = [
@@ -46,13 +46,23 @@ const ProductBenefits = () => {
                 <CardDescription className="text-gray-600 mb-6 text-center">
                   See FlowIQ's AI agents in action with a personalized demo tailored to your practice.
                 </CardDescription>
-                <Button 
-                  className="w-full bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white py-3"
-                  onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
-                >
-                  Schedule Your Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                <div className="space-y-3">
+                  <Button 
+                    className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white py-3"
+                    onClick={() => window.open('https://flowiqhealth.com', '_blank')}
+                  >
+                    <Play className="mr-2 h-5 w-5" />
+                    Try Live Demo
+                  </Button>
+                  <Button 
+                    variant="outline"
+                    className="w-full border-blue-600 text-blue-700 hover:bg-blue-50 py-3"
+                    onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
+                  >
+                    Schedule Your Demo
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </div>

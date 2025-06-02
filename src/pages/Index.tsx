@@ -1,10 +1,11 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
-import { ArrowRight, MessageSquare, Shield, Calendar, Star, BarChart3, FileText } from "lucide-react";
+import { ArrowRight, MessageSquare, Shield, Calendar, Star, BarChart3, FileText, Play } from "lucide-react";
 
 const Index = () => {
   const features = [
@@ -59,6 +60,14 @@ const Index = () => {
               Automate scheduling, insurance verification, appointment reminders, patient follow-up, claims processing, and business intelligence seamlessly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-3 text-lg"
+                onClick={() => window.open('https://flowiqhealth.com', '_blank')}
+              >
+                <Play className="mr-2 h-5 w-5" />
+                Try Live Demo
+              </Button>
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-8 py-3 text-lg"
@@ -125,14 +134,24 @@ const Index = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals who have already revolutionized their operations with FlowIQ's AI agents.
           </p>
-          <Button 
-            size="lg" 
-            className="bg-white text-blue-700 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
-            onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
-          >
-            Schedule Your Demo Today
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              size="lg" 
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg font-semibold"
+              onClick={() => window.open('https://flowiqhealth.com', '_blank')}
+            >
+              <Play className="mr-2 h-5 w-5" />
+              Try Live Demo
+            </Button>
+            <Button 
+              size="lg" 
+              className="bg-white text-blue-700 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
+              onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
+            >
+              Schedule Your Demo Today
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
         </div>
       </section>
 
