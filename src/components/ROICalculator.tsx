@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -319,7 +318,7 @@ const ROICalculator = () => {
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
               <Brain className="mr-2 h-5 w-5" />
-              Book Free AI Assessment
+              Book AI Readiness Assessment
             </Button>
             <p className="text-sm text-gray-600 mt-2">
               Get a personalized analysis of your practice's automation potential
