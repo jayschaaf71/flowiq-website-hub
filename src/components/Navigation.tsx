@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Play, Brain } from "lucide-react";
+import { Menu, X, Play, Brain, Calculator } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
@@ -12,6 +12,7 @@ const Navigation = () => {
     { name: "Home", path: "/" },
     { name: "Product", path: "/product" },
     { name: "How It Works", path: "/how-it-works" },
+    { name: "ROI Calculator", path: "/roi-calculator" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];

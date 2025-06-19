@@ -12,6 +12,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import ROICalculatorPage from "./pages/ROICalculator";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/product" element={<Product />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/roi-calculator" element={<ROICalculatorPage />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
