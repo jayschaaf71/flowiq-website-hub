@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MessageSquare, Shield, Calendar, Star, FileText, BarChart3, CreditCard } from "lucide-react";
+import { MessageSquare, Shield, Calendar, Star, FileText, BarChart3, CreditCard, FileEdit } from "lucide-react";
 
 const DetailedFeatures = () => {
   return (
@@ -87,6 +87,31 @@ const DetailedFeatures = () => {
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-cyan-600 rounded-full mt-2"></div>
                 <span className="text-gray-700">Referral generation</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-none shadow-lg">
+            <CardHeader className="text-center">
+              <FileEdit className="h-12 w-12 text-amber-600 mx-auto mb-4" />
+              <CardTitle className="text-xl">Medical Scribing</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
+                <span className="text-gray-700">Automated clinical documentation</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
+                <span className="text-gray-700">EHR system integration</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
+                <span className="text-gray-700">Visit note generation</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
+                <span className="text-gray-700">Clinical data extraction</span>
               </div>
             </CardContent>
           </Card>

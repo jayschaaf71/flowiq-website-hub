@@ -11,8 +11,8 @@ const ProductHero = () => {
             FlowIQ Product Suite
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Six powerful AI agents working together to automate your practice operations. 
-            From scheduling to insurance verification to business intelligence - FlowIQ handles it all.
+            Eight powerful AI agents working together to automate your practice operations. 
+            From scheduling to insurance verification to medical scribing to business intelligence - FlowIQ handles it all.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
