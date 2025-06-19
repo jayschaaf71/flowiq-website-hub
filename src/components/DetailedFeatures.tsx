@@ -1,6 +1,5 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MessageSquare, Shield, Calendar, Star, FileText, BarChart3 } from "lucide-react";
+import { MessageSquare, Shield, Calendar, Star, FileText, BarChart3, CreditCard } from "lucide-react";
 
 const DetailedFeatures = () => {
   return (
@@ -138,6 +137,31 @@ const DetailedFeatures = () => {
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-slate-600 rounded-full mt-2"></div>
                 <span className="text-gray-700">Reputation monitoring</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-none shadow-lg">
+            <CardHeader className="text-center">
+              <CreditCard className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
+              <CardTitle className="text-xl">Billing & Payments</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-indigo-600 rounded-full mt-2"></div>
+                <span className="text-gray-700">Automated billing generation</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-indigo-600 rounded-full mt-2"></div>
+                <span className="text-gray-700">Payment processing</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-indigo-600 rounded-full mt-2"></div>
+                <span className="text-gray-700">Collection follow-up</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-indigo-600 rounded-full mt-2"></div>
+                <span className="text-gray-700">Revenue cycle optimization</span>
               </div>
             </CardContent>
           </Card>
