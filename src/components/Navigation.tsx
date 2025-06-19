@@ -59,7 +59,7 @@ const Navigation = () => {
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
               <Brain className="mr-1 h-4 w-4" />
-              AI Assessment
+              AI Readiness Assessment
             </Button>
             <Button 
               variant="outline"
@@ -116,7 +116,7 @@ const Navigation = () => {
                   }}
                 >
                   <Brain className="mr-1 h-4 w-4" />
-                  Free AI Assessment
+                  AI Readiness Assessment
                 </Button>
                 <Button 
                   variant="outline"

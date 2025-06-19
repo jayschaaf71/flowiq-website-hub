@@ -52,7 +52,7 @@ const ProductBenefits = () => {
                     onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
                   >
                     <Brain className="mr-2 h-5 w-5" />
-                    Book Free AI Assessment
+                    Book AI Readiness Assessment
                   </Button>
                   <Button 
                     className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white py-3"

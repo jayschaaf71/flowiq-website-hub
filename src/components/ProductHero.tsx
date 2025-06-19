@@ -21,7 +21,7 @@ const ProductHero = () => {
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
               <Brain className="mr-2 h-5 w-5" />
-              Book Free AI Assessment
+              Book AI Readiness Assessment
             </Button>
             <Button 
               size="lg" 
