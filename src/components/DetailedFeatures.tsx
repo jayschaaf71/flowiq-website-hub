@@ -1,5 +1,6 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MessageSquare, Shield, Calendar, Star, FileText, BarChart3, CreditCard, FileEdit } from "lucide-react";
+import { MessageSquare, Shield, Calendar, Star, FileText, BarChart3, CreditCard, FileEdit, Database } from "lucide-react";
 
 const DetailedFeatures = () => {
   return (
@@ -112,6 +113,31 @@ const DetailedFeatures = () => {
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-amber-600 rounded-full mt-2"></div>
                 <span className="text-gray-700">Clinical data extraction</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-none shadow-lg">
+            <CardHeader className="text-center">
+              <Database className="h-12 w-12 text-rose-600 mx-auto mb-4" />
+              <CardTitle className="text-xl">EHR Management</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-rose-600 rounded-full mt-2"></div>
+                <span className="text-gray-700">Patient data synchronization</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-rose-600 rounded-full mt-2"></div>
+                <span className="text-gray-700">Clinical workflow optimization</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-rose-600 rounded-full mt-2"></div>
+                <span className="text-gray-700">Record management automation</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-rose-600 rounded-full mt-2"></div>
+                <span className="text-gray-700">System integration</span>
               </div>
             </CardContent>
           </Card>

@@ -1,10 +1,11 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
-import { ArrowRight, MessageSquare, Shield, Calendar, Star, BarChart3, FileText, Play, Brain, CreditCard, FileEdit } from "lucide-react";
+import { ArrowRight, MessageSquare, Shield, Calendar, Star, BarChart3, FileText, Play, Brain, CreditCard, FileEdit, Database } from "lucide-react";
 
 const Index = () => {
   const features = [
@@ -32,6 +33,11 @@ const Index = () => {
       icon: <FileEdit className="h-8 w-8 text-amber-600" />,
       title: "ScribeIQ",
       description: "AI medical scribing that automates clinical documentation and integrates seamlessly with EHR systems for efficient visit notes."
+    },
+    {
+      icon: <Database className="h-8 w-8 text-rose-600" />,
+      title: "EHRIQ",
+      description: "Comprehensive EHR system management with automated patient data synchronization and clinical workflow optimization."
     },
     {
       icon: <FileText className="h-8 w-8 text-purple-600" />,
@@ -66,7 +72,7 @@ const Index = () => {
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Transform your practice with FlowIQ's specialized AI agents. 
-              Automate scheduling, insurance verification, appointment reminders, patient follow-up, medical scribing, claims processing, billing, and business intelligence seamlessly.
+              Automate scheduling, insurance verification, appointment reminders, patient follow-up, medical scribing, EHR management, claims processing, billing, and business intelligence seamlessly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <Button 
@@ -113,7 +119,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Eight AI Agents, One Powerful System
+              Nine AI Agents, One Powerful System
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Each FlowIQ agent specializes in automating a critical aspect of your practice operations, 
