@@ -32,9 +32,10 @@ const About = () => {
       specialty: "Orthodontic", 
       members: [
         { 
-          name: "Charlie Ries", 
+          name: "Dr. Charlie Ries, DMD", 
           practice: "Ries Orthodontics", 
           location: "TBD",
+          bio: "Dr. Charlie Ries is a skilled and compassionate orthodontist proudly serving the Ellisville and O'Fallon communities. A Ballwin native and graduate of St. Louis University High School, Dr. Ries earned a basketball scholarship to Northern Illinois University, where he studied Biology. He went on to complete his Doctor of Dental Medicine at Southern Illinois University and a General Practice Residency at St. John's Mercy Hospital before specializing in Orthodontics at the University of Nevada, Las Vegas. Known for his warm approach and personalized care, Dr. Ries is passionate about creating confident, lasting smiles while building genuine relationships with his patients. He's proud to practice in his hometown and raise his family — his wife Molly, three sons, and a daughter — in the same vibrant community. Dr. Ries is a member of the American Association of Orthodontists, American Dental Association, Missouri Dental Association, and the Greater St. Louis Dental Society.",
           image: "/lovable-uploads/b2b03705-b864-4956-afc3-36bb474c0eb8.png"
         }
       ],
