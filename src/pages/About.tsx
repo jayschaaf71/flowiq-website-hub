@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -47,7 +48,7 @@ const About = () => {
     {
       specialty: "Dental",
       members: [
-        { name: "Tom Gotsis", practice: "Gotsis Dental Practice", location: "TBD" }
+        { name: "Tom Gotsis", practice: "Midwest Dental Sleep Medicine Institute", location: "TBD" }
       ],
       icon: <Stethoscope className="h-6 w-6 text-blue-600" />
     },
