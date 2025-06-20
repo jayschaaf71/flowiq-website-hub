@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -62,8 +61,8 @@ const About = () => {
     {
       specialty: "Chiropractic",
       members: [
-        { name: "Lauren Hendrix", practice: "Hendrix Chiropractic", location: "TBD" },
-        { name: "Matt Davidson", practice: "Davidson Chiropractic", location: "TBD" }
+        { name: "Lauren Hendrix", practice: "West County Spine and Joint", location: "TBD" },
+        { name: "Matt Davidson", practice: "West County Spine and Joint", location: "TBD" }
       ],
       icon: <Brain className="h-6 w-6 text-purple-600" />
     },
