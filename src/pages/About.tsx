@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -32,7 +31,12 @@ const About = () => {
     {
       specialty: "Orthodontic", 
       members: [
-        { name: "Charlie Ries", practice: "Ries Orthodontics", location: "TBD" }
+        { 
+          name: "Charlie Ries", 
+          practice: "Ries Orthodontics", 
+          location: "TBD",
+          image: "/lovable-uploads/b2b03705-b864-4956-afc3-36bb474c0eb8.png"
+        }
       ],
       icon: <Heart className="h-6 w-6 text-red-600" />
     },
