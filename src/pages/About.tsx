@@ -1,9 +1,8 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Building2, Stethoscope, Briefcase, Heart, Eye, Brain } from "lucide-react";
+import { ArrowRight, Building2, Stethoscope, Heart, Brain } from "lucide-react";
 
 const About = () => {
   const founder = {
@@ -36,51 +35,6 @@ const About = () => {
         { name: "Matt Davidson", practice: "West County Spine and Joint", location: "TBD" }
       ],
       icon: <Brain className="h-6 w-6 text-purple-600" />
-    },
-    {
-      specialty: "Primary Care",
-      members: [
-        { name: "Dr. Emily Rodriguez", practice: "Rodriguez Family Medicine", location: "Austin, TX" },
-        { name: "Dr. James Wilson", practice: "Westside Primary Care", location: "Los Angeles, CA" },
-        { name: "Dr. Maria Santos", practice: "Santos Medical Group", location: "Miami, FL" }
-      ],
-      icon: <Stethoscope className="h-6 w-6 text-blue-600" />
-    },
-    {
-      specialty: "Specialty Care",
-      members: [
-        { name: "Dr. Robert Kim", practice: "Advanced Cardiology Associates", location: "Chicago, IL" },
-        { name: "Dr. Lisa Chen", practice: "Metropolitan Dermatology", location: "New York, NY" },
-        { name: "Dr. David Thompson", practice: "Orthopedic Excellence Center", location: "Denver, CO" }
-      ],
-      icon: <Heart className="h-6 w-6 text-red-600" />
-    },
-    {
-      specialty: "Mental Health",
-      members: [
-        { name: "Dr. Amanda Foster", practice: "Mindful Psychiatry Group", location: "Seattle, WA" },
-        { name: "Dr. Carlos Mendez", practice: "Wellness Psychology Center", location: "Phoenix, AZ" },
-        { name: "Dr. Jennifer Lee", practice: "Integrated Mental Health", location: "Boston, MA" }
-      ],
-      icon: <Brain className="h-6 w-6 text-purple-600" />
-    },
-    {
-      specialty: "Vision Care",
-      members: [
-        { name: "Dr. Mark Anderson", practice: "Clear Vision Optometry", location: "San Francisco, CA" },
-        { name: "Dr. Rachel Green", practice: "Precision Eye Care", location: "Nashville, TN" },
-        { name: "Dr. Thomas Wang", practice: "Modern Ophthalmology", location: "Atlanta, GA" }
-      ],
-      icon: <Eye className="h-6 w-6 text-green-600" />
-    },
-    {
-      specialty: "Practice Management",
-      members: [
-        { name: "Sarah Johnson", title: "Former CEO, Regional Medical Group", location: "Dallas, TX" },
-        { name: "Michael Brown", title: "Healthcare Operations Consultant", location: "Portland, OR" },
-        { name: "Lisa Davis", title: "Former Practice Administrator", location: "Tampa, FL" }
-      ],
-      icon: <Briefcase className="h-6 w-6 text-amber-600" />
     }
   ];
 
