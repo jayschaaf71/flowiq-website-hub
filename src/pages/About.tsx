@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -44,6 +45,28 @@ const About = () => {
   };
 
   const advisoryBoard = [
+    {
+      specialty: "Dental",
+      members: [
+        { name: "Tom Gotsis", practice: "Gotsis Dental Practice", location: "TBD" }
+      ],
+      icon: <Stethoscope className="h-6 w-6 text-blue-600" />
+    },
+    {
+      specialty: "Orthodontic", 
+      members: [
+        { name: "Charlie Ries", practice: "Ries Orthodontics", location: "TBD" }
+      ],
+      icon: <Heart className="h-6 w-6 text-red-600" />
+    },
+    {
+      specialty: "Chiropractic",
+      members: [
+        { name: "Lauren Hendrix", practice: "Hendrix Chiropractic", location: "TBD" },
+        { name: "Matt Davidson", practice: "Davidson Chiropractic", location: "TBD" }
+      ],
+      icon: <Brain className="h-6 w-6 text-purple-600" />
+    },
     {
       specialty: "Primary Care",
       members: [
