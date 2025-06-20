@@ -23,7 +23,8 @@ const About = () => {
           name: "Dr. Tom Gotsis, DDS", 
           practice: "Midwest Dental Sleep Medicine Institute", 
           location: "TBD",
-          bio: "Dr. Tom Gotsis is a seasoned dental professional and retired U.S. Army Colonel with over 35 years of experience. A graduate of Loyola School of Dentistry, he began his career in the Army, completing a residency at Ft. Carson and serving overseas in Germany. After active duty, he built a successful private practice in St. Louis and continued to serve in the Army Reserve until 2008. Dr. Gotsis is a Fellow of the Academy of General Dentistry and an active member of the ADA, Missouri Dental Association, and Greater St. Louis Dental Society. Today, he focuses on helping patients treat Obstructive Sleep Apnea through personalized care and oral appliance therapy. He and his wife Laurie have three grown children and have called St. Louis home for over three decades."
+          bio: "Dr. Tom Gotsis is a seasoned dental professional and retired U.S. Army Colonel with over 35 years of experience. A graduate of Loyola School of Dentistry, he began his career in the Army, completing a residency at Ft. Carson and serving overseas in Germany. After active duty, he built a successful private practice in St. Louis and continued to serve in the Army Reserve until 2008. Dr. Gotsis is a Fellow of the Academy of General Dentistry and an active member of the ADA, Missouri Dental Association, and Greater St. Louis Dental Society. Today, he focuses on helping patients treat Obstructive Sleep Apnea through personalized care and oral appliance therapy. He and his wife Laurie have three grown children and have called St. Louis home for over three decades.",
+          image: "/lovable-uploads/a8c1c489-0de5-4e86-91a0-699d1348e3cb.png"
         }
       ],
       icon: <Stethoscope className="h-6 w-6 text-blue-600" />
