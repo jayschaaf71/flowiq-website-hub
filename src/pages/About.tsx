@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ArrowRight, Building2, Stethoscope, Heart, Brain } from "lucide-react";
 
 const About = () => {
@@ -41,13 +42,15 @@ const About = () => {
           name: "Dr. Lauren Hendrix, DC, MS", 
           practice: "West County Spine and Joint", 
           location: "TBD",
-          bio: "Dr. Lauren specializes in women's health, prenatal care, and injury rehabilitation, with advanced certifications in Webster Technique, Graston Technique®, and female-specific training. She holds degrees in Exercise Science, Psychology, Chiropractic, and Sports Rehabilitation, and is an ultramarathon runner, equestrian, and lifelong coach."
+          bio: "Dr. Lauren specializes in women's health, prenatal care, and injury rehabilitation, with advanced certifications in Webster Technique, Graston Technique®, and female-specific training. She holds degrees in Exercise Science, Psychology, Chiropractic, and Sports Rehabilitation, and is an ultramarathon runner, equestrian, and lifelong coach.",
+          image: "/lovable-uploads/718e6216-0407-4e28-b964-c455d30fdb03.png"
         },
         { 
           name: "Dr. Matt Davidson, DC", 
           practice: "West County Spine and Joint", 
           location: "TBD",
-          bio: "Dr. Matt combines clinical excellence with personal experience as a competitive endurance athlete, having completed over 300 races, including Ironman triathlons and ultra-distance runs. He holds degrees from Thomas More College and Logan College of Chiropractic and is a passionate advocate for movement-based wellness at every stage of life."
+          bio: "Dr. Matt combines clinical excellence with personal experience as a competitive endurance athlete, having completed over 300 races, including Ironman triathlons and ultra-distance runs. He holds degrees from Thomas More College and Logan College of Chiropractic and is a passionate advocate for movement-based wellness at every stage of life.",
+          image: "/lovable-uploads/d1c2cfaa-43c1-48a0-8361-53eca1c3b48b.png"
         }
       ],
       icon: <Brain className="h-6 w-6 text-purple-600" />,
@@ -148,9 +151,18 @@ const About = () => {
                   <div className="space-y-4">
                     {board.members.map((member, memberIndex) => (
                       <div key={memberIndex} className="flex items-start space-x-3 p-4 bg-white rounded-lg">
-                        <div className="w-8 h-8 bg-gradient-to-br from-blue-100 to-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
-                          <Building2 className="h-4 w-4 text-blue-600" />
-                        </div>
+                        {member.image ? (
+                          <Avatar className="w-12 h-12 flex-shrink-0">
+                            <AvatarImage src={member.image} alt={member.name} />
+                            <AvatarFallback>
+                              {member.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                            </AvatarFallback>
+                          </Avatar>
+                        ) : (
+                          <div className="w-8 h-8 bg-gradient-to-br from-blue-100 to-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <Building2 className="h-4 w-4 text-blue-600" />
+                          </div>
+                        )}
                         <div className="flex-1 min-w-0">
                           <p className="font-semibold text-gray-900 text-sm">{member.name}</p>
                           <p className="text-gray-600 text-sm">{member.practice}</p>
