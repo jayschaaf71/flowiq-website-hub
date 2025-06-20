@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Users, Award, Globe, Lightbulb, User, Building2, Stethoscope, Briefcase, Heart, Eye, Brain } from "lucide-react";
+import { ArrowRight, Users, Award, Globe, Lightbulb, Building2, Stethoscope, Briefcase, Heart, Eye, Brain } from "lucide-react";
 
 const About = () => {
   const values = [
@@ -35,26 +35,13 @@ const About = () => {
     { number: "24/7", label: "Expert Support" }
   ];
 
-  const founders = [
-    {
-      name: "Jason Chen",
-      title: "Co-Founder & CEO",
-      background: "Former McKinsey Partner specializing in healthcare operations and digital transformation. Led AI initiatives for Fortune 500 healthcare organizations.",
-      expertise: "Healthcare Operations, AI Strategy, Digital Transformation"
-    },
-    {
-      name: "Dr. Sarah Martinez",
-      title: "Co-Founder & Chief Medical Officer",
-      background: "Board-certified physician with 15+ years in practice management. Former Chief Innovation Officer at leading medical group with 200+ providers.",
-      expertise: "Clinical Operations, Practice Management, Healthcare Innovation"
-    },
-    {
-      name: "Michael Zhang",
-      title: "Co-Founder & CTO",
-      background: "Former Principal Engineer at Google AI. PhD in Computer Science from Stanford. Led development of enterprise AI solutions at scale.",
-      expertise: "AI/ML Engineering, Enterprise Software, Scalable Systems"
-    }
-  ];
+  const founder = {
+    name: "Jason Schaaf",
+    title: "Founder & CEO",
+    background: "After more than two decades leading sales for cutting-edge tech companies, Jason Schaaf saw a pattern: professional practices were overwhelmed by clunky systems, missed revenue, and manual workflows. That insight led to FlowIQ — an AI-native operating system designed for modern practices like dental, ortho, chiro, med spa, and veterinary clinics. Jason's mission is to replace busywork with automation so practice owners can focus on care, not chaos.",
+    expertise: "Sales Leadership, Healthcare Technology, AI Strategy, Practice Operations",
+    image: "/lovable-uploads/a070fea9-ce42-4b65-9f49-197e02aa4ef0.png"
+  };
 
   const advisoryBoard = [
     {
@@ -199,41 +186,43 @@ const About = () => {
         </div>
       </section>
 
-      {/* Founders Section */}
+      {/* Founder Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Meet Our Founders
+              Meet Our Founder
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Industry veterans with deep expertise in healthcare, AI, and practice management.
+              Bringing decades of sales leadership and healthcare technology expertise to transform professional practices.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {founders.map((founder, index) => (
-              <Card key={index} className="border-none shadow-lg text-center">
-                <CardHeader>
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-teal-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <User className="h-10 w-10 text-blue-600" />
-                  </div>
-                  <CardTitle className="text-xl">{founder.name}</CardTitle>
-                  <CardDescription className="text-blue-600 font-semibold">
-                    {founder.title}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {founder.background}
-                  </p>
-                  <div className="pt-2 border-t border-gray-100">
-                    <p className="text-xs text-gray-500 font-medium">EXPERTISE</p>
-                    <p className="text-sm text-gray-700 mt-1">{founder.expertise}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-none shadow-lg">
+              <CardHeader className="text-center pb-6">
+                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
+                  <img 
+                    src={founder.image} 
+                    alt={founder.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardTitle className="text-2xl">{founder.name}</CardTitle>
+                <CardDescription className="text-blue-600 font-semibold text-lg">
+                  {founder.title}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <p className="text-gray-600 text-lg leading-relaxed text-center max-w-3xl mx-auto">
+                  {founder.background}
+                </p>
+                <div className="pt-4 border-t border-gray-100 text-center">
+                  <p className="text-sm text-gray-500 font-medium mb-2">EXPERTISE</p>
+                  <p className="text-gray-700">{founder.expertise}</p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
