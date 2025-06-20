@@ -1,9 +1,8 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Users, Award, Globe, Lightbulb } from "lucide-react";
+import { ArrowRight, Users, Award, Globe, Lightbulb, User, Building2, Stethoscope, Briefcase, Heart, Eye, Brain } from "lucide-react";
 
 const About = () => {
   const values = [
@@ -34,6 +33,75 @@ const About = () => {
     { number: "95%", label: "Client Satisfaction" },
     { number: "70%", label: "Average Efficiency Gain" },
     { number: "24/7", label: "Expert Support" }
+  ];
+
+  const founders = [
+    {
+      name: "Jason Chen",
+      title: "Co-Founder & CEO",
+      background: "Former McKinsey Partner specializing in healthcare operations and digital transformation. Led AI initiatives for Fortune 500 healthcare organizations.",
+      expertise: "Healthcare Operations, AI Strategy, Digital Transformation"
+    },
+    {
+      name: "Dr. Sarah Martinez",
+      title: "Co-Founder & Chief Medical Officer",
+      background: "Board-certified physician with 15+ years in practice management. Former Chief Innovation Officer at leading medical group with 200+ providers.",
+      expertise: "Clinical Operations, Practice Management, Healthcare Innovation"
+    },
+    {
+      name: "Michael Zhang",
+      title: "Co-Founder & CTO",
+      background: "Former Principal Engineer at Google AI. PhD in Computer Science from Stanford. Led development of enterprise AI solutions at scale.",
+      expertise: "AI/ML Engineering, Enterprise Software, Scalable Systems"
+    }
+  ];
+
+  const advisoryBoard = [
+    {
+      specialty: "Primary Care",
+      members: [
+        { name: "Dr. Emily Rodriguez", practice: "Rodriguez Family Medicine", location: "Austin, TX" },
+        { name: "Dr. James Wilson", practice: "Westside Primary Care", location: "Los Angeles, CA" },
+        { name: "Dr. Maria Santos", practice: "Santos Medical Group", location: "Miami, FL" }
+      ],
+      icon: <Stethoscope className="h-6 w-6 text-blue-600" />
+    },
+    {
+      specialty: "Specialty Care",
+      members: [
+        { name: "Dr. Robert Kim", practice: "Advanced Cardiology Associates", location: "Chicago, IL" },
+        { name: "Dr. Lisa Chen", practice: "Metropolitan Dermatology", location: "New York, NY" },
+        { name: "Dr. David Thompson", practice: "Orthopedic Excellence Center", location: "Denver, CO" }
+      ],
+      icon: <Heart className="h-6 w-6 text-red-600" />
+    },
+    {
+      specialty: "Mental Health",
+      members: [
+        { name: "Dr. Amanda Foster", practice: "Mindful Psychiatry Group", location: "Seattle, WA" },
+        { name: "Dr. Carlos Mendez", practice: "Wellness Psychology Center", location: "Phoenix, AZ" },
+        { name: "Dr. Jennifer Lee", practice: "Integrated Mental Health", location: "Boston, MA" }
+      ],
+      icon: <Brain className="h-6 w-6 text-purple-600" />
+    },
+    {
+      specialty: "Vision Care",
+      members: [
+        { name: "Dr. Mark Anderson", practice: "Clear Vision Optometry", location: "San Francisco, CA" },
+        { name: "Dr. Rachel Green", practice: "Precision Eye Care", location: "Nashville, TN" },
+        { name: "Dr. Thomas Wang", practice: "Modern Ophthalmology", location: "Atlanta, GA" }
+      ],
+      icon: <Eye className="h-6 w-6 text-green-600" />
+    },
+    {
+      specialty: "Practice Management",
+      members: [
+        { name: "Sarah Johnson", title: "Former CEO, Regional Medical Group", location: "Dallas, TX" },
+        { name: "Michael Brown", title: "Healthcare Operations Consultant", location: "Portland, OR" },
+        { name: "Lisa Davis", title: "Former Practice Administrator", location: "Tampa, FL" }
+      ],
+      icon: <Briefcase className="h-6 w-6 text-amber-600" />
+    }
   ];
 
   return (
@@ -124,6 +192,91 @@ const About = () => {
                   <CardDescription className="text-gray-600">
                     {value.description}
                   </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Founders Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Meet Our Founders
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Industry veterans with deep expertise in healthcare, AI, and practice management.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {founders.map((founder, index) => (
+              <Card key={index} className="border-none shadow-lg text-center">
+                <CardHeader>
+                  <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-teal-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <User className="h-10 w-10 text-blue-600" />
+                  </div>
+                  <CardTitle className="text-xl">{founder.name}</CardTitle>
+                  <CardDescription className="text-blue-600 font-semibold">
+                    {founder.title}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {founder.background}
+                  </p>
+                  <div className="pt-2 border-t border-gray-100">
+                    <p className="text-xs text-gray-500 font-medium">EXPERTISE</p>
+                    <p className="text-sm text-gray-700 mt-1">{founder.expertise}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Advisory Board Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Customer Advisory Board
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Leading practitioners across specialties who guide our product development and ensure 
+              real-world applicability of our AI solutions.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {advisoryBoard.map((board, index) => (
+              <Card key={index} className="border-none shadow-lg">
+                <CardHeader>
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="p-2 bg-white rounded-lg shadow-sm">
+                      {board.icon}
+                    </div>
+                    <CardTitle className="text-xl">{board.specialty}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    {board.members.map((member, memberIndex) => (
+                      <div key={memberIndex} className="flex items-start space-x-3 p-3 bg-white rounded-lg">
+                        <div className="w-8 h-8 bg-gradient-to-br from-blue-100 to-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
+                          <Building2 className="h-4 w-4 text-blue-600" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-gray-900 text-sm">{member.name}</p>
+                          <p className="text-gray-600 text-sm">{member.practice || member.title}</p>
+                          <p className="text-gray-500 text-xs">{member.location}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             ))}
