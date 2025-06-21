@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -98,7 +99,7 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <Card className="border-none shadow-lg">
               <CardHeader className="text-center pb-6">
-                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
+                <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
                   <img 
                     src={founder.image} 
                     alt={founder.name}
@@ -156,17 +157,17 @@ const About = () => {
                 <CardContent>
                   <div className="space-y-4">
                     {board.members.map((member, memberIndex) => (
-                      <div key={memberIndex} className="flex items-start space-x-3 p-4 bg-white rounded-lg">
+                      <div key={memberIndex} className="flex items-start space-x-4 p-4 bg-white rounded-lg">
                         {member.image ? (
-                          <Avatar className="w-12 h-12 flex-shrink-0">
+                          <Avatar className="w-20 h-20 flex-shrink-0">
                             <AvatarImage src={member.image} alt={member.name} />
                             <AvatarFallback>
                               {member.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
                             </AvatarFallback>
                           </Avatar>
                         ) : (
-                          <div className="w-8 h-8 bg-gradient-to-br from-blue-100 to-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
-                            <Building2 className="h-4 w-4 text-blue-600" />
+                          <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <Building2 className="h-8 w-8 text-blue-600" />
                           </div>
                         )}
                         <div className="flex-1 min-w-0">
