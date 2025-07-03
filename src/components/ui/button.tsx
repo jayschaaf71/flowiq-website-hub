@@ -9,7 +9,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-gradient-primary text-white hover:opacity-90 shadow-brand hover:shadow-glow font-semibold transition-smooth",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
@@ -18,10 +18,16 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        "cta-primary": "bg-[var(--cta-gradient-primary)] text-white hover:opacity-90 shadow-[var(--shadow-cta)] hover:shadow-xl font-semibold transition-[var(--transition-cta)]",
-        "cta-secondary": "bg-[hsl(var(--cta-secondary))] text-[hsl(var(--cta-secondary-foreground))] hover:bg-[hsl(var(--cta-secondary-hover))] shadow-lg hover:shadow-xl font-semibold transition-all duration-300",
-        "cta-accent": "bg-[hsl(var(--cta-accent))] text-[hsl(var(--cta-accent-foreground))] hover:bg-[hsl(var(--cta-accent-hover))] shadow-lg hover:shadow-xl font-semibold transition-all duration-300",
-        "cta-outline": "border-2 border-white/30 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm font-semibold transition-all duration-300",
+        "gradient-primary": "bg-gradient-primary text-white hover:opacity-90 shadow-brand hover:shadow-glow font-semibold transition-smooth",
+        "gradient-secondary": "bg-gradient-secondary text-white hover:opacity-90 shadow-brand hover:shadow-glow font-semibold transition-smooth",
+        "gradient-full": "bg-gradient-full text-white hover:opacity-90 shadow-brand hover:shadow-glow font-semibold transition-smooth",
+        "brand-blue": "bg-brand-blue text-white hover:bg-brand-blue-hover shadow-brand hover:shadow-glow font-semibold transition-smooth",
+        "brand-teal": "bg-brand-teal text-white hover:bg-brand-teal-hover shadow-brand hover:shadow-glow font-semibold transition-smooth",
+        "brand-green": "bg-brand-green text-white hover:bg-brand-green-hover shadow-brand hover:shadow-glow font-semibold transition-smooth",
+        "cta-primary": "bg-gradient-primary text-white hover:opacity-90 shadow-brand hover:shadow-glow font-semibold transition-smooth",
+        "cta-secondary": "bg-brand-teal text-white hover:bg-brand-teal-hover shadow-brand hover:shadow-glow font-semibold transition-smooth",
+        "cta-accent": "bg-brand-green text-white hover:bg-brand-green-hover shadow-brand hover:shadow-glow font-semibold transition-smooth",
+        "cta-outline": "border-2 border-white/30 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm font-semibold transition-smooth",
       },
       size: {
         default: "h-10 px-4 py-2",
