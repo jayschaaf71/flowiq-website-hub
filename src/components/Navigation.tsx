@@ -1,7 +1,6 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Play, Brain, Calculator } from "lucide-react";
+import { Menu, X, Play, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
@@ -19,40 +18,24 @@ const Navigation = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
-  console.log('Navigation rendering - checking position');
-  
   return (
-    <nav 
-      className="bg-white shadow-lg fixed top-0 left-0 right-0 z-50"
-      style={{
-        position: 'fixed' as const, 
-        top: 0, 
-        left: 0, 
-        right: 0, 
-        zIndex: 9999,
-        height: '64px',
-        backgroundColor: 'white'
-      }}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 group">
-              <div className="flex items-center transition-all duration-300 group-hover:scale-105">
-                <div>
-                  <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-                    FlowIQ
-                  </span>
-                  <div className="text-xs text-gray-500 font-medium tracking-wide">
-                    The AI Business Operating System
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo Section */}
+          <Link to="/" className="flex-shrink-0">
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
+                FlowIQ
+              </span>
+              <span className="text-xs text-gray-500 font-medium tracking-wide">
+                The AI Business Operating System
+              </span>
+            </div>
+          </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -66,35 +49,41 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            
             <Button 
               variant="outline"
+              size="sm"
               className="border-orange-600 text-orange-700 hover:bg-orange-50"
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
               <Brain className="mr-1 h-4 w-4" />
-              AI Readiness Assessment
+              AI Assessment
             </Button>
+            
             <Button 
               variant="outline"
+              size="sm"
               className="border-green-600 text-green-700 hover:bg-green-50"
               onClick={() => window.open('https://remarkable-flan-7ac120.netlify.app', '_blank')}
             >
               <Play className="mr-1 h-4 w-4" />
               Demo
             </Button>
+            
             <Button 
+              size="sm"
               className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white"
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
-              Book a Demo
+              Book Demo
             </Button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-700"
+              className="text-gray-700 hover:text-blue-700 p-2"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -103,8 +92,8 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+          <div className="lg:hidden border-t border-gray-200 bg-white">
+            <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
@@ -119,6 +108,7 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
+              
               <div className="px-3 py-2 space-y-2">
                 <Button 
                   variant="outline"
@@ -129,8 +119,9 @@ const Navigation = () => {
                   }}
                 >
                   <Brain className="mr-1 h-4 w-4" />
-                  AI Readiness Assessment
+                  AI Assessment
                 </Button>
+                
                 <Button 
                   variant="outline"
                   className="w-full border-green-600 text-green-700 hover:bg-green-50"
@@ -142,6 +133,7 @@ const Navigation = () => {
                   <Play className="mr-1 h-4 w-4" />
                   Try Demo
                 </Button>
+                
                 <Button 
                   className="w-full bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white"
                   onClick={() => {
@@ -149,14 +141,14 @@ const Navigation = () => {
                     setIsOpen(false);
                   }}
                 >
-                  Book a Demo
+                  Book Demo
                 </Button>
               </div>
             </div>
           </div>
         )}
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 
