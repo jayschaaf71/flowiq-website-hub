@@ -6,7 +6,7 @@ const FounderSection = () => {
     name: "Jason Schaaf",
     title: "Founder & CEO",
     background: "After more than two decades leading sales for cutting-edge tech companies, Jason Schaaf saw a pattern: professional practices were overwhelmed by clunky systems, missed revenue, and manual workflows. That insight led to FlowIQ — an AI-native operating system designed for modern practices like dental, ortho, chiro, med spa, and veterinary clinics. Jason's mission is to replace busywork with automation so practice owners can focus on care, not chaos.",
-    expertise: "Sales Leadership, Technology, AI Strategy, Practice Operations",
+    expertise: "Leadership, Emerging AI technology and practice operations",
     image: "/lovable-uploads/a070fea9-ce42-4b65-9f49-197e02aa4ef0.png"
   };
 
