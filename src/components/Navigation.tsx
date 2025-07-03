@@ -23,14 +23,15 @@ const Navigation = () => {
   
   return (
     <nav 
-      className="bg-white shadow-lg fixed top-0 left-0 right-0 z-[9999]" 
+      className="bg-white shadow-lg fixed top-0 left-0 right-0"
       style={{
-        position: 'fixed', 
-        top: '0', 
-        left: '0', 
-        right: '0', 
+        position: 'fixed' as const, 
+        top: 0, 
+        left: 0, 
+        right: 0, 
         zIndex: 9999,
-        height: '64px'
+        height: '64px',
+        backgroundColor: 'white'
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
