@@ -39,13 +39,13 @@ const StatusQuoSection = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-orange-200 bg-white shadow-lg">
+          <Card className="border-blue-200 bg-white shadow-lg">
             <CardHeader className="text-center">
-              <Clock className="h-12 w-12 text-orange-600 mx-auto mb-3" />
-              <CardTitle className="text-xl text-orange-800">Time Hemorrhage</CardTitle>
+              <Clock className="h-12 w-12 text-blue-600 mx-auto mb-3" />
+              <CardTitle className="text-xl text-blue-800">Time Hemorrhage</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
-              <div className="text-3xl font-bold text-orange-600 mb-2">43 hrs</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">43 hrs</div>
               <p className="text-sm text-gray-600 mb-4">Weekly hours wasted on tasks AI should handle</p>
               <ul className="text-xs text-gray-600 space-y-1">
                 <li>• Phone scheduling: 15 hrs</li>
@@ -56,13 +56,13 @@ const StatusQuoSection = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-yellow-200 bg-white shadow-lg">
+          <Card className="border-teal-200 bg-white shadow-lg">
             <CardHeader className="text-center">
-              <TrendingUp className="h-12 w-12 text-yellow-600 mx-auto mb-3" />
-              <CardTitle className="text-xl text-yellow-800">Opportunity Cost</CardTitle>
+              <TrendingUp className="h-12 w-12 text-teal-600 mx-auto mb-3" />
+              <CardTitle className="text-xl text-teal-800">Opportunity Cost</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
-              <div className="text-3xl font-bold text-yellow-600 mb-2">35%</div>
+              <div className="text-3xl font-bold text-teal-600 mb-2">35%</div>
               <p className="text-sm text-gray-600 mb-4">Patient capacity increase with automation</p>
               <ul className="text-xs text-gray-600 space-y-1">
                 <li>• 50% fewer no-shows</li>
