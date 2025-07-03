@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AboutHero from "@/components/about/AboutHero";
 import FounderSection from "@/components/about/FounderSection";
-import AdvisoryBoard from "@/components/about/AdvisoryBoard";
+// import AdvisoryBoard from "@/components/about/AdvisoryBoard";
 import AboutCTA from "@/components/about/AboutCTA";
 
 const About = () => {
@@ -12,7 +12,7 @@ const About = () => {
       <Navigation />
       <AboutHero />
       <FounderSection />
-      <AdvisoryBoard />
+      {/* <AdvisoryBoard /> */}
       <AboutCTA />
       <Footer />
     </div>
