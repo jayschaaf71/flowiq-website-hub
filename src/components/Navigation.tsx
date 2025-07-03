@@ -19,8 +19,21 @@ const Navigation = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  console.log('Navigation rendering - checking position');
+  
   return (
-    <nav className="bg-white shadow-lg fixed top-0 left-0 right-0 z-[9999]" style={{backgroundColor: 'white', position: 'fixed', top: '0', left: '0', right: '0', zIndex: 9999}}>
+    <nav 
+      className="bg-red-500 shadow-lg fixed top-0 left-0 right-0 z-[9999]" 
+      style={{
+        backgroundColor: 'red !important', 
+        position: 'fixed', 
+        top: '0', 
+        left: '0', 
+        right: '0', 
+        zIndex: 9999,
+        height: '64px'
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
