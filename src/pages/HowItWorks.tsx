@@ -91,7 +91,8 @@ const HowItWorks = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-8 py-3 text-lg"
+                variant="cta-primary"
+                className="px-8 py-3 text-lg"
                 onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
               >
                 Start Your Transformation
@@ -221,10 +222,11 @@ const HowItWorks = () => {
           </p>
           <Button 
             size="lg" 
-            className="bg-white text-blue-700 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
+            variant="cta-outline"
+            className="px-8 py-3 text-lg"
             onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
           >
-            Book Your Discovery Call
+            Book Discovery Call
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>

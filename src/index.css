@@ -49,6 +49,25 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* CTA Design Tokens */
+    --cta-primary: 217 91% 60%;
+    --cta-primary-foreground: 0 0% 100%;
+    --cta-primary-hover: 217 91% 50%;
+    
+    --cta-secondary: 173 80% 40%;
+    --cta-secondary-foreground: 0 0% 100%;
+    --cta-secondary-hover: 173 80% 30%;
+    
+    --cta-accent: 25 95% 53%;
+    --cta-accent-foreground: 0 0% 100%;
+    --cta-accent-hover: 25 95% 43%;
+    
+    --cta-gradient-primary: linear-gradient(135deg, hsl(var(--cta-primary)), hsl(var(--cta-secondary)));
+    --cta-gradient-secondary: linear-gradient(135deg, hsl(var(--cta-accent)), hsl(25 100% 60%));
+    
+    --shadow-cta: 0 10px 30px -10px hsl(var(--cta-primary) / 0.3);
+    --transition-cta: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
@@ -87,6 +106,25 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* CTA Design Tokens */
+    --cta-primary: 217 91% 60%;
+    --cta-primary-foreground: 0 0% 100%;
+    --cta-primary-hover: 217 91% 50%;
+    
+    --cta-secondary: 173 80% 40%;
+    --cta-secondary-foreground: 0 0% 100%;
+    --cta-secondary-hover: 173 80% 30%;
+    
+    --cta-accent: 25 95% 53%;
+    --cta-accent-foreground: 0 0% 100%;
+    --cta-accent-hover: 25 95% 43%;
+    
+    --cta-gradient-primary: linear-gradient(135deg, hsl(var(--cta-primary)), hsl(var(--cta-secondary)));
+    --cta-gradient-secondary: linear-gradient(135deg, hsl(var(--cta-accent)), hsl(25 100% 60%));
+    
+    --shadow-cta: 0 10px 30px -10px hsl(var(--cta-primary) / 0.3);
+    --transition-cta: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
