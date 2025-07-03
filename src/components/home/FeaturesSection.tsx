@@ -1,7 +1,15 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { features } from "@/data/features";
+import { useState } from "react";
+import AgentDemoModal from "../AgentDemoModal";
 
 const FeaturesSection = () => {
+  const [selectedAgent, setSelectedAgent] = useState<string | null>(null);
+
+  const handleAgentClick = (agentTitle: string) => {
+    const agentId = agentTitle.toLowerCase().replace(' ', '-');
+    setSelectedAgent(agentId);
+  };
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,7 +27,11 @@ const FeaturesSection = () => {
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
-              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Card 
+                key={index} 
+                className="border-none shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+                onClick={() => handleAgentClick(feature.title)}
+              >
                 <CardHeader className="text-center">
                   <div className="mx-auto mb-4 p-3 bg-slate-50 rounded-full w-fit">
                     <IconComponent className={`h-8 w-8 ${feature.color}`} />
@@ -36,6 +48,12 @@ const FeaturesSection = () => {
           })}
         </div>
       </div>
+      
+      <AgentDemoModal 
+        isOpen={!!selectedAgent}
+        onClose={() => setSelectedAgent(null)}
+        agentId={selectedAgent}
+      />
     </section>
   );
 };

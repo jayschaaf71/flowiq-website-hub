@@ -1,8 +1,16 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { agentCategories } from "@/data/features";
+import { useState } from "react";
+import AgentDemoModal from "./AgentDemoModal";
 
 const AgentCards = () => {
+  const [selectedAgent, setSelectedAgent] = useState<string | null>(null);
+
+  const handleAgentClick = (agentTitle: string) => {
+    const agentId = agentTitle.toLowerCase().replace(' ', '-');
+    setSelectedAgent(agentId);
+  };
 
   return (
     <section className="py-20 bg-white">
@@ -27,7 +35,11 @@ const AgentCards = () => {
                 {category.agents.map((agent, agentIndex) => {
                   const IconComponent = agent.icon;
                   return (
-                    <Card key={agentIndex} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <Card 
+                      key={agentIndex} 
+                      className="border-none shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+                      onClick={() => handleAgentClick(agent.title)}
+                    >
                       <CardHeader>
                         <div className="flex items-center space-x-3">
                           <div className="p-2 bg-gray-50 rounded-lg">
@@ -49,6 +61,12 @@ const AgentCards = () => {
           ))}
         </div>
       </div>
+      
+      <AgentDemoModal 
+        isOpen={!!selectedAgent}
+        onClose={() => setSelectedAgent(null)}
+        agentId={selectedAgent}
+      />
     </section>
   );
 };
