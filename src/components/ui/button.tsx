@@ -18,9 +18,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        "cta-primary": "bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700 shadow-lg hover:shadow-xl font-semibold transition-all duration-300",
-        "cta-secondary": "bg-gradient-to-r from-orange-600 to-red-600 text-white hover:from-orange-700 hover:to-red-700 shadow-lg hover:shadow-xl font-semibold transition-all duration-300",
-        "cta-accent": "bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 shadow-lg hover:shadow-xl font-semibold transition-all duration-300",
+        "cta-primary": "bg-[var(--cta-gradient-primary)] text-white hover:opacity-90 shadow-[var(--shadow-cta)] hover:shadow-xl font-semibold transition-[var(--transition-cta)]",
+        "cta-secondary": "bg-[hsl(var(--cta-secondary))] text-[hsl(var(--cta-secondary-foreground))] hover:bg-[hsl(var(--cta-secondary-hover))] shadow-lg hover:shadow-xl font-semibold transition-all duration-300",
+        "cta-accent": "bg-[hsl(var(--cta-accent))] text-[hsl(var(--cta-accent-foreground))] hover:bg-[hsl(var(--cta-accent-hover))] shadow-lg hover:shadow-xl font-semibold transition-all duration-300",
         "cta-outline": "border-2 border-white/30 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm font-semibold transition-all duration-300",
       },
       size: {
