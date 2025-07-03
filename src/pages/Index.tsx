@@ -61,7 +61,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 pb-32" style={{marginTop: '80px', paddingTop: '60px'}}>
+      <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 pb-32 page-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">

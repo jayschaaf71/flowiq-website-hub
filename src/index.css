@@ -103,6 +103,11 @@
   
   /* Ensure proper spacing for fixed navigation */
   .main-content {
-    margin-top: 80px; /* Navigation height + some buffer */
+    padding-top: 80px; /* Navigation height + some buffer */
+  }
+
+  /* Page hero sections that need spacing from fixed nav */
+  .page-hero {
+    padding-top: 144px; /* Navigation height + proper buffer */
   }
 }
