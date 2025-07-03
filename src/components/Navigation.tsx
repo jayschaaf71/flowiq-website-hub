@@ -23,12 +23,12 @@ const Navigation = () => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo Section */}
-          <Link to="/" className="flex-shrink-0">
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
+          <Link to="/" className="flex-shrink-0 mr-8">
+            <div className="flex flex-col max-w-[200px]">
+              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent whitespace-nowrap">
                 FlowIQ
               </span>
-              <span className="text-xs text-gray-500 font-medium tracking-wide">
+              <span className="text-xs text-gray-500 font-medium tracking-wide hidden sm:block">
                 The AI Business Operating System
               </span>
             </div>
