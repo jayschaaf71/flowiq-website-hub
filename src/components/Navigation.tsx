@@ -23,9 +23,8 @@ const Navigation = () => {
   
   return (
     <nav 
-      className="bg-red-500 shadow-lg fixed top-0 left-0 right-0 z-[9999]" 
+      className="bg-white shadow-lg fixed top-0 left-0 right-0 z-[9999]" 
       style={{
-        backgroundColor: 'red !important', 
         position: 'fixed', 
         top: '0', 
         left: '0', 
