@@ -61,7 +61,14 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 pb-32 page-hero">
+      <section 
+        className="bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 pb-32"
+        style={{
+          paddingTop: '100px',
+          backgroundColor: 'rgba(255, 0, 0, 0.1)' // Temporary red tint to see the section
+        }}
+        onLoad={() => console.log('Hero section loaded')}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">

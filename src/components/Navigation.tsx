@@ -20,18 +20,20 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   console.log('Navigation rendering - checking position');
+  console.log('Navigation element height should be 64px');
   
   return (
     <nav 
-      className="bg-white shadow-lg fixed top-0 left-0 right-0"
+      className="bg-white shadow-lg"
       style={{
         position: 'fixed' as const, 
         top: 0, 
         left: 0, 
         right: 0, 
-        zIndex: 9999,
+        zIndex: 50,
         height: '64px',
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
