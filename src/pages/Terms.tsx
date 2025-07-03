@@ -7,7 +7,7 @@ const Terms = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      <section className="pt-20 pb-16 bg-gray-50">
+      <section className="pt-36 pb-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
           <p className="text-gray-600 mb-8">Last updated: {new Date().toLocaleDateString()}</p>
