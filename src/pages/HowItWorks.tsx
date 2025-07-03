@@ -168,54 +168,42 @@ const HowItWorks = () => {
             </p>
           </div>
           
-          <div className="space-y-16">
+          <div className="space-y-12">
             {implementationSteps.map((step, index) => (
-              <div key={index} className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12`}>
-                <div className="flex-1">
-                  <Card className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <CardHeader className="text-center lg:text-left">
-                      <div className="mx-auto lg:mx-0 mb-4 p-4 bg-slate-50 rounded-full w-fit">
-                        {step.icon}
-                      </div>
-                      <CardTitle className="text-2xl md:text-3xl">{step.title}</CardTitle>
-                      <CardDescription className="text-lg text-gray-600">
-                        {step.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div className="space-y-3">
-                        {step.details.map((detail, detailIndex) => (
-                          <div key={detailIndex} className="flex items-center space-x-3">
-                            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                            <span className="text-gray-700">{detail}</span>
-                          </div>
-                        ))}
-                      </div>
-                      <div className="pt-4 border-t border-gray-200">
-                        <div className="flex justify-between items-center">
-                          <div>
-                            <p className="text-sm font-medium text-gray-900">Timeline</p>
-                            <p className="text-sm text-gray-600">{step.timeline}</p>
-                          </div>
-                          <div className="text-right">
-                            <p className="text-sm font-medium text-gray-900">Deliverables</p>
-                            <p className="text-sm text-gray-600">{step.deliverables}</p>
-                          </div>
+              <div key={index} className="max-w-4xl mx-auto">
+                <Card className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <CardHeader className="text-center">
+                    <div className="mx-auto mb-4 p-4 bg-slate-50 rounded-full w-fit">
+                      {step.icon}
+                    </div>
+                    <CardTitle className="text-2xl md:text-3xl">{step.title}</CardTitle>
+                    <CardDescription className="text-lg text-gray-600">
+                      {step.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-3">
+                      {step.details.map((detail, detailIndex) => (
+                        <div key={detailIndex} className="flex items-center space-x-3">
+                          <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                          <span className="text-gray-700">{detail}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="pt-4 border-t border-gray-200">
+                      <div className="flex justify-between items-center">
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">Timeline</p>
+                          <p className="text-sm text-gray-600">{step.timeline}</p>
+                        </div>
+                        <div className="text-right">
+                          <p className="text-sm font-medium text-gray-900">Deliverables</p>
+                          <p className="text-sm text-gray-600">{step.deliverables}</p>
                         </div>
                       </div>
-                    </CardContent>
-                  </Card>
-                </div>
-                <div className="flex-1">
-                  <div className="bg-gradient-to-br from-blue-100 to-teal-100 rounded-lg p-8 h-64 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-6xl font-bold bg-gradient-to-r from-blue-700 to-teal-600 bg-clip-text text-transparent mb-4">
-                        {index + 1}
-                      </div>
-                      <p className="text-gray-600">Step {index + 1}</p>
                     </div>
-                  </div>
-                </div>
+                  </CardContent>
+                </Card>
               </div>
             ))}
           </div>
