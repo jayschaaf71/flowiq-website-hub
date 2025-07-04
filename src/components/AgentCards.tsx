@@ -31,13 +31,13 @@ const AgentCards = () => {
               <h3 className="text-xl font-semibold text-gray-500 mb-6 tracking-wider">
                 {category.title}
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 {category.agents.map((agent, agentIndex) => {
                   const IconComponent = agent.icon;
                   return (
                     <Card 
                       key={agentIndex} 
-                      className="border-none shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+                      className="border-none shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105 min-h-[140px] touch-manipulation"
                       onClick={() => handleAgentClick(agent.title)}
                     >
                       <CardHeader>

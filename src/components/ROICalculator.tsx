@@ -94,7 +94,7 @@ const ROICalculator = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
         {/* Input Section */}
         <div className="space-y-6">
           <Card>
@@ -238,15 +238,15 @@ const ROICalculator = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                 <div className="text-center p-4 bg-white rounded-lg shadow">
-                  <div className="text-3xl font-bold text-green-600">
+                  <div className="text-2xl sm:text-3xl font-bold text-green-600">
                     {Math.round(results.roiPercentage)}%
                   </div>
                   <div className="text-sm text-gray-600">Monthly ROI</div>
                 </div>
                 <div className="text-center p-4 bg-white rounded-lg shadow">
-                  <div className="text-3xl font-bold text-blue-600">
+                  <div className="text-2xl sm:text-3xl font-bold text-blue-600">
                     {Math.round(results.paybackMonths)}
                   </div>
                   <div className="text-sm text-gray-600">Months to Payback</div>

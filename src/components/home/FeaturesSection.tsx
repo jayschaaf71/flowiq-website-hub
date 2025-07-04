@@ -23,13 +23,13 @@ const FeaturesSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
               <Card 
                 key={index} 
-                className="border-none shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+                className="border-none shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105 min-h-[200px] touch-manipulation"
                 onClick={() => handleAgentClick(feature.title)}
               >
                 <CardHeader className="text-center">
