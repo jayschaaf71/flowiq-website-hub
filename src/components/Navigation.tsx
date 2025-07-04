@@ -54,9 +54,9 @@ const Navigation = () => {
           {/* Action Buttons */}
           <div className="hidden lg:flex items-center space-x-3">
             <Button 
-              variant="ghost"
+              variant="outline"
               size="sm"
-              className="text-teal-600 hover:text-teal-700 hover:bg-teal-50"
+              className="border-teal-600 text-teal-700 bg-teal-50/50 hover:bg-teal-100 hover:border-teal-700 font-semibold"
               onClick={() => {
                 // TODO: Replace with actual patient portal URL
                 alert('Patient Portal - URL to be configured');
@@ -66,9 +66,9 @@ const Navigation = () => {
             </Button>
             
             <Button 
-              variant="ghost"
+              variant="outline"
               size="sm"
-              className="text-cyan-600 hover:text-cyan-700 hover:bg-cyan-50"
+              className="border-cyan-600 text-cyan-700 bg-cyan-50/50 hover:bg-cyan-100 hover:border-cyan-700 font-semibold"
               onClick={() => {
                 // TODO: Replace with actual provider portal URL
                 alert('Provider Portal - URL to be configured');
