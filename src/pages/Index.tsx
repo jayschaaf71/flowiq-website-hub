@@ -9,11 +9,18 @@ import UseCasesSection from "@/components/home/UseCasesSection";
 import CTASection from "@/components/home/CTASection";
 import AdvisoryBoardSignup from "@/components/AdvisoryBoardSignup";
 import EarlyAccessSignup from "@/components/EarlyAccessSignup";
+import { useMetaDescription } from "@/hooks/useMetaDescription";
+import { StructuredData } from "@/components/StructuredData";
 
 const Index = () => {
+  useMetaDescription(
+    "Transform your practice with FlowIQ's AI agents. Automate scheduling, insurance verification, appointment reminders, patient follow-up, claims processing, and business intelligence.",
+    "FlowIQ - AI Operating System for Professional Practices"
+  );
 
   return (
     <div className="min-h-screen bg-white">
+      <StructuredData type="homepage" />
       <Navigation />
       <HeroSection />
       <StatusQuoSection />

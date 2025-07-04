@@ -1,8 +1,14 @@
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { useMetaDescription } from "@/hooks/useMetaDescription";
 
 const Terms = () => {
+  useMetaDescription(
+    "FlowIQ Terms of Service - Review our service agreement, user responsibilities, and terms for using our AI-powered practice automation solutions.",
+    "FlowIQ Terms of Service - Service Agreement"
+  );
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />

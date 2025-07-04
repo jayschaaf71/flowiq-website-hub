@@ -1,8 +1,14 @@
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { useMetaDescription } from "@/hooks/useMetaDescription";
 
 const Privacy = () => {
+  useMetaDescription(
+    "FlowIQ Privacy Policy - Learn how we collect, use, and protect your information. We're committed to maintaining your privacy and securing your data with enterprise-grade security measures.",
+    "FlowIQ Privacy Policy - Data Protection & Security"
+  );
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />

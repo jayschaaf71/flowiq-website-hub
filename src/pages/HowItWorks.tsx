@@ -4,8 +4,14 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Target, Cog, Rocket, MessageSquare, Shield, Calendar, Star, FileText, CheckCircle, Users, Settings, BarChart, BarChart3, Clock, TrendingUp, Zap } from "lucide-react";
+import { useMetaDescription } from "@/hooks/useMetaDescription";
 
 const HowItWorks = () => {
+  useMetaDescription(
+    "Learn how FlowIQ transforms your practice in 30 days with our proven 3-step implementation process. Discover our integration approach, timeline, and 75% reduction in administrative tasks.",
+    "How FlowIQ Works - Practice Transformation in 30 Days"
+  );
+
   const implementationSteps = [
     {
       icon: <Target className="h-12 w-12 text-blue-700" />,

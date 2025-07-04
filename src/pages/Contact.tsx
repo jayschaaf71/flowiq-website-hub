@@ -6,8 +6,14 @@ import ContactInfo from "@/components/ContactInfo";
 import TrustSignals from "@/components/TrustSignals";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useMetaDescription } from "@/hooks/useMetaDescription";
 
 const Contact = () => {
+  useMetaDescription(
+    "Contact FlowIQ to learn how our AI agents can transform your practice operations. Schedule a demo, get pricing information, or speak with our team about custom solutions.",
+    "Contact FlowIQ - Get Your AI Practice Automation Demo"
+  );
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />

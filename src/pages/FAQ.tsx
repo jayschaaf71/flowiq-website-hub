@@ -5,8 +5,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, HelpCircle, MessageSquare, Shield, Settings, DollarSign, Clock, Users } from "lucide-react";
+import { useMetaDescription } from "@/hooks/useMetaDescription";
+import { StructuredData } from "@/components/StructuredData";
 
 const FAQ = () => {
+  useMetaDescription(
+    "Get answers to frequently asked questions about FlowIQ's AI agents, implementation, security, HIPAA compliance, pricing, and support. 99.9% uptime, 24/7 support, 60-90 days to ROI.",
+    "FlowIQ FAQ - Everything You Need to Know About AI Practice Automation"
+  );
+
   const faqCategories = [
     {
       icon: <MessageSquare className="h-6 w-6 text-blue-600" />,
@@ -129,6 +136,7 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <StructuredData type="faq" />
       <Navigation />
       
       {/* Hero Section */}
