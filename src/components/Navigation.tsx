@@ -35,23 +35,26 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`${
-                  isActive(item.path)
-                    ? "text-blue-700 border-b-2 border-blue-700"
-                    : "text-gray-700 hover:text-blue-700"
-                } px-3 py-2 text-sm font-medium transition-colors duration-200`}
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="hidden lg:flex items-center flex-1 justify-between">
+            {/* Main Navigation Links */}
+            <div className="flex items-center space-x-8 ml-8">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={`${
+                    isActive(item.path)
+                      ? "text-blue-700 border-b-2 border-blue-700"
+                      : "text-gray-700 hover:text-blue-700"
+                  } px-3 py-2 text-sm font-medium transition-colors duration-200`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
             
-            {/* Portal Buttons */}
-            <div className="flex items-center space-x-2 border-l border-gray-200 pl-4">
+            {/* Action Buttons */}
+            <div className="flex items-center space-x-3">
               <Button 
                 variant="outline"
                 size="sm"
@@ -75,35 +78,25 @@ const Navigation = () => {
               >
                 Provider Portal
               </Button>
+              
+              <Button 
+                variant="outline"
+                size="sm"
+                className="border-blue-600 text-blue-700 hover:bg-blue-50"
+                onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
+              >
+                <Play className="mr-1 h-4 w-4" />
+                AI Assessment
+              </Button>
+              
+              <Button 
+                size="sm"
+                className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white"
+                onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
+              >
+                Book Demo
+              </Button>
             </div>
-            
-            <Button 
-              variant="outline"
-              size="sm"
-              className="border-blue-600 text-blue-700 hover:bg-blue-50"
-              onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
-            >
-              <Brain className="mr-1 h-4 w-4" />
-              AI Assessment
-            </Button>
-            
-            <Button 
-              variant="outline"
-              size="sm"
-              className="border-green-600 text-green-700 hover:bg-green-50"
-              onClick={() => window.open('https://remarkable-flan-7ac120.netlify.app', '_blank')}
-            >
-              <Play className="mr-1 h-4 w-4" />
-              Demo
-            </Button>
-            
-            <Button 
-              size="sm"
-              className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white"
-              onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
-            >
-              Book Demo
-            </Button>
           </div>
 
           {/* Mobile menu button */}
