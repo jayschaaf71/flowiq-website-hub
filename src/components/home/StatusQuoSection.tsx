@@ -6,17 +6,17 @@ const StatusQuoSection = () => {
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-red-50 via-pink-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Reality Check Header */}
+        {/* AI Transformation Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center p-2 bg-red-100 rounded-full mb-4">
-            <AlertTriangle className="h-6 w-6 text-red-600" />
+          <div className="inline-flex items-center justify-center p-2 bg-blue-100 rounded-full mb-4">
+            <Brain className="h-6 w-6 text-blue-600" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Stop Accepting "That's Just Healthcare"
+            Your Practice's AI Transformation Starts Here
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            While you're manually managing your practice, your competitors are leveraging AI to work 
-            smarter, faster, and more profitably. The cost of staying manual just went up.
+            Join forward-thinking practices already leveraging AI to work smarter, increase revenue, 
+            and deliver exceptional patient care. The future of healthcare is automated—and it's available today.
           </p>
         </div>
 
