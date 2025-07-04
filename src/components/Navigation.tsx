@@ -19,84 +19,80 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200/50">
+      <nav className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           {/* Logo Section */}
-          <Link to="/" className="flex-shrink-0 mr-8">
-            <div className="flex flex-col max-w-[200px]">
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent whitespace-nowrap">
+          <Link to="/" className="flex-shrink-0">
+            <div className="flex flex-col">
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
                 FlowIQ
               </span>
-              <span className="text-xs text-gray-500 font-medium tracking-wide hidden sm:block">
-                The AI Business Operating System
+              <span className="text-xs text-gray-500 font-medium hidden sm:block">
+                AI Business Operating System
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center flex-1 justify-between min-w-0">
-            {/* Main Navigation Links */}
-            <div className="flex items-center space-x-6 ml-4 flex-shrink-0">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className={`${
-                    isActive(item.path)
-                      ? "text-blue-700 border-b-2 border-blue-700"
-                      : "text-gray-700 hover:text-blue-700"
-                  } px-2 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap`}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
+          <div className="hidden lg:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`${
+                  isActive(item.path)
+                    ? "text-blue-600 font-medium"
+                    : "text-gray-600 hover:text-gray-900"
+                } text-sm font-medium transition-colors duration-200`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+          
+          {/* Action Buttons */}
+          <div className="hidden lg:flex items-center space-x-3">
+            <Button 
+              variant="ghost"
+              size="sm"
+              className="text-teal-600 hover:text-teal-700 hover:bg-teal-50"
+              onClick={() => {
+                // TODO: Replace with actual patient portal URL
+                alert('Patient Portal - URL to be configured');
+              }}
+            >
+              Patient Portal
+            </Button>
             
-            {/* Action Buttons */}
-            <div className="flex items-center space-x-2 flex-shrink-0">
-              <Button 
-                variant="outline"
-                size="sm"
-                className="border-teal-600 text-teal-700 hover:bg-teal-50 text-xs px-3"
-                onClick={() => {
-                  // TODO: Replace with actual patient portal URL
-                  alert('Patient Portal - URL to be configured');
-                }}
-              >
-                Patient
-              </Button>
-              
-              <Button 
-                variant="outline"
-                size="sm"
-                className="border-cyan-600 text-cyan-700 hover:bg-cyan-50 text-xs px-3"
-                onClick={() => {
-                  // TODO: Replace with actual provider portal URL
-                  alert('Provider Portal - URL to be configured');
-                }}
-              >
-                Provider
-              </Button>
-              
-              <Button 
-                variant="outline"
-                size="sm"
-                className="border-blue-600 text-blue-700 hover:bg-blue-50 text-xs px-3"
-                onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
-              >
-                <Brain className="mr-1 h-3 w-3" />
-                AI Assessment
-              </Button>
-              
-              <Button 
-                size="sm"
-                className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white text-xs px-4"
-                onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
-              >
-                Book Demo
-              </Button>
-            </div>
+            <Button 
+              variant="ghost"
+              size="sm"
+              className="text-cyan-600 hover:text-cyan-700 hover:bg-cyan-50"
+              onClick={() => {
+                // TODO: Replace with actual provider portal URL
+                alert('Provider Portal - URL to be configured');
+              }}
+            >
+              Provider Portal
+            </Button>
+            
+            <Button 
+              variant="outline"
+              size="sm"
+              className="border-gray-300 text-gray-700 hover:bg-gray-50"
+              onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
+            >
+              AI Assessment
+            </Button>
+            
+            <Button 
+              size="sm"
+              className="bg-blue-600 hover:bg-blue-700 text-white shadow-sm"
+              onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
+            >
+              Book Demo
+            </Button>
           </div>
 
           {/* Mobile menu button */}
