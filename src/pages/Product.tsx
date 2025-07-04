@@ -6,6 +6,7 @@ import AgentCards from "@/components/AgentCards";
 import DetailedFeatures from "@/components/DetailedFeatures";
 import ProductBenefits from "@/components/ProductBenefits";
 import { useMetaDescription } from "@/hooks/useMetaDescription";
+import { StructuredData } from "@/components/StructuredData";
 
 const Product = () => {
   useMetaDescription(
@@ -15,6 +16,7 @@ const Product = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <StructuredData type="product" />
       <Navigation />
       <ProductHero />
       <AgentCards />

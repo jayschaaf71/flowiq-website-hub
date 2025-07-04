@@ -6,6 +6,7 @@ import FounderSection from "@/components/about/FounderSection";
 // import AdvisoryBoard from "@/components/about/AdvisoryBoard";
 import AboutCTA from "@/components/about/AboutCTA";
 import { useMetaDescription } from "@/hooks/useMetaDescription";
+import { StructuredData } from "@/components/StructuredData";
 
 const About = () => {
   useMetaDescription(
@@ -15,6 +16,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <StructuredData type="about" />
       <Navigation />
       <AboutHero />
       <FounderSection />

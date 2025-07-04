@@ -7,6 +7,7 @@ import TrustSignals from "@/components/TrustSignals";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useMetaDescription } from "@/hooks/useMetaDescription";
+import { StructuredData } from "@/components/StructuredData";
 
 const Contact = () => {
   useMetaDescription(
@@ -16,6 +17,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <StructuredData type="contact" />
       <Navigation />
       
       {/* Hero Section */}

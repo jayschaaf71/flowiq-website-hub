@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Target, Cog, Rocket, MessageSquare, Shield, Calendar, Star, FileText, CheckCircle, Users, Settings, BarChart, BarChart3, Clock, TrendingUp, Zap } from "lucide-react";
 import { useMetaDescription } from "@/hooks/useMetaDescription";
+import { StructuredData } from "@/components/StructuredData";
 
 const HowItWorks = () => {
   useMetaDescription(
@@ -81,6 +82,7 @@ const HowItWorks = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <StructuredData type="how-it-works" />
       <Navigation />
       
       {/* Hero Section */}

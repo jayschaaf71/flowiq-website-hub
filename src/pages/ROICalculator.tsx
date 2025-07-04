@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ROICalculator from "@/components/ROICalculator";
 import { useMetaDescription } from "@/hooks/useMetaDescription";
+import { StructuredData } from "@/components/StructuredData";
 
 const ROICalculatorPage = () => {
   useMetaDescription(
@@ -12,6 +13,7 @@ const ROICalculatorPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <StructuredData type="roi-calculator" />
       <Navigation />
       <ROICalculator />
       <Footer />

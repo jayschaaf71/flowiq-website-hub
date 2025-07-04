@@ -332,8 +332,17 @@ const ContactForm = () => {
                 disabled={form.formState.isSubmitting}
                 className="w-full bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white py-3"
               >
-                {form.formState.isSubmitting ? "Sending..." : "Send Message & Get Personalized Response"}
-                {!form.formState.isSubmitting && <ArrowRight className="ml-2 h-5 w-5" />}
+                {form.formState.isSubmitting ? (
+                  <div className="flex items-center">
+                    <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2" />
+                    Sending...
+                  </div>
+                ) : (
+                  <>
+                    Send Message & Get Personalized Response
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </>
+                )}
               </Button>
               
               <p className="text-sm text-gray-500 text-center">
