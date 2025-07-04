@@ -24,14 +24,9 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo Section */}
           <Link to="/" className="flex-shrink-0">
-            <div className="flex flex-col">
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-                FlowIQ
-              </span>
-              <span className="text-xs text-gray-500 font-medium hidden sm:block">
-                AI Business Operating System
-              </span>
-            </div>
+            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
+              FlowIQ
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
