@@ -7,6 +7,8 @@ import StatusQuoSection from "@/components/home/StatusQuoSection";
 import FeaturesSection from "@/components/home/FeaturesSection";
 import UseCasesSection from "@/components/home/UseCasesSection";
 import CTASection from "@/components/home/CTASection";
+import AdvisoryBoardSignup from "@/components/AdvisoryBoardSignup";
+import EarlyAccessSignup from "@/components/EarlyAccessSignup";
 
 const Index = () => {
 
@@ -18,8 +20,9 @@ const Index = () => {
       <FeaturesSection />
       <UseCasesSection />
       <Testimonials />
+      <EarlyAccessSignup />
+      <AdvisoryBoardSignup />
       <CTASection />
-
       <Footer />
     </div>
   );
