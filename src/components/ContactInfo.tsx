@@ -9,7 +9,7 @@ const ContactInfo = () => {
       title: "Phone",
       description: "Speak with our team",
       details: "(314) 420-5637",
-      action: () => window.open('tel:+13144205637', '_self')
+      action: () => window.location.href = 'tel:+13144205637'
     },
     {
       icon: <Mail className="h-6 w-6 text-teal-600" />,
