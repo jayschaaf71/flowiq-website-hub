@@ -35,9 +35,9 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center flex-1 justify-between">
+          <div className="hidden lg:flex items-center flex-1 justify-between min-w-0">
             {/* Main Navigation Links */}
-            <div className="flex items-center space-x-8 ml-8">
+            <div className="flex items-center space-x-6 ml-4 flex-shrink-0">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
@@ -46,7 +46,7 @@ const Navigation = () => {
                     isActive(item.path)
                       ? "text-blue-700 border-b-2 border-blue-700"
                       : "text-gray-700 hover:text-blue-700"
-                  } px-3 py-2 text-sm font-medium transition-colors duration-200`}
+                  } px-2 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap`}
                 >
                   {item.name}
                 </Link>
@@ -54,44 +54,44 @@ const Navigation = () => {
             </div>
             
             {/* Action Buttons */}
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2 flex-shrink-0">
               <Button 
                 variant="outline"
                 size="sm"
-                className="border-teal-600 text-teal-700 hover:bg-teal-50"
+                className="border-teal-600 text-teal-700 hover:bg-teal-50 text-xs px-3"
                 onClick={() => {
                   // TODO: Replace with actual patient portal URL
                   alert('Patient Portal - URL to be configured');
                 }}
               >
-                Patient Portal
+                Patient
               </Button>
               
               <Button 
                 variant="outline"
                 size="sm"
-                className="border-cyan-600 text-cyan-700 hover:bg-cyan-50"
+                className="border-cyan-600 text-cyan-700 hover:bg-cyan-50 text-xs px-3"
                 onClick={() => {
                   // TODO: Replace with actual provider portal URL
                   alert('Provider Portal - URL to be configured');
                 }}
               >
-                Provider Portal
+                Provider
               </Button>
               
               <Button 
                 variant="outline"
                 size="sm"
-                className="border-blue-600 text-blue-700 hover:bg-blue-50"
+                className="border-blue-600 text-blue-700 hover:bg-blue-50 text-xs px-3"
                 onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
               >
-                <Play className="mr-1 h-4 w-4" />
+                <Brain className="mr-1 h-3 w-3" />
                 AI Assessment
               </Button>
               
               <Button 
                 size="sm"
-                className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white"
+                className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white text-xs px-4"
                 onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
               >
                 Book Demo
