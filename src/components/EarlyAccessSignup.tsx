@@ -39,6 +39,22 @@ const EarlyAccessSignup = () => {
 
       if (error) throw error;
 
+      // Send notification email
+      try {
+        await supabase.functions.invoke('notify-early-access-signup', {
+          body: {
+            name: formData.name,
+            email: formData.email,
+            company: formData.company,
+            company_size: formData.companySize,
+            use_case: formData.useCase,
+          },
+        });
+      } catch (emailError) {
+        console.error('Error sending notification email:', emailError);
+        // Don't block the user flow if email fails
+      }
+
       toast({
         title: "You're On The List!",
         description: "Thank you for signing up for early access. We'll notify you when it's available.",

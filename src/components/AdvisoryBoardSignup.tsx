@@ -41,6 +41,23 @@ const AdvisoryBoardSignup = () => {
 
       if (error) throw error;
 
+      // Send notification email
+      try {
+        await supabase.functions.invoke('notify-advisory-board-signup', {
+          body: {
+            name: formData.name,
+            email: formData.email,
+            company: formData.company,
+            role: formData.role,
+            experience_level: formData.experienceLevel,
+            motivation: formData.motivation,
+          },
+        });
+      } catch (emailError) {
+        console.error('Error sending notification email:', emailError);
+        // Don't block the user flow if email fails
+      }
+
       toast({
         title: "Application Submitted!",
         description: "Thank you for your interest in joining our advisory board. We'll be in touch soon.",

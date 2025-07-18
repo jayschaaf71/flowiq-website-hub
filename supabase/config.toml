@@ -1,1 +1,7 @@
 project_id = "rnulxsjbzsvvatcbjmvr"
+
+[functions.notify-early-access-signup]
+verify_jwt = false
+
+[functions.notify-advisory-board-signup]
+verify_jwt = false
