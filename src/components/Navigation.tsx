@@ -52,10 +52,7 @@ const Navigation = () => {
               variant="outline"
               size="sm"
               className="border-teal-600 text-teal-700 bg-teal-50/50 hover:bg-teal-100 hover:border-teal-700 font-semibold"
-              onClick={() => {
-                // TODO: Replace with actual patient portal URL
-                alert('Patient Portal - URL to be configured');
-              }}
+              onClick={() => window.open('https://app.flow-iq.ai/patient-portal', '_blank')}
             >
               Patient Portal
             </Button>
@@ -64,10 +61,7 @@ const Navigation = () => {
               variant="outline"
               size="sm"
               className="border-cyan-600 text-cyan-700 bg-cyan-50/50 hover:bg-cyan-100 hover:border-cyan-700 font-semibold"
-              onClick={() => {
-                // TODO: Replace with actual provider portal URL
-                alert('Provider Portal - URL to be configured');
-              }}
+              onClick={() => window.open('https://app.flow-iq.ai/auth/login', '_blank')}
             >
               Provider Portal
             </Button>
@@ -132,8 +126,7 @@ const Navigation = () => {
                     size="lg"
                     className="h-12 border-teal-600 text-teal-700 hover:bg-teal-50 hover:border-teal-700 transition-all duration-200"
                     onClick={() => {
-                      // TODO: Replace with actual patient portal URL
-                      alert('Patient Portal - URL to be configured');
+                      window.open('https://app.flow-iq.ai/patient-portal', '_blank');
                       setIsOpen(false);
                     }}
                   >
@@ -145,8 +138,7 @@ const Navigation = () => {
                     size="lg"
                     className="h-12 border-cyan-600 text-cyan-700 hover:bg-cyan-50 hover:border-cyan-700 transition-all duration-200"
                     onClick={() => {
-                      // TODO: Replace with actual provider portal URL
-                      alert('Provider Portal - URL to be configured');
+                      window.open('https://app.flow-iq.ai/auth/login', '_blank');
                       setIsOpen(false);
                     }}
                   >
@@ -172,7 +164,7 @@ const Navigation = () => {
                   size="lg"
                   className="w-full h-12 border-green-600 text-green-700 hover:bg-green-50 hover:border-green-700 transition-all duration-200"
                   onClick={() => {
-                    window.open('https://remarkable-flan-7ac120.netlify.app', '_blank');
+                    window.open('https://app.flow-iq.ai', '_blank');
                     setIsOpen(false);
                   }}
                 >

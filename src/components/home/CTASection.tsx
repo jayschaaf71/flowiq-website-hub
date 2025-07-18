@@ -25,7 +25,7 @@ const CTASection = () => {
             size="lg" 
             variant="cta-outline"
             className="px-8 py-3 text-lg"
-            onClick={() => window.open('https://remarkable-flan-7ac120.netlify.app', '_blank')}
+            onClick={() => window.open('https://app.flow-iq.ai', '_blank')}
           >
             <Play className="mr-2 h-5 w-5" />
             Try Live Demo
