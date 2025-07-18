@@ -13,6 +13,7 @@ const Navigation = () => {
     { name: "How It Works", path: "/how-it-works" },
     { name: "ROI Calculator", path: "/roi-calculator" },
     { name: "About", path: "/about" },
+    { name: "AI Assessment", path: "/ai-assessment" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -67,12 +68,12 @@ const Navigation = () => {
             </Button>
             
             <Button 
+              asChild
               variant="outline"
               size="sm"
-              className="border-gray-300 text-gray-700 hover:bg-gray-50"
-              onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
+              className="border-primary text-primary bg-primary/5 hover:bg-primary/10 hover:border-primary/80 font-semibold"
             >
-              AI Assessment
+              <Link to="/ai-assessment">AI Assessment</Link>
             </Button>
             
             <Button 
@@ -147,16 +148,16 @@ const Navigation = () => {
                 </div>
                 
                 <Button 
+                  asChild
                   variant="outline"
                   size="lg"
-                  className="w-full h-12 border-blue-600 text-blue-700 hover:bg-blue-50 hover:border-blue-700 transition-all duration-200"
-                  onClick={() => {
-                    window.open('https://calendly.com/jason-flow-iq', '_blank');
-                    setIsOpen(false);
-                  }}
+                  className="w-full h-12 border-primary text-primary hover:bg-primary/10 hover:border-primary/80 transition-all duration-200"
+                  onClick={() => setIsOpen(false)}
                 >
-                  <Brain className="mr-2 h-5 w-5" />
-                  AI Assessment
+                  <Link to="/ai-assessment">
+                    <Brain className="mr-2 h-5 w-5" />
+                    AI Assessment
+                  </Link>
                 </Button>
                 
                 <Button 

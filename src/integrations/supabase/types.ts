@@ -47,6 +47,78 @@ export type Database = {
         }
         Relationships: []
       }
+      ai_assessments: {
+        Row: {
+          amount: number
+          assessment_package: string
+          assessment_status: string | null
+          calendly_booking_url: string | null
+          company: string | null
+          completed_at: string | null
+          created_at: string | null
+          currency: string | null
+          current_challenges: string | null
+          email: string
+          id: string
+          name: string
+          notes: string | null
+          payment_status: string | null
+          phone: string | null
+          practice_size: string | null
+          practice_type: string | null
+          scheduled_at: string | null
+          stripe_payment_intent_id: string | null
+          stripe_session_id: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          amount: number
+          assessment_package: string
+          assessment_status?: string | null
+          calendly_booking_url?: string | null
+          company?: string | null
+          completed_at?: string | null
+          created_at?: string | null
+          currency?: string | null
+          current_challenges?: string | null
+          email: string
+          id?: string
+          name: string
+          notes?: string | null
+          payment_status?: string | null
+          phone?: string | null
+          practice_size?: string | null
+          practice_type?: string | null
+          scheduled_at?: string | null
+          stripe_payment_intent_id?: string | null
+          stripe_session_id?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          amount?: number
+          assessment_package?: string
+          assessment_status?: string | null
+          calendly_booking_url?: string | null
+          company?: string | null
+          completed_at?: string | null
+          created_at?: string | null
+          currency?: string | null
+          current_challenges?: string | null
+          email?: string
+          id?: string
+          name?: string
+          notes?: string | null
+          payment_status?: string | null
+          phone?: string | null
+          practice_size?: string | null
+          practice_type?: string | null
+          scheduled_at?: string | null
+          stripe_payment_intent_id?: string | null
+          stripe_session_id?: string | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
       early_access_signups: {
         Row: {
           company: string | null
