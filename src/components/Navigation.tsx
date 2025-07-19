@@ -50,21 +50,21 @@ const Navigation = () => {
           {/* Action Buttons */}
           <div className="hidden lg:flex items-center space-x-3">
             <Button 
+              asChild
               variant="outline"
               size="sm"
               className="border-teal-600 text-teal-700 bg-teal-50/50 hover:bg-teal-100 hover:border-teal-700 font-semibold"
-              onClick={() => window.open('https://app.flow-iq.ai/patient-portal', '_blank')}
             >
-              Patient Portal
+              <Link to="/patient-portal">Patient Portal</Link>
             </Button>
             
             <Button 
+              asChild
               variant="outline"
               size="sm"
               className="border-cyan-600 text-cyan-700 bg-cyan-50/50 hover:bg-cyan-100 hover:border-cyan-700 font-semibold"
-              onClick={() => window.open('https://app.flow-iq.ai/auth/login', '_blank')}
             >
-              Provider Portal
+              <Link to="/provider-portal">Provider Portal</Link>
             </Button>
             
             <Button 
@@ -123,27 +123,23 @@ const Navigation = () => {
                 {/* Portal Buttons */}
                 <div className="grid grid-cols-2 gap-3 mb-3">
                   <Button 
+                    asChild
                     variant="outline"
                     size="lg"
                     className="h-12 border-teal-600 text-teal-700 hover:bg-teal-50 hover:border-teal-700 transition-all duration-200"
-                    onClick={() => {
-                      window.open('https://app.flow-iq.ai/patient-portal', '_blank');
-                      setIsOpen(false);
-                    }}
+                    onClick={() => setIsOpen(false)}
                   >
-                    Patient Portal
+                    <Link to="/patient-portal">Patient Portal</Link>
                   </Button>
                   
                   <Button 
+                    asChild
                     variant="outline"
                     size="lg"
                     className="h-12 border-cyan-600 text-cyan-700 hover:bg-cyan-50 hover:border-cyan-700 transition-all duration-200"
-                    onClick={() => {
-                      window.open('https://app.flow-iq.ai/auth/login', '_blank');
-                      setIsOpen(false);
-                    }}
+                    onClick={() => setIsOpen(false)}
                   >
-                    Provider Portal
+                    <Link to="/provider-portal">Provider Portal</Link>
                   </Button>
                 </div>
                 
