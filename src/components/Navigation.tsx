@@ -8,12 +8,10 @@ const Navigation = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: "Home", path: "/" },
     { name: "Product", path: "/product" },
     { name: "How It Works", path: "/how-it-works" },
     { name: "ROI Calculator", path: "/roi-calculator" },
     { name: "About", path: "/about" },
-    { name: "AI Assessment", path: "/ai-assessment" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -31,7 +29,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -40,7 +38,7 @@ const Navigation = () => {
                   isActive(item.path)
                     ? "text-blue-600 font-medium"
                     : "text-gray-600 hover:text-gray-900"
-                } text-sm font-medium transition-colors duration-200`}
+                } text-sm font-medium transition-colors duration-200 whitespace-nowrap`}
               >
                 {item.name}
               </Link>
@@ -48,37 +46,19 @@ const Navigation = () => {
           </div>
           
           {/* Action Buttons */}
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="hidden lg:flex items-center space-x-2">
             <Button 
               asChild
               variant="outline"
               size="sm"
-              className="border-teal-600 text-teal-700 bg-teal-50/50 hover:bg-teal-100 hover:border-teal-700 font-semibold"
-            >
-              <Link to="/patient-portal">Patient Portal</Link>
-            </Button>
-            
-            <Button 
-              asChild
-              variant="outline"
-              size="sm"
-              className="border-cyan-600 text-cyan-700 bg-cyan-50/50 hover:bg-cyan-100 hover:border-cyan-700 font-semibold"
-            >
-              <Link to="/provider-portal">Provider Portal</Link>
-            </Button>
-            
-            <Button 
-              asChild
-              variant="outline"
-              size="sm"
-              className="border-primary text-primary bg-primary/5 hover:bg-primary/10 hover:border-primary/80 font-semibold"
+              className="border-primary text-primary bg-primary/5 hover:bg-primary/10 hover:border-primary/80 font-semibold text-xs px-3"
             >
               <Link to="/ai-assessment">AI Assessment</Link>
             </Button>
             
             <Button 
               size="sm"
-              className="bg-blue-600 hover:bg-blue-700 text-white shadow-sm"
+              className="bg-blue-600 hover:bg-blue-700 text-white shadow-sm text-xs px-4"
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
               Book Demo
