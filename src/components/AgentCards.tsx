@@ -31,7 +31,7 @@ const AgentCards = () => {
               <h3 className="text-xl font-semibold text-gray-500 mb-6 tracking-wider">
                 {category.title}
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 justify-items-center max-w-6xl mx-auto">
                 {category.agents.map((agent, agentIndex) => {
                   const IconComponent = agent.icon;
                   return (
