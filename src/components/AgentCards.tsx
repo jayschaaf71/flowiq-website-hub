@@ -17,11 +17,11 @@ const AgentCards = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Twelve AI Agents, Four Core Areas
+            Five AI Assistants, Complete Practice Management
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Each FlowIQ agent specializes in a critical aspect of practice management, 
-            working together to create a seamless patient experience and operational excellence.
+            Each FlowIQ assistant consolidates multiple specialized functions to deliver 
+            comprehensive practice management and operational excellence.
           </p>
         </div>
         
