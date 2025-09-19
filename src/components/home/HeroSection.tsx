@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 pb-16 sm:pb-24 lg:pb-32 page-hero">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
             The Property Management Platform That{" "}
             <span className="text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Thinks Like AI, Acts Like Humans
