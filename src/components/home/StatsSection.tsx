@@ -3,24 +3,24 @@ import { Card, CardContent } from "@/components/ui/card";
 const StatsSection = () => {
   const stats = [
     {
+      value: "85%",
+      label: "Full AI Automation",
+      description: "Most requests handled without human intervention"
+    },
+    {
+      value: "<2 Sec",
+      label: "Handoff Time", 
+      description: "Seamless AI-to-human transitions"
+    },
+    {
       value: "40%",
-      label: "Time Savings",
-      description: "Less admin work"
+      label: "Cost Reduction",
+      description: "Offshore human expertise at scale"
     },
     {
-      value: "30%",
-      label: "Faster Resolution",
-      description: "Quicker responses"
-    },
-    {
-      value: "24/7",
-      label: "Human Oversight",
-      description: "Always monitoring"
-    },
-    {
-      value: "95%",
-      label: "Satisfaction Rate",
-      description: "Happy tenants"
+      value: "99.2%",
+      label: "System Uptime",
+      description: "Always-on maintenance coordination"
     }
   ];
 

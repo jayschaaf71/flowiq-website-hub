@@ -8,13 +8,34 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-            The Property Management Assistant That 
-            <span className="text-primary"> Never Sleeps</span>
+            The Property Management Platform That{" "}
+            <span className="text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              Thinks Like AI, Acts Like Humans
+            </span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Combine AI automation with 24/7 human oversight to handle maintenance, 
-            communication, and coordination - so you can focus on growing your business.
+            Revolutionary confidence-based AI automatically handles 85% of maintenance requests, while expert human agents seamlessly take over complex situations - delivering perfect service every time.
           </p>
+          
+          {/* Key Differentiators */}
+          <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto mb-8 text-gray-700">
+            <div className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-primary rounded-full"></div>
+              <span className="text-sm">Invisible Intelligence: Customers never know when AI hands off to humans</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-primary rounded-full"></div>
+              <span className="text-sm">85% Full Automation Rate with 15% Expert Human Intervention</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-primary rounded-full"></div>
+              <span className="text-sm">Built on Proven Voice & Scheduling Technology</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-primary rounded-full"></div>
+              <span className="text-sm">24/7 Offshore Human Backup for Complex Situations</span>
+            </div>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button 
               size="lg" 

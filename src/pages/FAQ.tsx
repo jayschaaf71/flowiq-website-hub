@@ -20,20 +20,20 @@ const FAQ = () => {
       title: "Getting Started",
       faqs: [
         {
-          question: "How long does it take to implement SymAssist?",
-          answer: "Most property management companies are fully operational with SymAssist within 2-4 weeks. Our implementation process includes discovery (1-2 weeks), setup and integration (1-2 weeks), and launch optimization (ongoing). We work around your schedule to minimize disruption."
+          question: "How does the AI know when to hand off to humans?",
+          answer: "Our confidence scoring engine evaluates every decision on a 0-100% scale. Requests below 70% confidence automatically trigger human review or takeover, ensuring quality while maximizing efficiency. This intelligent routing means simple requests get instant AI responses while complex situations receive expert human attention."
         },
         {
-          question: "Do I need technical expertise to use SymAssist?",
-          answer: "No technical expertise required. SymAssist is designed to be intuitive for property managers. Our team handles all technical setup, and we provide comprehensive training for your staff. The AI agents work automatically with 24/7 human oversight."
+          question: "Are your human agents really available 24/7?",
+          answer: "Yes, our expert virtual assistants in Mexico provide true 24/7 coverage across all time zones, with Tier 1, 2, and 3 escalation levels for different complexity situations. They maintain high English proficiency standards and follow rigorous quality assurance protocols."
         },
         {
-          question: "Will SymAssist work with my existing systems?",
-          answer: "Yes, SymAssist integrates with most popular property management software, accounting platforms, and maintenance systems. During our discovery phase, we'll assess your current systems and ensure seamless integration."
+          question: "How quickly can humans take over from AI?",
+          answer: "Context handoffs happen in under 2 seconds with complete conversation history, AI recommendations, and stakeholder information transferred seamlessly. Tenants and vendors never experience interruption when the system routes to human agents."
         },
         {
-          question: "What if my portfolio is very small or very large?",
-          answer: "SymAssist scales to fit property portfolios of all sizes - from individual property owners to large multi-property management companies. Our AI agents adapt to your specific volume and complexity requirements."
+          question: "What happens if the AI makes a mistake?",
+          answer: "Every AI decision is logged and can be reviewed. Human agents can override any AI decision, and these interventions automatically improve future AI performance through our continuous learning system. We maintain full audit trails for transparency and improvement."
         }
       ]
     },
@@ -148,8 +148,7 @@ const FAQ = () => {
               Frequently Asked Questions
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Everything you need to know about SymAssist, our AI property management assistant, implementation process, 
-              and how we can transform your property operations.
+              Get answers to common questions about SymAssist's AI-human integration platform, confidence-based routing, implementation, security, and support for property management.
             </p>
           </div>
         </div>

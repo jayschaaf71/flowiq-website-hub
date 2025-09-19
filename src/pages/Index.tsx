@@ -8,6 +8,8 @@ import StatusQuoSection from "@/components/home/StatusQuoSection";
 import FeaturesSection from "@/components/home/FeaturesSection";
 import UseCasesSection from "@/components/home/UseCasesSection";
 import CTASection from "@/components/home/CTASection";
+import InvisibleIntelligenceSection from "@/components/home/InvisibleIntelligenceSection";
+import ValuePropositionsSection from "@/components/home/ValuePropositionsSection";
 import AdvisoryBoardSignup from "@/components/AdvisoryBoardSignup";
 import EarlyAccessSignup from "@/components/EarlyAccessSignup";
 import { useMetaDescription } from "@/hooks/useMetaDescription";
@@ -25,7 +27,9 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <StatsSection />
+      <InvisibleIntelligenceSection />
       <StatusQuoSection />
+      <ValuePropositionsSection />
       <FeaturesSection />
       <UseCasesSection />
       <Testimonials />

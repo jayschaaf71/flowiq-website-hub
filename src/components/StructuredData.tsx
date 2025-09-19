@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 interface StructuredDataProps {
-  type: 'homepage' | 'product' | 'faq' | 'contact' | 'about' | 'how-it-works' | 'roi-calculator';
+  type: 'homepage' | 'product' | 'faq' | 'contact' | 'about' | 'how-it-works' | 'roi-calculator' | 'technology' | 'case-studies';
 }
 
 export const StructuredData = ({ type }: StructuredDataProps) => {
@@ -232,6 +232,39 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Web",
           "provider": baseOrganization
+        };
+        break;
+
+      case 'technology':
+        structuredData = {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "name": "SymAssist Technology Platform",
+          "description": "Advanced AI technology stack with confidence scoring, offshore human infrastructure, and enterprise security",
+          "publisher": baseOrganization,
+          "about": "AI and Machine Learning for Property Management"
+        };
+        break;
+
+      case 'case-studies':
+        structuredData = {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "SymAssist Case Studies",
+          "description": "Real results from property managers using SymAssist's AI automation platform",
+          "publisher": baseOrganization,
+          "hasPart": [
+            {
+              "@type": "Article",
+              "name": "Metro Apartments Success Story",
+              "description": "78% reduction in maintenance coordination time with SymAssist"
+            },
+            {
+              "@type": "Article", 
+              "name": "Sunrise Properties Case Study",
+              "description": "85% automation rate achieved in 3 months with SymAssist"
+            }
+          ]
         };
         break;
 

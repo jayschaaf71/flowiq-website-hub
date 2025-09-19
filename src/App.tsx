@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import Product from "./pages/Product";
+import Technology from "./pages/Technology";
+import CaseStudies from "./pages/CaseStudies";
 import HowItWorks from "./pages/HowItWorks";
 import FAQ from "./pages/FAQ";
 import About from "./pages/About";
@@ -32,6 +34,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/technology" element={<Technology />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/roi-calculator" element={<ROICalculatorPage />} />
           <Route path="/faq" element={<FAQ />} />
