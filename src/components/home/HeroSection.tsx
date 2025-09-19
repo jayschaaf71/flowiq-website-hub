@@ -48,7 +48,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               variant="outline"
-              className="px-8 py-4 text-lg border-primary text-primary hover:bg-blue-50"
+              className="px-8 py-4 text-lg"
               asChild
             >
               <Link to="/roi-calculator">Calculate Your ROI</Link>

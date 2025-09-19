@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const AboutCTA = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-600 to-teal-600">
+    <section className="py-20 bg-gradient-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
           Ready to Join Our Success Story?
@@ -14,7 +14,8 @@ const AboutCTA = () => {
         </p>
         <Button 
           size="lg" 
-          className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
+          variant="cta-outline"
+          className="px-8 py-3 text-lg"
           onClick={() => window.open('https://calendly.com', '_blank')}
         >
           Schedule a Demo

@@ -62,7 +62,8 @@ const Navigation = () => {
             
             <Button 
               size="sm"
-              className="bg-blue-600 hover:bg-blue-700 text-white shadow-sm text-xs px-4"
+              variant="brand-blue"
+              className="text-xs px-4"
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
               Book Demo
@@ -118,9 +119,9 @@ const Navigation = () => {
                 </Button>
                 
                 <Button 
-                  variant="outline"
+                  variant="brand-cyan"
                   size="lg"
-                  className="w-full h-12 border-green-600 text-green-700 hover:bg-green-50 hover:border-green-700 transition-all duration-200"
+                  className="w-full h-12"
                   onClick={() => {
                     window.open('https://remarkable-flan-7ac120.netlify.app', '_blank');
                     setIsOpen(false);
@@ -132,7 +133,8 @@ const Navigation = () => {
                 
                 <Button 
                   size="lg"
-                  className="w-full h-12 bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white shadow-lg hover:shadow-xl transition-all duration-200"
+                  variant="cta-primary"
+                  className="w-full h-12"
                   onClick={() => {
                     window.open('https://calendly.com/jason-flow-iq', '_blank');
                     setIsOpen(false);

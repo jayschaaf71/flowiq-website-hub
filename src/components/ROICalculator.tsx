@@ -250,7 +250,7 @@ const ROICalculator = () => {
                   <span className="font-semibold text-orange-600">-{formatCurrency(symAssistMonthlyCost)}</span>
                 </div>
                 
-                <div className="flex justify-between items-center p-4 bg-gradient-to-r from-blue-600 to-teal-600 text-white rounded-lg">
+                <div className="flex justify-between items-center p-4 bg-gradient-primary text-white rounded-lg">
                   <span className="font-semibold">Net Monthly Benefit</span>
                   <span className="text-xl font-bold">{formatCurrency(results.totalBenefit - symAssistMonthlyCost)}</span>
                 </div>
@@ -290,7 +290,8 @@ const ROICalculator = () => {
           <div className="text-center">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white px-8 py-3 text-lg font-semibold"
+              variant="brand-orange"
+              className="px-8 py-3 text-lg"
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
               <Brain className="mr-2 h-5 w-5" />

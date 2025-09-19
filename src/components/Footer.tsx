@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
@@ -34,12 +35,13 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <p className="text-gray-300 mb-2">Ready to transform your property management?</p>
-            <button 
-              className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-4 py-2 rounded-md font-medium transition-all duration-200"
+            <Button 
+              variant="cta-primary"
+              className="px-4 py-2 text-sm"
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
               Book a Demo
-            </button>
+            </Button>
           </div>
         </div>
         

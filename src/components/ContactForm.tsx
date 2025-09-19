@@ -330,7 +330,8 @@ const ContactForm = () => {
               <Button 
                 type="submit" 
                 disabled={form.formState.isSubmitting}
-                className="w-full bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white py-3"
+                variant="cta-primary"
+                className="w-full py-3"
               >
                 {form.formState.isSubmitting ? (
                   <div className="flex items-center">

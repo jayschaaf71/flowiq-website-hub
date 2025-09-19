@@ -39,7 +39,7 @@ const ProductBenefits = () => {
           </div>
           <div className="lg:pl-8">
             <Card className="border-none shadow-2xl">
-              <CardHeader className="bg-gradient-to-br from-blue-600 to-teal-600 text-white rounded-t-lg">
+              <CardHeader className="bg-gradient-primary text-white rounded-t-lg">
                 <CardTitle className="text-2xl text-center">Ready to Get Started?</CardTitle>
               </CardHeader>
               <CardContent className="p-8">
@@ -48,14 +48,16 @@ const ProductBenefits = () => {
                 </CardDescription>
                 <div className="space-y-3">
                   <Button 
-                    className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-3"
+                    variant="brand-orange"
+                    className="w-full py-3"
                     onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
                   >
                     <Brain className="mr-2 h-5 w-5" />
                     Book AI Readiness Assessment
                   </Button>
                   <Button 
-                    className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white py-3"
+                    variant="brand-cyan"
+                    className="w-full py-3"
                     onClick={() => window.open('https://remarkable-flan-7ac120.netlify.app', '_blank')}
                   >
                     <Play className="mr-2 h-5 w-5" />
@@ -63,7 +65,7 @@ const ProductBenefits = () => {
                   </Button>
                   <Button 
                     variant="outline"
-                    className="w-full border-blue-600 text-blue-700 hover:bg-blue-50 py-3"
+                    className="w-full py-3"
                     onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
                   >
                     Schedule Your Demo

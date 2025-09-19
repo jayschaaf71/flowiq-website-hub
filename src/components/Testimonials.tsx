@@ -82,7 +82,7 @@ const Testimonials = () => {
                 
                 {/* Author Info */}
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-teal-600 rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-semibold mr-4">
                     {testimonial.avatar}
                   </div>
                   <div>

@@ -127,7 +127,7 @@ const CaseStudies = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-teal-600">
+      <section className="py-16 bg-gradient-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Get Similar Results?
@@ -141,8 +141,7 @@ const CaseStudies = () => {
             </Button>
             <Button 
               size="lg" 
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-primary"
+              variant="cta-outline"
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
               Schedule Live Demo

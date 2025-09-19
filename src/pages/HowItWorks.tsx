@@ -184,7 +184,7 @@ const HowItWorks = () => {
           </div>
 
           {/* Confidence Scoring Visualization */}
-          <div className="mt-20 bg-gradient-to-r from-blue-600 to-teal-600 rounded-2xl p-8 text-white">
+          <div className="mt-20 bg-gradient-primary rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold text-center mb-8">
               AI Confidence Scoring in Action
             </h3>
@@ -284,7 +284,7 @@ const HowItWorks = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-teal-600">
+      <section className="py-20 bg-gradient-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Experience Invisible Intelligence in Action
