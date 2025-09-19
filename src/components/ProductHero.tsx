@@ -8,11 +8,11 @@ const ProductHero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            FlowIQ Product Suite
+            SymAssist Product Suite
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Twelve powerful AI agents working together to automate your practice operations. 
-            From scheduling to insurance verification to medical scribing to EHR management to business intelligence - FlowIQ handles it all.
+            Five powerful AI assistants working together to automate your property operations. 
+            From maintenance coordination to tenant communication to vendor dispatch to financial management - SymAssist handles it all.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 

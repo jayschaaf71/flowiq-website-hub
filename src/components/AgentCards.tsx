@@ -20,8 +20,8 @@ const AgentCards = () => {
             Five AI Assistants, Complete Practice Management
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Each FlowIQ assistant consolidates multiple specialized functions to deliver 
-            comprehensive practice management and operational excellence.
+            Each SymAssist assistant consolidates multiple specialized functions to deliver 
+            comprehensive property management and operational excellence.
           </p>
         </div>
         

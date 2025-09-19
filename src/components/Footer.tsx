@@ -9,15 +9,15 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="mb-4">
               <span className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
-                FlowIQ
+                SymAssist
               </span>
               <div className="text-sm text-gray-400 font-medium tracking-wide">
-                The AI Business Operating System
+                AI-Powered Property Management Assistant
               </div>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              The AI Operating System for Professional Practices. Streamline your operations, 
-              enhance productivity, and scale your business with intelligent automation.
+              Transform your property management with SymAssist's AI-powered platform. 
+              Automate maintenance coordination, tenant communication, and operations.
             </p>
           </div>
           
@@ -33,7 +33,7 @@ const Footer = () => {
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <p className="text-gray-300 mb-2">Ready to transform your practice?</p>
+            <p className="text-gray-300 mb-2">Ready to transform your property management?</p>
             <button 
               className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-4 py-2 rounded-md font-medium transition-all duration-200"
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
@@ -46,7 +46,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 mb-4 md:mb-0">
-              © 2024 FlowIQ. All rights reserved.
+              © 2024 SymAssist. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</Link>

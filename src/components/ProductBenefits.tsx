@@ -5,13 +5,13 @@ import { Check, ArrowRight, Play, Brain } from "lucide-react";
 
 const ProductBenefits = () => {
   const benefits = [
-    "Reduce front desk workload by up to 70% with automated scheduling",
-    "Eliminate insurance verification delays with pre-appointment automation",
-    "Decrease no-show rates by 50% with intelligent reminder systems",
-    "Increase online reviews by 300% with automated follow-up campaigns",
-    "Accelerate claims processing with automated submission and tracking",
-    "Ensure HIPAA compliance with SOC 2 certified security practices",
-    "Integrate seamlessly with existing practice management systems"
+    "Reduce maintenance response time by up to 80% with intelligent triage",
+    "Automate tenant communication across all channels (voice, SMS, email)",
+    "Streamline vendor dispatch and work order management",
+    "Optimize rent collection with automated payment processing",
+    "Increase tenant satisfaction with 24/7 AI-powered support",
+    "Maintain comprehensive property records with automated documentation",
+    "Scale operations across multiple properties seamlessly"
   ];
 
   return (
@@ -20,11 +20,11 @@ const ProductBenefits = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Measurable Results for Your Practice
+              Measurable Results for Your Properties
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              FlowIQ delivers tangible improvements that you can see from day one. 
-              Our specialized AI agents work around the clock to optimize every aspect of your practice operations.
+            SymAssist delivers tangible improvements that you can see from day one. 
+            Our specialized AI assistants work around the clock to optimize every aspect of your property operations.
             </p>
             <div className="space-y-4">
               {benefits.map((benefit, index) => (
@@ -44,7 +44,7 @@ const ProductBenefits = () => {
               </CardHeader>
               <CardContent className="p-8">
                 <CardDescription className="text-gray-600 mb-6 text-center">
-                  Get a personalized AI assessment to see how FlowIQ can transform your practice operations.
+                  Get a personalized AI assessment to see how SymAssist can transform your property operations.
                 </CardDescription>
                 <div className="space-y-3">
                   <Button 

@@ -5,8 +5,8 @@ const FounderSection = () => {
   const founder = {
     name: "Jason Schaaf",
     title: "Founder & CEO",
-    background: "After more than two decades leading sales for cutting-edge tech companies, Jason Schaaf saw a pattern: professional practices were overwhelmed by clunky systems, missed revenue, and manual workflows. That insight led to FlowIQ — an AI-native operating system designed for modern practices like dental, ortho, chiro, med spa, and veterinary clinics. Jason's mission is to replace busywork with automation so practice owners can focus on care, not chaos.",
-    expertise: "Leadership, Emerging AI technology and practice operations",
+    background: "After more than two decades leading sales for cutting-edge tech companies, Jason Schaaf saw a pattern: property managers were overwhelmed by clunky systems, missed opportunities, and manual workflows. That insight led to SymAssist — an AI-native platform designed for modern property management including residential, commercial, and mixed-use properties. Jason's mission is to replace busywork with automation so property managers can focus on growth, not chaos.",
+    expertise: "Leadership, Emerging AI technology and property management operations",
     image: "/lovable-uploads/a070fea9-ce42-4b65-9f49-197e02aa4ef0.png"
   };
 
@@ -18,7 +18,7 @@ const FounderSection = () => {
             Meet Our Founder
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Bringing decades of go to market leadership and technology expertise to transform professional practices.
+            Bringing decades of go to market leadership and technology expertise to transform property management.
           </p>
         </div>
         

@@ -29,7 +29,7 @@ const ROICalculator = () => {
     paybackMonths: 0
   });
 
-  const flowIQMonthlyCost = 500; // Estimated monthly cost
+  const symAssistMonthlyCost = 500; // Estimated monthly cost
 
   useEffect(() => {
     calculateROI();
@@ -55,9 +55,9 @@ const ROICalculator = () => {
     
     // Total monthly benefit
     const totalMonthlyBenefit = monthlyCostSavings + monthlyAdditionalRevenue;
-    const netBenefit = totalMonthlyBenefit - flowIQMonthlyCost;
-    const roiPercentage = (netBenefit / flowIQMonthlyCost) * 100;
-    const paybackMonths = flowIQMonthlyCost / totalMonthlyBenefit;
+    const netBenefit = totalMonthlyBenefit - symAssistMonthlyCost;
+    const roiPercentage = (netBenefit / symAssistMonthlyCost) * 100;
+    const paybackMonths = symAssistMonthlyCost / totalMonthlyBenefit;
 
     setResults({
       currentCosts: monthlyStaffCost,
@@ -86,11 +86,11 @@ const ROICalculator = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          FlowIQ ROI Calculator
+          SymAssist ROI Calculator
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Calculate your potential return on investment with FlowIQ's AI automation. 
-          Adjust the parameters below to see how much your practice could save.
+          Calculate your potential return on investment with SymAssist's AI automation. 
+          Adjust the parameters below to see how much your property management could save.
         </p>
       </div>
 
@@ -270,13 +270,13 @@ const ROICalculator = () => {
                 </div>
                 
                 <div className="flex justify-between items-center p-3 bg-orange-50 rounded-lg">
-                  <span className="text-gray-700">FlowIQ Monthly Cost</span>
-                  <span className="font-semibold text-orange-600">-{formatCurrency(flowIQMonthlyCost)}</span>
+                  <span className="text-gray-700">SymAssist Monthly Cost</span>
+                  <span className="font-semibold text-orange-600">-{formatCurrency(symAssistMonthlyCost)}</span>
                 </div>
                 
                 <div className="flex justify-between items-center p-4 bg-gradient-to-r from-blue-600 to-teal-600 text-white rounded-lg">
                   <span className="font-semibold">Net Monthly Benefit</span>
-                  <span className="text-xl font-bold">{formatCurrency(results.totalBenefit - flowIQMonthlyCost)}</span>
+                  <span className="text-xl font-bold">{formatCurrency(results.totalBenefit - symAssistMonthlyCost)}</span>
                 </div>
               </div>
             </CardContent>
@@ -293,7 +293,7 @@ const ROICalculator = () => {
               <div className="space-y-3">
                 <div className="flex justify-between">
                   <span>Total Annual Savings:</span>
-                  <span className="font-bold text-green-600">{formatCurrency((results.totalBenefit - flowIQMonthlyCost) * 12)}</span>
+                  <span className="font-bold text-green-600">{formatCurrency((results.totalBenefit - symAssistMonthlyCost) * 12)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Time Saved Per Year:</span>
@@ -321,7 +321,7 @@ const ROICalculator = () => {
               Book AI Readiness Assessment
             </Button>
             <p className="text-sm text-gray-600 mt-2">
-              Get a personalized analysis of your practice's automation potential
+              Get a personalized analysis of your property's automation potential
             </p>
           </div>
         </div>

@@ -12,7 +12,7 @@ const DetailedFeatures = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             From the moment a patient discovers your practice to comprehensive business insights, 
-            FlowIQ ensures every touchpoint is optimized.
+            SymAssist ensures every touchpoint is optimized.
           </p>
         </div>
         

@@ -5,43 +5,43 @@ import { Star } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Dr. Sarah Chen",
-      title: "Dentist",
-      practice: "Smile Family Dental",
-      content: "FlowIQ's ReceptionIQ has been a game-changer. We've reduced no-shows by 60% and our staff can focus on patient care instead of phone calls. The insurance verification happens automatically before every appointment.",
+      name: "Marcus Thompson",
+      title: "Property Manager",
+      practice: "Skyline Properties",
+      content: "SymAssist's Maintenance Assistant has been a game-changer. We've reduced emergency calls by 60% and our team can focus on tenant relations instead of constant coordination. The vendor dispatch automation works flawlessly.",
       rating: 5,
-      avatar: "SC"
+      avatar: "MT"
     },
     {
-      name: "Michael Rodriguez",
-      title: "Practice Manager",
-      practice: "Metro Orthopedics",
-      content: "The claims processing automation has cut our billing cycle time in half. We're getting paid faster and spending 70% less time on administrative tasks. ROI was immediate.",
+      name: "Sarah Rodriguez",
+      title: "Portfolio Director",
+      practice: "Metro Real Estate Group",
+      content: "The financial management automation has cut our rent collection time in half. We're getting paid faster and spending 70% less time on administrative tasks. ROI was immediate.",
       rating: 5,
-      avatar: "MR"
+      avatar: "SR"
     },
     {
-      name: "Dr. Jennifer Walsh",
-      title: "Veterinarian",
-      practice: "Paws & Claws Animal Hospital",
-      content: "Patient follow-up has never been easier. Our review scores increased by 40% and we're seeing more referrals than ever. The AI handles everything seamlessly.",
+      name: "David Chen",
+      title: "Asset Manager",
+      practice: "Greenfield Property Management",
+      content: "Tenant communication has never been easier. Our satisfaction scores increased by 40% and we're seeing fewer complaints than ever. The AI handles everything seamlessly.",
+      rating: 5,
+      avatar: "DC"
+    },
+    {
+      name: "Jessica Wilson",
+      title: "Operations Manager",
+      practice: "Prime Property Solutions",
+      content: "SymAssist transformed our maintenance process. We capture 3x more maintenance requests through our portal and the automation works 24/7. Our response time has doubled.",
       rating: 5,
       avatar: "JW"
-    },
-    {
-      name: "David Kim",
-      title: "Attorney",
-      practice: "Kim & Associates Law Firm",
-      content: "FlowIQ transformed our client intake process. We capture 3x more leads from our website and the scheduling automation works 24/7. Our conversion rate has doubled.",
-      rating: 5,
-      avatar: "DK"
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Practices Automated" },
+    { number: "200+", label: "Properties Automated" },
     { number: "95%", label: "Customer Satisfaction" },
-    { number: "60%", label: "Avg. No-Show Reduction" },
+    { number: "80%", label: "Avg. Response Time Reduction" },
     { number: "70%", label: "Admin Time Saved" }
   ];
 
@@ -51,10 +51,10 @@ const Testimonials = () => {
         {/* Stats Section */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Trusted by Professional Practices Nationwide
+            Trusted by Property Managers Nationwide
           </h2>
           <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            See the measurable impact FlowIQ's AI agents have made for practices just like yours.
+            See the measurable impact SymAssist's AI assistants have made for properties just like yours.
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">

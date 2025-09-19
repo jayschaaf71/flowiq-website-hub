@@ -87,7 +87,7 @@ const ContactForm = () => {
             <CheckCircle className="w-5 h-5 text-green-600 mt-1" />
             <div>
               <h4 className="font-semibold text-gray-900">Personalized Demo</h4>
-              <p className="text-gray-600">See FlowIQ in action with examples from your practice type</p>
+              <p className="text-gray-600">See SymAssist in action with examples from your property type</p>
             </div>
           </div>
           <div className="flex items-start space-x-4">

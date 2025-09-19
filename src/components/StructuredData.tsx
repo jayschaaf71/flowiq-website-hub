@@ -17,10 +17,10 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
     // Base organization data
     const baseOrganization = {
       "@type": "Organization",
-      "name": "FlowIQ",
-      "url": "https://flowiq.com",
-      "logo": "https://flowiq.com/lovable-uploads/1dc3e303-8477-4a7e-813e-189d1d0aa011.png",
-      "description": "AI Operating System for Professional Practices",
+      "name": "SymAssist",
+      "url": "https://symassist.com",
+      "logo": "https://symassist.com/lovable-uploads/1dc3e303-8477-4a7e-813e-189d1d0aa011.png",
+      "description": "AI-Powered Property Management Assistant",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "US"
@@ -28,10 +28,10 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "sales",
-        "url": "https://flowiq.com/contact"
+        "url": "https://symassist.com/contact"
       },
       "sameAs": [
-        "https://calendly.com/jason-flow-iq"
+        "https://calendly.com/jason-symassist"
       ]
     };
 
@@ -44,51 +44,51 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
               ...baseOrganization,
               "offers": {
                 "@type": "Offer",
-                "description": "AI automation for professional practices including scheduling, insurance verification, claims processing, and patient communication"
+                "description": "AI automation for property management including maintenance coordination, tenant communication, vendor dispatch, and financial management"
               }
             },
             {
               "@type": "WebSite",
-              "name": "FlowIQ",
-              "url": "https://flowiq.com",
-              "description": "Transform your practice with FlowIQ's AI agents. Automate scheduling, insurance verification, appointment reminders, patient follow-up, claims processing, and business intelligence.",
+              "name": "SymAssist",
+              "url": "https://symassist.com",
+              "description": "Transform your property management with SymAssist's AI-powered platform. Automate maintenance coordination, tenant communication, vendor dispatch, and operations with 24/7 human oversight.",
               "publisher": {
                 "@type": "Organization",
-                "name": "FlowIQ"
+                "name": "SymAssist"
               }
             },
             {
               "@type": "Service",
-              "name": "AI Practice Automation",
-              "description": "Comprehensive AI automation solutions for professional practices",
+              "name": "AI Property Management Automation",
+              "description": "Comprehensive AI automation solutions for property management",
               "provider": baseOrganization,
               "serviceType": "Software as a Service",
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
-                "name": "FlowIQ AI Agents",
+                "name": "SymAssist AI Assistants",
                 "itemListElement": [
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Scheduling Automation",
-                      "description": "AI-powered appointment scheduling and management"
+                      "name": "Maintenance Coordination",
+                      "description": "AI-powered maintenance triage and vendor dispatch"
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Insurance Verification",
-                      "description": "Automated insurance eligibility verification"
+                      "name": "Tenant Communication",
+                      "description": "Automated multi-channel tenant communication"
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Claims Processing",
-                      "description": "Intelligent claims processing and revenue cycle management"
+                      "name": "Financial Management",
+                      "description": "Intelligent financial processing and reporting"
                     }
                   }
                 ]
@@ -102,30 +102,30 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
         structuredData = {
           "@context": "https://schema.org",
           "@type": "Product",
-          "name": "FlowIQ AI Agents",
-          "description": "12 specialized AI agents for practice automation including scheduling, insurance verification, claims processing, and patient communication",
+          "name": "SymAssist AI Assistants",
+          "description": "5 specialized AI assistants for property management including maintenance coordination, tenant communication, vendor management, financial processing, and analytics",
           "brand": baseOrganization,
-          "category": "Practice Management Software",
+          "category": "Property Management Software",
           "offers": {
             "@type": "Offer",
-            "description": "AI automation for professional practices",
+            "description": "AI automation for property management",
             "seller": baseOrganization
           },
           "hasFeature": [
             {
               "@type": "Feature",
-              "name": "Automated Scheduling",
-              "description": "AI-powered appointment scheduling and management"
+              "name": "Automated Maintenance Coordination",
+              "description": "AI-powered maintenance triage and vendor dispatch"
             },
             {
               "@type": "Feature", 
-              "name": "Insurance Verification",
-              "description": "Real-time insurance eligibility verification"
+              "name": "Tenant Communication",
+              "description": "Multi-channel automated tenant communication"
             },
             {
               "@type": "Feature",
-              "name": "Claims Processing",
-              "description": "Intelligent claims processing and revenue cycle management"
+              "name": "Financial Management",
+              "description": "Intelligent financial processing and reporting"
             }
           ]
         };
@@ -138,34 +138,34 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "How long does it take to implement FlowIQ?",
+              "name": "How long does it take to implement SymAssist?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Most practices are fully operational with FlowIQ within 2-4 weeks. Our implementation process includes discovery (1-2 weeks), setup and integration (1-2 weeks), and launch optimization (ongoing)."
+                "text": "Most properties are fully operational with SymAssist within 2-4 weeks. Our implementation process includes discovery (1-2 weeks), setup and integration (1-2 weeks), and launch optimization (ongoing)."
               }
             },
             {
               "@type": "Question",
-              "name": "Is FlowIQ HIPAA compliant?",
+              "name": "Is SymAssist secure and compliant?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, FlowIQ is fully HIPAA compliant and SOC 2 Type II certified. We use enterprise-grade encryption, secure data centers, and maintain strict access controls."
+                "text": "Yes, SymAssist is fully secure and SOC 2 Type II certified. We use enterprise-grade encryption, secure data centers, and maintain strict access controls for all property data."
               }
             },
             {
               "@type": "Question",
-              "name": "How much does FlowIQ cost?",
+              "name": "How much does SymAssist cost?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "FlowIQ pricing is based on your practice size and selected modules. Most practices see ROI within 60-90 days through reduced staff time, fewer no-shows, and faster claims processing."
+                "text": "SymAssist pricing is based on your property portfolio size and selected modules. Most property managers see ROI within 60-90 days through reduced staff time, faster maintenance responses, and improved tenant satisfaction."
               }
             },
             {
               "@type": "Question",
-              "name": "Can the AI agents be customized for my specialty?",
+              "name": "Can the AI assistants be customized for my property type?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Absolutely. Each AI agent is trained and customized for your specific practice type, terminology, and workflows. Whether you're in dental, medical, veterinary, or legal practice, the AI adapts to your specialty's unique requirements."
+                "text": "Absolutely. Each AI assistant is trained and customized for your specific property types, terminology, and workflows. Whether you manage residential, commercial, or mixed-use properties, the AI adapts to your unique requirements."
               }
             }
           ]
@@ -176,8 +176,8 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
         structuredData = {
           "@context": "https://schema.org",
           "@type": "ContactPage",
-          "name": "Contact FlowIQ",
-          "description": "Contact FlowIQ to learn how our AI agents can transform your practice operations",
+          "name": "Contact SymAssist",
+          "description": "Contact SymAssist to learn how our AI assistants can transform your property operations",
           "mainEntity": baseOrganization
         };
         break;
@@ -186,8 +186,8 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
         structuredData = {
           "@context": "https://schema.org",
           "@type": "AboutPage",
-          "name": "About FlowIQ",
-          "description": "Learn about FlowIQ's mission to transform professional practices with AI automation",
+          "name": "About SymAssist",
+          "description": "Learn about SymAssist's mission to transform property management with AI automation",
           "mainEntity": baseOrganization
         };
         break;
@@ -196,25 +196,25 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
         structuredData = {
           "@context": "https://schema.org",
           "@type": "HowTo",
-          "name": "How FlowIQ Transforms Your Practice",
-          "description": "Learn how FlowIQ's AI agents work together to transform practice operations in 30 days",
+          "name": "How SymAssist Transforms Your Property Management",
+          "description": "Learn how SymAssist's AI assistants work together to transform property operations in 30 days",
           "step": [
             {
               "@type": "HowToStep",
               "name": "Discovery & Assessment",
-              "text": "We analyze your current workflows and identify optimization opportunities tailored to your practice.",
+              "text": "We analyze your current property management workflows and identify optimization opportunities tailored to your portfolio.",
               "position": 1
             },
             {
               "@type": "HowToStep", 
               "name": "Setup & Integration",
-              "text": "Our expert team seamlessly integrates FlowIQ with your existing systems and processes.",
+              "text": "Our expert team seamlessly integrates SymAssist with your existing property management systems and processes.",
               "position": 2
             },
             {
               "@type": "HowToStep",
               "name": "Launch & Optimization", 
-              "text": "Watch your practice transform as FlowIQ continuously learns and optimizes your operations.",
+              "text": "Watch your property operations transform as SymAssist continuously learns and optimizes your workflows.",
               "position": 3
             }
           ],
@@ -226,9 +226,9 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
         structuredData = {
           "@context": "https://schema.org",
           "@type": "WebApplication",
-          "name": "FlowIQ ROI Calculator",
-          "description": "Calculate your ROI with FlowIQ's AI automation tools",
-          "url": "https://flowiq.com/roi-calculator",
+          "name": "SymAssist ROI Calculator",
+          "description": "Calculate your ROI with SymAssist's AI automation tools",
+          "url": "https://symassist.com/roi-calculator",
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Web",
           "provider": baseOrganization

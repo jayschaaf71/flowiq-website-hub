@@ -176,7 +176,7 @@ const LaunchChecklist = () => {
         <CardHeader>
           <div className="flex items-center justify-between">
             <div>
-              <CardTitle className="text-2xl">FlowIQ Launch Readiness</CardTitle>
+              <CardTitle className="text-2xl">SymAssist Launch Readiness</CardTitle>
               <CardDescription>
                 Track your pre-launch progress across all critical areas
               </CardDescription>
@@ -257,7 +257,7 @@ const LaunchChecklist = () => {
               <div>
                 <h4 className="font-semibold text-blue-900 mb-2">Ready to Launch?</h4>
                 <p className="text-blue-700 text-sm mb-3">
-                  Once you've completed the remaining items, your FlowIQ website will be ready for production launch.
+                  Once you've completed the remaining items, your SymAssist website will be ready for production launch.
                 </p>
                 <div className="space-y-2 text-sm">
                   <p className="text-blue-600">
