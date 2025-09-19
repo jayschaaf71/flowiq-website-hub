@@ -15,11 +15,11 @@ const FeaturesSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Twelve AI Agents, One Powerful System
+            Five AI Assistants, One Powerful System
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Each FlowIQ agent specializes in automating a critical aspect of your practice operations, 
-            working together to deliver exceptional patient experiences.
+            Each SymAssist agent specializes in automating a critical aspect of your property management operations, 
+            working together with 24/7 human oversight to deliver exceptional tenant experiences.
           </p>
         </div>
         

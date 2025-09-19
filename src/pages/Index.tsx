@@ -14,8 +14,8 @@ import { StructuredData } from "@/components/StructuredData";
 
 const Index = () => {
   useMetaDescription(
-    "Transform your practice with FlowIQ's AI agents. Automate scheduling, insurance verification, appointment reminders, patient follow-up, claims processing, and business intelligence.",
-    "FlowIQ - AI Operating System for Professional Practices"
+    "Transform your property management with SymAssist's AI-powered platform. Automate maintenance coordination, tenant communication, vendor dispatch, and operations with 24/7 human oversight.",
+    "SymAssist - AI-Powered Property Management Assistant"
   );
 
   return (

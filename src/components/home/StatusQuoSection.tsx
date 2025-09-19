@@ -12,11 +12,11 @@ const StatusQuoSection = () => {
             <Brain className="h-6 w-6 text-blue-600" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Your Practice's AI Transformation Starts Here
+            Property Management is Overwhelming
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Join forward-thinking practices already leveraging AI to work smarter, increase revenue, 
-            and deliver exceptional patient care. The future of healthcare is automated—and it's available today.
+            Property managers spend countless hours on maintenance coordination, tenant communication, 
+            and vendor management - time that could be better spent growing their business.
           </p>
         </div>
 
@@ -28,13 +28,13 @@ const StatusQuoSection = () => {
               <CardTitle className="text-xl text-red-800">Hidden Daily Losses</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
-              <div className="text-3xl font-bold text-red-600 mb-2">$247</div>
-              <p className="text-sm text-gray-600 mb-4">Average daily revenue loss from manual processes</p>
+              <div className="text-3xl font-bold text-red-600 mb-2">60%</div>
+              <p className="text-sm text-gray-600 mb-4">of time spent on maintenance coordination</p>
               <ul className="text-xs text-gray-600 space-y-1">
-                <li>• 4 hours staff overtime</li>
-                <li>• 6 missed appointment slots</li>
-                <li>• 12 insurance verification delays</li>
-                <li>• 8 patients waiting on hold</li>
+                <li>• 3 hours vendor coordination</li>
+                <li>• 2 hours tenant communications</li>
+                <li>• 2 hours maintenance tracking</li>
+                <li>• 1 hour emergency calls</li>
               </ul>
             </CardContent>
           </Card>
@@ -45,13 +45,13 @@ const StatusQuoSection = () => {
               <CardTitle className="text-xl text-blue-800">Time Hemorrhage</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">43 hrs</div>
-              <p className="text-sm text-gray-600 mb-4">Weekly hours wasted on tasks AI should handle</p>
+              <div className="text-3xl font-bold text-blue-600 mb-2">30%</div>
+              <p className="text-sm text-gray-600 mb-4">average response delay to tenant requests</p>
               <ul className="text-xs text-gray-600 space-y-1">
-                <li>• Phone scheduling: 15 hrs</li>
-                <li>• Insurance verification: 12 hrs</li>
-                <li>• Appointment reminders: 8 hrs</li>
-                <li>• Follow-up calls: 8 hrs</li>
+                <li>• Tenant request processing: 8 hrs</li>
+                <li>• Vendor coordination: 12 hrs</li>
+                <li>• Follow-up calls: 6 hrs</li>
+                <li>• Documentation: 4 hrs</li>
               </ul>
             </CardContent>
           </Card>
@@ -62,13 +62,13 @@ const StatusQuoSection = () => {
               <CardTitle className="text-xl text-teal-800">Opportunity Cost</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
-              <div className="text-3xl font-bold text-teal-600 mb-2">35%</div>
-              <p className="text-sm text-gray-600 mb-4">Patient capacity increase with automation</p>
+              <div className="text-3xl font-bold text-teal-600 mb-2">40%</div>
+              <p className="text-sm text-gray-600 mb-4">higher costs due to poor vendor coordination</p>
               <ul className="text-xs text-gray-600 space-y-1">
-                <li>• 50% fewer no-shows</li>
-                <li>• 70% faster check-in</li>
-                <li>• 60% more efficient scheduling</li>
-                <li>• 80% reduced wait times</li>
+                <li>• 30% faster issue resolution</li>
+                <li>• 40% reduction in emergency calls</li>
+                <li>• 50% improved tenant satisfaction</li>
+                <li>• 60% better vendor utilization</li>
               </ul>
             </CardContent>
           </Card>
@@ -85,28 +85,28 @@ const StatusQuoSection = () => {
             <div className="bg-red-50 rounded-xl p-6">
               <h4 className="text-lg font-semibold text-red-800 mb-4 flex items-center">
                 <AlertTriangle className="h-5 w-5 mr-2" />
-                Your Practice Today
+                Your Property Management Today
               </h4>
               <ul className="space-y-3 text-sm text-red-700">
                 <li className="flex items-start">
                   <span className="font-medium mr-2">8:00 AM:</span>
-                  <span>Staff already overwhelmed with yesterday's backlog</span>
+                  <span>Already behind with overnight maintenance requests</span>
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium mr-2">10:30 AM:</span>
-                  <span>Phone ringing while trying to verify insurance manually</span>
+                  <span>Playing phone tag with vendors while tenants wait</span>
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium mr-2">2:00 PM:</span>
-                  <span>Two no-shows, scrambling to fill slots</span>
+                  <span>Emergency call interrupts scheduled inspections</span>
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium mr-2">5:30 PM:</span>
-                  <span>Staff staying late to catch up on reminders</span>
+                  <span>Still coordinating repairs, no time for strategic planning</span>
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium mr-2">7:00 PM:</span>
-                  <span>You're still thinking about tomorrow's chaos</span>
+                  <span>Worried about unresolved tenant issues</span>
                 </li>
               </ul>
             </div>
@@ -115,28 +115,28 @@ const StatusQuoSection = () => {
             <div className="bg-green-50 rounded-xl p-6">
               <h4 className="text-lg font-semibold text-green-800 mb-4 flex items-center">
                 <Zap className="h-5 w-5 mr-2" />
-                Your Practice with FlowIQ
+                Your Property Management with SymAssist
               </h4>
               <ul className="space-y-3 text-sm text-green-700">
                 <li className="flex items-start">
                   <span className="font-medium mr-2">8:00 AM:</span>
-                  <span>AI handled 90% of scheduling overnight</span>
+                  <span>AI triaged overnight requests, vendors already dispatched</span>
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium mr-2">10:30 AM:</span>
-                  <span>All insurance pre-verified, staff focused on patient care</span>
+                  <span>Vendors coordinated automatically, tenants updated via SMS</span>
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium mr-2">2:00 PM:</span>
-                  <span>Zero no-shows thanks to AI reminders, fully booked</span>
+                  <span>Emergency handled seamlessly, no disruption to schedule</span>
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium mr-2">5:30 PM:</span>
-                  <span>Staff leaving on time, no backlog</span>
+                  <span>All maintenance coordinated, time for portfolio growth</span>
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium mr-2">7:00 PM:</span>
-                  <span>You're planning practice growth, not fighting fires</span>
+                  <span>Confident everything is handled with 24/7 oversight</span>
                 </li>
               </ul>
             </div>
@@ -149,12 +149,12 @@ const StatusQuoSection = () => {
             "But Implementation Must Be Complicated, Right?"
           </h3>
           <p className="text-lg text-gray-600 mb-6">
-            Wrong. FlowIQ is designed for practices that can't afford downtime or disruption.
+            Wrong. SymAssist is designed for property managers who can't afford downtime or disruption.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">3 weeks</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">2 weeks</div>
               <div className="text-sm text-gray-600">From chaos to complete automation</div>
             </div>
             <div className="text-center">
@@ -174,9 +174,9 @@ const StatusQuoSection = () => {
             onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
           >
             <Brain className="mr-2 h-5 w-5" />
-            Calculate Your Hidden Losses - Free Assessment
+            Calculate Your Property Management Savings - Free Assessment
           </Button>
-          <p className="text-xs text-gray-500 mt-2">See exactly how much manual processes are costing you</p>
+          <p className="text-xs text-gray-500 mt-2">See exactly how much manual coordination is costing you</p>
         </div>
       </div>
     </section>

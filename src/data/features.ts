@@ -8,37 +8,37 @@ import {
 
 export const agentCategories = [
   {
-    id: "ai-assistants",
-    title: "AI ASSISTANTS",
+    id: "property-management-assistants",
+    title: "PROPERTY MANAGEMENT ASSISTANTS",
     agents: [
       {
         icon: Stethoscope,
-        title: "Clinical Assistant",
-        description: "Comprehensive clinical support including medical scribing, appointment scheduling, patient intake, and clinical documentation automation.",
+        title: "Maintenance Assistant",
+        description: "Intelligent triage and coordination of maintenance requests, vendor dispatch, and work order management with 24/7 human oversight.",
         color: "text-blue-600"
       },
       {
         icon: MessageSquare,
         title: "Communication Assistant",
-        description: "Intelligent patient communication including appointment reminders, follow-ups, patient education, and automated messaging systems.",
+        description: "Multi-channel tenant communication including maintenance updates, lease reminders, and automated messaging via voice, SMS, and email.",
         color: "text-green-600"
       },
       {
         icon: CreditCard,
-        title: "Revenue Assistant",
-        description: "Complete revenue cycle management including claims processing, payment collection, prior authorization, and billing optimization.",
+        title: "Financial Assistant",
+        description: "Rent collection automation, late fee processing, expense tracking, and financial reporting for property portfolios.",
         color: "text-purple-600"
       },
       {
         icon: Settings,
         title: "Operations Assistant",
-        description: "Streamlined operational intelligence including inventory management, workflow optimization, and practice efficiency monitoring.",
+        description: "Vendor management, inspection scheduling, lease renewals, and operational workflow optimization across properties.",
         color: "text-slate-600"
       },
       {
         icon: TrendingUp,
-        title: "Growth Assistant",
-        description: "Strategic practice growth including marketing automation, referral management, patient acquisition, and business intelligence analytics.",
+        title: "Analytics Assistant",
+        description: "Property performance tracking, market analysis, occupancy optimization, and business intelligence for portfolio growth.",
         color: "text-orange-600"
       }
     ]

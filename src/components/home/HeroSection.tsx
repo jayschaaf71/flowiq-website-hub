@@ -8,14 +8,14 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-            The AI Operating System for{" "}
+            The Property Management Assistant That{" "}
             <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-              Professional Practices
+              Never Sleeps
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto px-2">
-            Transform your practice with FlowIQ's specialized AI agents. 
-            Automate scheduling, insurance verification, appointment reminders, patient follow-up, medical scribing, EHR management, claims processing, billing, and business intelligence seamlessly.
+            Combine AI automation with 24/7 human oversight to handle maintenance, 
+            communication, and coordination - so you can focus on growing your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-4 sm:mb-6 px-2">
             <Button 

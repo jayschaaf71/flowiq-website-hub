@@ -6,10 +6,10 @@ const CTASection = () => {
     <section className="py-20 bg-gradient-to-br from-blue-600 to-teal-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-          Ready to Transform Your Practice?
+          Ready to Transform Your Property Management?
         </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-          Join thousands of professionals who have already revolutionized their operations with FlowIQ's AI agents.
+          Join hundreds of property managers who have already revolutionized their operations with SymAssist's AI-powered platform.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
