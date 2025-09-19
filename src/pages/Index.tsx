@@ -15,6 +15,7 @@ import EarlyAccessSignup from "@/components/EarlyAccessSignup";
 import PricingSection from "@/components/PricingSection";
 import TrustSignals from "@/components/TrustSignals";
 import SocialProof from "@/components/SocialProof";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import { useMetaDescription } from "@/hooks/useMetaDescription";
 import { StructuredData } from "@/components/StructuredData";
 
@@ -39,6 +40,7 @@ const Index = () => {
       <SocialProof />
       <Testimonials />
       <PricingSection />
+      <NewsletterSignup />
       <EarlyAccessSignup />
       <AdvisoryBoardSignup />
       <CTASection />
