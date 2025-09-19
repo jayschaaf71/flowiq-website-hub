@@ -65,10 +65,10 @@ export default {
 				brand: {
 					blue: 'hsl(var(--brand-blue))',
 					'blue-hover': 'hsl(var(--brand-blue-hover))',
-					teal: 'hsl(var(--brand-teal))',
-					'teal-hover': 'hsl(var(--brand-teal-hover))',
-					green: 'hsl(var(--brand-green))',
-					'green-hover': 'hsl(var(--brand-green-hover))'
+					cyan: 'hsl(var(--brand-teal))',
+					'cyan-hover': 'hsl(var(--brand-teal-hover))',
+					orange: 'hsl(var(--accent))',
+					'orange-hover': 'hsl(var(--accent))',
 				}
 			},
 			backgroundImage: {
