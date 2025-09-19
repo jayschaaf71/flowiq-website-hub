@@ -13,45 +13,54 @@ const HowItWorks = () => {
     "How SymAssist Works - Property Management Automation"
   );
 
-  const implementationSteps = [
+  const confidenceSteps = [
     {
-      icon: <Target className="h-12 w-12 text-blue-700" />,
-      title: "1. Discovery & Assessment",
-      description: "We analyze your current workflows and identify optimization opportunities tailored to your practice.",
+      icon: <MessageSquare className="h-12 w-12 text-blue-700" />,
+      title: "1. Multi-Channel Intake",
+      description: "Voice, SMS, web portal, and email requests powered by proven VTS communication platform",
       details: [
-        "Comprehensive practice workflow audit",
-        "Current system integration assessment", 
-        "Staff interview and pain point analysis",
-        "Custom implementation roadmap creation"
+        "Instant NLP processing and intent recognition",
+        "Multi-language support (English, Spanish)",
+        "24/7 availability across all channels",
+        "Seamless integration with existing systems"
       ],
-      timeline: "Week 1-2",
-      deliverables: "Practice assessment report, integration plan, timeline"
+      confidenceRange: "Initial Processing"
     },
     {
-      icon: <Cog className="h-12 w-12 text-teal-600" />,
-      title: "2. Setup & Integration",
-      description: "Our expert team seamlessly integrates FlowIQ with your existing systems and processes.",
+      icon: <Target className="h-12 w-12 text-teal-600" />,
+      title: "2. AI Confidence Scoring (0-100%)",
+      description: "Every decision gets evaluated with intelligent confidence thresholds",
       details: [
-        "Zero-disruption deployment process",
-        "EMR and practice management integration",
-        "AI agent training and customization",
-        "Staff training and onboarding sessions"
+        "90%+: Full AI automation with passive monitoring",
+        "70-89%: AI execution with active human oversight",
+        "50-69%: Human review required before action",
+        "<50%: Immediate human takeover"
       ],
-      timeline: "Week 3-4",
-      deliverables: "Fully configured system, trained staff, documentation"
+      confidenceRange: "Decision Routing"
     },
     {
-      icon: <Rocket className="h-12 w-12 text-cyan-600" />,
-      title: "3. Launch & Optimization",
-      description: "Watch your practice transform as FlowIQ continuously learns and optimizes your operations.",
+      icon: <Zap className="h-12 w-12 text-cyan-600" />,
+      title: "3. Intelligent Routing",
+      description: "Smart decision routing ensures the right level of intelligence handles each situation",
       details: [
-        "Gradual rollout with monitoring",
-        "AI performance optimization",
-        "Continuous learning and improvement",
-        "Ongoing support and guidance"
+        "High-confidence: AI handles end-to-end",
+        "Medium-confidence: AI acts, humans monitor",
+        "Low-confidence: Humans take control seamlessly",
+        "Emergency situations: Instant human escalation"
       ],
-      timeline: "Week 5+",
-      deliverables: "Optimized workflows, performance reports, ongoing support"
+      confidenceRange: "Action Execution"
+    },
+    {
+      icon: <Users className="h-12 w-12 text-green-600" />,
+      title: "4. Seamless Human Integration",
+      description: "Expert VAs in Mexico provide 24/7 coverage with invisible handoffs",
+      details: [
+        "Complete context transfer in under 2 seconds",
+        "Customers never know when handoff occurs",
+        "Continuous AI learning from human decisions",
+        "Rigorous quality assurance and training"
+      ],
+      confidenceRange: "Human Oversight"
     }
   ];
 
@@ -90,11 +99,11 @@ const HowItWorks = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              How SymAssist Works
+              How Our Invisible Intelligence Works
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              From tenant request to completion, SymAssist handles the entire workflow 
-              with AI efficiency and human reliability.
+              Revolutionary confidence-based AI that knows when to hand off to humans - 
+              delivering perfect service while customers never know the difference.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -111,99 +120,163 @@ const HowItWorks = () => {
         </div>
       </section>
 
-      {/* Key Process Features */}
+      {/* Confidence-Based Process */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              How SymAssist Works
+              The 4-Step Confidence Routing Process
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From tenant request to completion with AI efficiency and human reliability.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Experience the perfect blend of AI efficiency and human expertise, delivered seamlessly 
+              through our revolutionary confidence-based routing system.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {processSteps.map((step, index) => (
-              <Card key={index} className="border-none shadow-lg text-center">
-                <CardHeader>
-                  <div className="mx-auto mb-4 p-3 bg-slate-50 rounded-full w-fit">
-                    {step.icon}
+          <div className="space-y-16">
+            {confidenceSteps.map((step, index) => (
+              <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+                <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                  <div className="flex items-center mb-6">
+                    <div className="p-4 bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl mr-6">
+                      {step.icon}
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-primary mb-2">{step.confidenceRange}</div>
+                      <h3 className="text-2xl font-bold text-gray-900">{step.title}</h3>
+                    </div>
                   </div>
-                  <CardTitle className="text-xl">{step.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-600">
+                  
+                  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                     {step.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
+                  </p>
+                  
+                  <ul className="space-y-3">
+                    {step.details.map((detail, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-600">{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+                  <Card className="border-none shadow-xl bg-gradient-to-br from-gray-50 to-blue-50 p-8">
+                    <div className="text-center">
+                      <div className="text-6xl mb-4">
+                        {index === 0 && '📱'}
+                        {index === 1 && '🧠'}
+                        {index === 2 && '⚡'}
+                        {index === 3 && '👥'}
+                      </div>
+                      <div className="text-lg font-semibold text-primary mb-2">
+                        Step {index + 1}
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        {step.confidenceRange}
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+              </div>
             ))}
           </div>
 
-          {/* ROI Metrics */}
-          <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
-              Proven Results for Property Managers
+          {/* Confidence Scoring Visualization */}
+          <div className="mt-20 bg-gradient-to-r from-blue-600 to-teal-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold text-center mb-8">
+              AI Confidence Scoring in Action
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {roiMetrics.map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-2">
-                    {item.icon}
-                  </div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">
-                    {item.metric}
-                  </div>
-                  <div className="text-sm text-gray-600">
-                    {item.description}
-                  </div>
-                </div>
-              ))}
+            <div className="grid md:grid-cols-4 gap-6">
+              <div className="text-center p-4 bg-white/10 rounded-lg">
+                <div className="text-3xl font-bold mb-2">90%+</div>
+                <div className="text-sm opacity-90">Full AI Automation</div>
+                <div className="text-xs mt-2 opacity-75">Passive monitoring only</div>
+              </div>
+              <div className="text-center p-4 bg-white/10 rounded-lg">
+                <div className="text-3xl font-bold mb-2">70-89%</div>
+                <div className="text-sm opacity-90">AI + Human Oversight</div>
+                <div className="text-xs mt-2 opacity-75">Active monitoring</div>
+              </div>
+              <div className="text-center p-4 bg-white/10 rounded-lg">
+                <div className="text-3xl font-bold mb-2">50-69%</div>
+                <div className="text-sm opacity-90">Human Review Required</div>
+                <div className="text-xs mt-2 opacity-75">Before action taken</div>
+              </div>
+              <div className="text-center p-4 bg-white/10 rounded-lg">
+                <div className="text-3xl font-bold mb-2">&lt;50%</div>
+                <div className="text-sm opacity-90">Human Takeover</div>
+                <div className="text-xs mt-2 opacity-75">Immediate handoff</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Implementation Process */}
+      {/* Results Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              How It Works
+              Proven Results from Our Confidence Routing
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Four simple steps from tenant request to completion with 24/7 oversight.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              See the measurable impact of AI-human integration on property management operations.
             </p>
           </div>
           
-          <div className="space-y-12">
-            <div className="max-w-4xl mx-auto">
-              <div className="grid lg:grid-cols-4 gap-8">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">📱</div>
-                  <div className="text-primary font-bold text-lg mb-2">01</div>
-                  <h3 className="text-xl font-semibold mb-3">Tenant Reports Issue</h3>
-                  <p className="text-gray-600">Via voice, SMS, or web form - SymAssist captures every request</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {roiMetrics.map((item, index) => (
+              <Card key={index} className="border-none shadow-lg text-center p-6">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-gradient-to-br from-blue-50 to-teal-50 rounded-full">
+                    {item.icon}
+                  </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🤖</div>
-                  <div className="text-primary font-bold text-lg mb-2">02</div>
-                  <h3 className="text-xl font-semibold mb-3">AI Analyzes & Triages</h3>
-                  <p className="text-gray-600">Intelligent classification determines urgency and required trade</p>
+                <div className="text-3xl font-bold text-gray-900 mb-2">
+                  {item.metric}
                 </div>
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🔧</div>
-                  <div className="text-primary font-bold text-lg mb-2">03</div>
-                  <h3 className="text-xl font-semibold mb-3">Smart Vendor Dispatch</h3>
-                  <p className="text-gray-600">Best-match vendor selected based on availability, rating, and location</p>
+                <div className="text-sm text-gray-600 leading-relaxed">
+                  {item.description}
                 </div>
-                <div className="text-center">
-                  <div className="text-6xl mb-4">👥</div>
-                  <div className="text-primary font-bold text-lg mb-2">04</div>
-                  <h3 className="text-xl font-semibold mb-3">Human Oversight</h3>
-                  <p className="text-gray-600">24/7 monitoring ensures quality and handles complex situations</p>
+              </Card>
+            ))}
+          </div>
+          
+          {/* Real-World Example */}
+          <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
+              Real-World Example: Emergency Maintenance Request
+            </h3>
+            <div className="grid md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="w-12 h-12 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                  <span className="text-xl">📱</span>
                 </div>
+                <div className="font-semibold mb-2">11:30 PM</div>
+                <div className="text-sm text-gray-600">Tenant reports broken heater via SMS</div>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center">
+                  <span className="text-xl">🧠</span>
+                </div>
+                <div className="font-semibold mb-2">11:30 PM</div>
+                <div className="text-sm text-gray-600">AI scores 45% confidence - triggers human review</div>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
+                  <span className="text-xl">👥</span>
+                </div>
+                <div className="font-semibold mb-2">11:31 PM</div>
+                <div className="text-sm text-gray-600">Expert VA takes over, identifies emergency</div>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
+                  <span className="text-xl">🔧</span>
+                </div>
+                <div className="font-semibold mb-2">11:35 PM</div>
+                <div className="text-sm text-gray-600">Emergency HVAC tech dispatched, tenant updated</div>
               </div>
             </div>
           </div>
@@ -214,10 +287,11 @@ const HowItWorks = () => {
       <section className="py-20 bg-gradient-to-br from-blue-600 to-teal-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Start Your Transformation?
+            Experience Invisible Intelligence in Action
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join hundreds of property managers who have already revolutionized their operations with SymAssist.
+            See how confidence-based routing can transform your property management operations. 
+            Schedule a personalized demo today.
           </p>
           <Button 
             size="lg" 
