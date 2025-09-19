@@ -5,36 +5,28 @@ import { Star } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Marcus Thompson",
+      name: "Sarah Chen",
       title: "Property Manager",
-      practice: "Skyline Properties",
-      content: "SymAssist's Maintenance Assistant has been a game-changer. We've reduced emergency calls by 60% and our team can focus on tenant relations instead of constant coordination. The vendor dispatch automation works flawlessly.",
+      practice: "Metro Property Group",
+      content: "SymAssist handles 90% of our maintenance requests automatically, but when complex issues arise, their human team steps in seamlessly. Our tenants can't tell the difference.",
       rating: 5,
-      avatar: "MT"
+      avatar: "SC"
     },
     {
-      name: "Sarah Rodriguez",
-      title: "Portfolio Director",
-      practice: "Metro Real Estate Group",
-      content: "The financial management automation has cut our rent collection time in half. We're getting paid faster and spending 70% less time on administrative tasks. ROI was immediate.",
+      name: "Mike Rodriguez",
+      title: "Portfolio Director", 
+      practice: "Sunrise Properties",
+      content: "The confidence-based routing is genius. Simple requests get handled instantly by AI, while complex situations get expert human attention. It's the best of both worlds.",
       rating: 5,
-      avatar: "SR"
+      avatar: "MR"
     },
     {
-      name: "David Chen",
-      title: "Asset Manager",
-      practice: "Greenfield Property Management",
-      content: "Tenant communication has never been easier. Our satisfaction scores increased by 40% and we're seeing fewer complaints than ever. The AI handles everything seamlessly.",
-      rating: 5,
-      avatar: "DC"
-    },
-    {
-      name: "Jessica Wilson",
+      name: "Lisa Thompson",
       title: "Operations Manager",
-      practice: "Prime Property Solutions",
-      content: "SymAssist transformed our maintenance process. We capture 3x more maintenance requests through our portal and the automation works 24/7. Our response time has doubled.",
+      practice: "Urban Living Management",
+      content: "We've reduced our maintenance coordination costs by 40% while improving tenant satisfaction. The offshore human team is incredibly professional.",
       rating: 5,
-      avatar: "JW"
+      avatar: "LT"
     }
   ];
 
@@ -71,8 +63,8 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+{/* Testimonials Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardContent className="p-8">

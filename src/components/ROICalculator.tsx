@@ -8,16 +8,14 @@ import { Calculator, TrendingUp, DollarSign, Clock, Users, Brain } from "lucide-
 
 const ROICalculator = () => {
   const [inputs, setInputs] = useState({
-    frontDeskStaff: 2,
-    hourlyWage: 18,
-    hoursPerWeek: 40,
-    appointmentsPerWeek: 150,
-    noShowRate: 20,
-    averageAppointmentValue: 200,
-    timeSpentOnScheduling: 30,
-    timeSpentOnInsurance: 25,
-    timeSpentOnFollowUp: 15,
-    claimsProcessingTime: 45
+    numberOfUnits: 50,
+    maintenanceRequestsPerMonth: 25,
+    costPerMaintenanceCoordination: 45,
+    propertyManagerHourlyRate: 25,
+    currentTenantSatisfactionScore: 75,
+    averageResponseTimeHours: 6,
+    vendorManagementHours: 10,
+    emergencyCallsPerMonth: 8
   });
 
   const [results, setResults] = useState({
@@ -29,40 +27,39 @@ const ROICalculator = () => {
     paybackMonths: 0
   });
 
-  const symAssistMonthlyCost = 500; // Estimated monthly cost
+  const symAssistMonthlyCost = inputs.numberOfUnits * 199; // $199 per unit per month
 
   useEffect(() => {
     calculateROI();
   }, [inputs]);
 
   const calculateROI = () => {
-    // Current monthly staff costs
-    const monthlyStaffCost = inputs.frontDeskStaff * inputs.hourlyWage * inputs.hoursPerWeek * 4.33;
+    // Current monthly property management costs
+    const currentMaintenanceCoordinationCost = inputs.maintenanceRequestsPerMonth * inputs.costPerMaintenanceCoordination;
+    const vendorManagementCost = inputs.vendorManagementHours * inputs.propertyManagerHourlyRate;
+    const emergencyHandlingCost = inputs.emergencyCallsPerMonth * inputs.propertyManagerHourlyRate * 2; // 2 hours per emergency
+    const totalCurrentCosts = currentMaintenanceCoordinationCost + vendorManagementCost + emergencyHandlingCost;
     
-    // Time savings calculations (in hours per week)
-    const schedulingTimeSaved = (inputs.timeSpentOnScheduling / 100) * inputs.hoursPerWeek * inputs.frontDeskStaff * 0.7; // 70% reduction
-    const insuranceTimeSaved = (inputs.timeSpentOnInsurance / 100) * inputs.hoursPerWeek * inputs.frontDeskStaff * 0.8; // 80% reduction
-    const followUpTimeSaved = (inputs.timeSpentOnFollowUp / 100) * inputs.hoursPerWeek * inputs.frontDeskStaff * 0.6; // 60% reduction
-    const claimsTimeSaved = (inputs.claimsProcessingTime / 100) * inputs.hoursPerWeek * inputs.frontDeskStaff * 0.5; // 50% reduction
+    // Savings calculations with SymAssist automation
+    const maintenanceCoordinationSavings = currentMaintenanceCoordinationCost * 0.75; // 75% reduction
+    const vendorManagementSavings = vendorManagementCost * 0.60; // 60% reduction  
+    const emergencyHandlingSavings = emergencyHandlingCost * 0.45; // 45% faster response
+    const totalMonthlySavings = maintenanceCoordinationSavings + vendorManagementSavings + emergencyHandlingSavings;
     
-    const totalTimeSavedPerWeek = schedulingTimeSaved + insuranceTimeSaved + followUpTimeSaved + claimsTimeSaved;
-    const monthlyCostSavings = totalTimeSavedPerWeek * 4.33 * inputs.hourlyWage;
-    
-    // Revenue improvements
-    const noShowReduction = inputs.noShowRate * 0.5; // 50% reduction in no-shows
-    const additionalAppointments = (inputs.appointmentsPerWeek * (noShowReduction / 100)) * 4.33;
-    const monthlyAdditionalRevenue = additionalAppointments * inputs.averageAppointmentValue;
+    // Improved tenant satisfaction and retention benefits
+    const satisfactionImprovement = (100 - inputs.currentTenantSatisfactionScore) * 0.5; // 50% improvement in gap
+    const tenantRetentionValue = inputs.numberOfUnits * 50 * (satisfactionImprovement / 100); // $50 per unit value
     
     // Total monthly benefit
-    const totalMonthlyBenefit = monthlyCostSavings + monthlyAdditionalRevenue;
+    const totalMonthlyBenefit = totalMonthlySavings + tenantRetentionValue;
     const netBenefit = totalMonthlyBenefit - symAssistMonthlyCost;
     const roiPercentage = (netBenefit / symAssistMonthlyCost) * 100;
     const paybackMonths = symAssistMonthlyCost / totalMonthlyBenefit;
 
     setResults({
-      currentCosts: monthlyStaffCost,
-      potentialSavings: monthlyCostSavings,
-      additionalRevenue: monthlyAdditionalRevenue,
+      currentCosts: totalCurrentCosts,
+      potentialSavings: totalMonthlySavings,
+      additionalRevenue: tenantRetentionValue,
       totalBenefit: totalMonthlyBenefit,
       roiPercentage: roiPercentage,
       paybackMonths: paybackMonths
@@ -106,57 +103,58 @@ const ROICalculator = () => {
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
-                <Label htmlFor="frontDeskStaff">Number of Front Desk Staff</Label>
+                <Label htmlFor="numberOfUnits">Number of Properties/Units</Label>
                 <Input
-                  id="frontDeskStaff"
+                  id="numberOfUnits"
                   type="number"
-                  value={inputs.frontDeskStaff}
-                  onChange={(e) => handleInputChange('frontDeskStaff', parseInt(e.target.value) || 0)}
+                  value={inputs.numberOfUnits}
+                  onChange={(e) => handleInputChange('numberOfUnits', parseInt(e.target.value) || 0)}
                   className="mt-1"
                 />
               </div>
               
               <div>
-                <Label htmlFor="hourlyWage">Average Hourly Wage ($)</Label>
+                <Label htmlFor="maintenanceRequestsPerMonth">Average Maintenance Requests per Month</Label>
                 <Input
-                  id="hourlyWage"
+                  id="maintenanceRequestsPerMonth"
                   type="number"
-                  value={inputs.hourlyWage}
-                  onChange={(e) => handleInputChange('hourlyWage', parseInt(e.target.value) || 0)}
+                  value={inputs.maintenanceRequestsPerMonth}
+                  onChange={(e) => handleInputChange('maintenanceRequestsPerMonth', parseInt(e.target.value) || 0)}
                   className="mt-1"
                 />
               </div>
               
               <div>
-                <Label htmlFor="hoursPerWeek">Hours Per Week (per staff member)</Label>
+                <Label htmlFor="costPerMaintenanceCoordination">Current Cost per Maintenance Coordination ($)</Label>
                 <Input
-                  id="hoursPerWeek"
+                  id="costPerMaintenanceCoordination"
                   type="number"
-                  value={inputs.hoursPerWeek}
-                  onChange={(e) => handleInputChange('hoursPerWeek', parseInt(e.target.value) || 0)}
+                  value={inputs.costPerMaintenanceCoordination}
+                  onChange={(e) => handleInputChange('costPerMaintenanceCoordination', parseInt(e.target.value) || 0)}
                   className="mt-1"
                 />
               </div>
               
               <div>
-                <Label htmlFor="appointmentsPerWeek">Appointments Per Week</Label>
+                <Label htmlFor="propertyManagerHourlyRate">Average Property Manager Hourly Rate ($)</Label>
                 <Input
-                  id="appointmentsPerWeek"
+                  id="propertyManagerHourlyRate"
                   type="number"
-                  value={inputs.appointmentsPerWeek}
-                  onChange={(e) => handleInputChange('appointmentsPerWeek', parseInt(e.target.value) || 0)}
+                  value={inputs.propertyManagerHourlyRate}
+                  onChange={(e) => handleInputChange('propertyManagerHourlyRate', parseInt(e.target.value) || 0)}
                   className="mt-1"
                 />
               </div>
               
               <div>
-                <Label htmlFor="averageAppointmentValue">Average Appointment Value ($)</Label>
+                <Label htmlFor="currentTenantSatisfactionScore">Current Tenant Satisfaction Score (%)</Label>
                 <Input
-                  id="averageAppointmentValue"
+                  id="currentTenantSatisfactionScore"
                   type="number"
-                  value={inputs.averageAppointmentValue}
-                  onChange={(e) => handleInputChange('averageAppointmentValue', parseInt(e.target.value) || 0)}
+                  value={inputs.currentTenantSatisfactionScore}
+                  onChange={(e) => handleInputChange('currentTenantSatisfactionScore', parseInt(e.target.value) || 0)}
                   className="mt-1"
+                  max="100"
                 />
               </div>
             </CardContent>
@@ -171,56 +169,34 @@ const ROICalculator = () => {
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
-                <Label>Scheduling & Appointment Management: {inputs.timeSpentOnScheduling}%</Label>
+                <Label>Average Response Time (hours): {inputs.averageResponseTimeHours}</Label>
                 <Slider
-                  value={[inputs.timeSpentOnScheduling]}
-                  onValueChange={(value) => handleInputChange('timeSpentOnScheduling', value[0])}
-                  max={50}
-                  step={5}
+                  value={[inputs.averageResponseTimeHours]}
+                  onValueChange={(value) => handleInputChange('averageResponseTimeHours', value[0])}
+                  max={24}
+                  step={1}
                   className="mt-2"
                 />
               </div>
               
               <div>
-                <Label>Insurance Verification: {inputs.timeSpentOnInsurance}%</Label>
+                <Label>Vendor Management Hours per Month: {inputs.vendorManagementHours}</Label>
                 <Slider
-                  value={[inputs.timeSpentOnInsurance]}
-                  onValueChange={(value) => handleInputChange('timeSpentOnInsurance', value[0])}
-                  max={50}
-                  step={5}
-                  className="mt-2"
-                />
-              </div>
-              
-              <div>
-                <Label>Patient Follow-up: {inputs.timeSpentOnFollowUp}%</Label>
-                <Slider
-                  value={[inputs.timeSpentOnFollowUp]}
-                  onValueChange={(value) => handleInputChange('timeSpentOnFollowUp', value[0])}
-                  max={50}
-                  step={5}
-                  className="mt-2"
-                />
-              </div>
-              
-              <div>
-                <Label>Claims Processing: {inputs.claimsProcessingTime}%</Label>
-                <Slider
-                  value={[inputs.claimsProcessingTime]}
-                  onValueChange={(value) => handleInputChange('claimsProcessingTime', value[0])}
-                  max={50}
-                  step={5}
-                  className="mt-2"
-                />
-              </div>
-              
-              <div>
-                <Label>Current No-Show Rate: {inputs.noShowRate}%</Label>
-                <Slider
-                  value={[inputs.noShowRate]}
-                  onValueChange={(value) => handleInputChange('noShowRate', value[0])}
+                  value={[inputs.vendorManagementHours]}
+                  onValueChange={(value) => handleInputChange('vendorManagementHours', value[0])}
                   max={40}
-                  step={5}
+                  step={2}
+                  className="mt-2"
+                />
+              </div>
+              
+              <div>
+                <Label>Emergency Calls per Month: {inputs.emergencyCallsPerMonth}</Label>
+                <Slider
+                  value={[inputs.emergencyCallsPerMonth]}
+                  onValueChange={(value) => handleInputChange('emergencyCallsPerMonth', value[0])}
+                  max={20}
+                  step={1}
                   className="mt-2"
                 />
               </div>
@@ -255,17 +231,17 @@ const ROICalculator = () => {
               
               <div className="space-y-4">
                 <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-                  <span className="text-gray-700">Monthly Staff Costs</span>
+                  <span className="text-gray-700">Current Monthly Costs</span>
                   <span className="font-semibold">{formatCurrency(results.currentCosts)}</span>
                 </div>
                 
                 <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg">
-                  <span className="text-gray-700">Cost Savings</span>
+                  <span className="text-gray-700">Operational Savings</span>
                   <span className="font-semibold text-green-600">+{formatCurrency(results.potentialSavings)}</span>
                 </div>
                 
                 <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
-                  <span className="text-gray-700">Additional Revenue</span>
+                  <span className="text-gray-700">Tenant Retention Value</span>
                   <span className="font-semibold text-blue-600">+{formatCurrency(results.additionalRevenue)}</span>
                 </div>
                 
@@ -298,13 +274,13 @@ const ROICalculator = () => {
                 <div className="flex justify-between">
                   <span>Time Saved Per Year:</span>
                   <span className="font-bold text-blue-600">
-                    {Math.round((results.potentialSavings / inputs.hourlyWage) * 12)} hours
+                    {Math.round((results.potentialSavings / inputs.propertyManagerHourlyRate) * 12)} hours
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Additional Appointments:</span>
+                  <span>Maintenance Requests Automated:</span>
                   <span className="font-bold text-purple-600">
-                    {Math.round((results.additionalRevenue / inputs.averageAppointmentValue) * 12)}
+                    {Math.round(inputs.maintenanceRequestsPerMonth * 0.85 * 12)}
                   </span>
                 </div>
               </div>

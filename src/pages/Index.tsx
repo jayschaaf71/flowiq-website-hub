@@ -12,6 +12,7 @@ import InvisibleIntelligenceSection from "@/components/home/InvisibleIntelligenc
 import ValuePropositionsSection from "@/components/home/ValuePropositionsSection";
 import AdvisoryBoardSignup from "@/components/AdvisoryBoardSignup";
 import EarlyAccessSignup from "@/components/EarlyAccessSignup";
+import PricingSection from "@/components/PricingSection";
 import { useMetaDescription } from "@/hooks/useMetaDescription";
 import { StructuredData } from "@/components/StructuredData";
 
@@ -33,6 +34,7 @@ const Index = () => {
       <FeaturesSection />
       <UseCasesSection />
       <Testimonials />
+      <PricingSection />
       <EarlyAccessSignup />
       <AdvisoryBoardSignup />
       <CTASection />

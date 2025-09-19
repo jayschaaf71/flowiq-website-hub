@@ -5,6 +5,7 @@ import ProductHero from "@/components/ProductHero";
 import AgentCards from "@/components/AgentCards";
 import DetailedFeatures from "@/components/DetailedFeatures";
 import ProductBenefits from "@/components/ProductBenefits";
+import PricingSection from "@/components/PricingSection";
 import { useMetaDescription } from "@/hooks/useMetaDescription";
 import { StructuredData } from "@/components/StructuredData";
 
@@ -22,6 +23,7 @@ const Product = () => {
       <AgentCards />
       <DetailedFeatures />
       <ProductBenefits />
+      <PricingSection />
       <Footer />
     </div>
   );

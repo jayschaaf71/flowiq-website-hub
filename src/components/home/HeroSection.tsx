@@ -43,15 +43,15 @@ const HeroSection = () => {
               className="px-8 py-4 text-lg"
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
-              Schedule Free Demo
+              Start Free 30-Day Trial
             </Button>
             <Button 
               size="lg" 
               variant="outline"
               className="px-8 py-4 text-lg border-primary text-primary hover:bg-blue-50"
-              onClick={() => window.open('https://remarkable-flan-7ac120.netlify.app', '_blank')}
+              asChild
             >
-              Watch 2-Min Video
+              <Link to="/roi-calculator">Calculate Your ROI</Link>
             </Button>
           </div>
           <div className="flex items-center justify-center space-x-6 text-sm text-gray-500">
