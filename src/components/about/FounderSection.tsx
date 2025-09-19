@@ -7,7 +7,7 @@ const FounderSection = () => {
       name: "Jason Schaaf",
       title: "Co-Founder & CEO",
       background: "After more than two decades leading sales for cutting-edge tech companies, Jason Schaaf saw a pattern: property managers were overwhelmed by clunky systems, missed opportunities, and manual workflows. That insight led to SymAssist — an AI-native platform designed for modern property management including residential, commercial, and mixed-use properties. Jason's mission is to replace busywork with automation so property managers can focus on growth, not chaos.",
-      expertise: "Leadership, Emerging AI technology and property management operations",
+      expertise: "SAAS go-to-market leadership and emerging AI technology",
       image: "/lovable-uploads/a070fea9-ce42-4b65-9f49-197e02aa4ef0.png"
     },
     {
