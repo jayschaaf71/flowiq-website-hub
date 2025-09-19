@@ -14,7 +14,6 @@ createRoot(document.getElementById("root")!).render(
       <SecurityHeaders />
       <GlobalSEO />
       <MobileNavOptimizations />
-      <Analytics />
       <App />
     </ErrorBoundary>
   </StrictMode>

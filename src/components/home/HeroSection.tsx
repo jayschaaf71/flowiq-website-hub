@@ -21,7 +21,7 @@ const HeroSection = () => {
           <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto mb-8 text-gray-700">
             <div className="flex items-center space-x-3">
               <div className="w-2 h-2 bg-primary rounded-full"></div>
-              <span className="text-sm">Invisible Intelligence: Customers never know when AI hands off to humans</span>
+              <span className="text-sm">Seamless AI-to-Human Handoffs - Customers Never Notice</span>
             </div>
             <div className="flex items-center space-x-3">
               <div className="w-2 h-2 bg-primary rounded-full"></div>
