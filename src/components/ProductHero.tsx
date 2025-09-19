@@ -17,7 +17,7 @@ const ProductHero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              variant="brand-orange"
+              variant="brand-blue"
               className="px-8 py-3 text-lg"
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
@@ -26,7 +26,7 @@ const ProductHero = () => {
             </Button>
             <Button 
               size="lg" 
-              variant="brand-cyan"
+              variant="cta-secondary"
               className="px-8 py-3 text-lg"
               onClick={() => window.open('https://remarkable-flan-7ac120.netlify.app', '_blank')}
             >
