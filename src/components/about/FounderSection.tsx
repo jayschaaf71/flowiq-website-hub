@@ -13,8 +13,8 @@ const FounderSection = () => {
     {
       name: "Jeremy Aspen",
       title: "Co-Founder, President & COO",
-      background: "Jeremy brings deep technical expertise and a passion for building scalable AI systems that solve real-world problems. With extensive experience in software architecture and machine learning, Jeremy leads SymAssist's technical vision, ensuring our AI-native platform delivers intelligent automation that property managers can trust and rely on.",
-      expertise: "Software Architecture, AI/ML Systems, and Technical Leadership",
+      background: "Jeremy is an expert in the property management space and was previously co-founder of Anaquim, which specializes in remote property management virtual assistants. With deep operational experience and technical expertise, Jeremy brings invaluable insights into the challenges property managers face daily, helping shape SymAssist's AI-native platform to deliver solutions that truly address real-world property management needs.",
+      expertise: "Property Management Operations, Virtual Assistant Solutions, and Business Strategy",
       image: "/lovable-uploads/jeremy-aspen.png"
     }
   ];
