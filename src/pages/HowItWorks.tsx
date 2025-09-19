@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ConfidenceRoutingVisualization from "@/components/ConfidenceRoutingVisualization";
 import { useMetaDescription } from "@/hooks/useMetaDescription";
 import { StructuredData } from "@/components/StructuredData";
 import { Clock, Brain, Users, CheckCircle, ArrowRight, Zap, Shield } from "lucide-react";
@@ -188,7 +189,23 @@ const HowItWorks = () => {
           </div>
         </div>
       </section>
-      
+
+      {/* Interactive Confidence Routing */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Experience Confidence-Based Routing
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              See how our AI intelligently decides when to handle requests automatically 
+              or hand off to human experts based on confidence levels.
+            </p>
+          </div>
+          <ConfidenceRoutingVisualization />
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

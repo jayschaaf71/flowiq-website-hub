@@ -290,7 +290,7 @@ const ROICalculator = () => {
           <div className="text-center">
             <Button 
               size="lg" 
-              variant="brand-orange"
+              variant="brand-blue"
               className="px-8 py-3 text-lg"
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >

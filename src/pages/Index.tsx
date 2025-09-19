@@ -13,6 +13,8 @@ import ValuePropositionsSection from "@/components/home/ValuePropositionsSection
 import AdvisoryBoardSignup from "@/components/AdvisoryBoardSignup";
 import EarlyAccessSignup from "@/components/EarlyAccessSignup";
 import PricingSection from "@/components/PricingSection";
+import TrustSignals from "@/components/TrustSignals";
+import SocialProof from "@/components/SocialProof";
 import { useMetaDescription } from "@/hooks/useMetaDescription";
 import { StructuredData } from "@/components/StructuredData";
 
@@ -27,12 +29,14 @@ const Index = () => {
       <StructuredData type="homepage" />
       <Navigation />
       <HeroSection />
+      <TrustSignals />
       <StatsSection />
       <InvisibleIntelligenceSection />
       <StatusQuoSection />
       <ValuePropositionsSection />
       <FeaturesSection />
       <UseCasesSection />
+      <SocialProof />
       <Testimonials />
       <PricingSection />
       <EarlyAccessSignup />
