@@ -12,7 +12,7 @@ const FounderSection = () => {
     },
     {
       name: "Jeremy Aspen",
-      title: "Co-Founder & CTO",
+      title: "Co-Founder, President & COO",
       background: "Jeremy brings deep technical expertise and a passion for building scalable AI systems that solve real-world problems. With extensive experience in software architecture and machine learning, Jeremy leads SymAssist's technical vision, ensuring our AI-native platform delivers intelligent automation that property managers can trust and rely on.",
       expertise: "Software Architecture, AI/ML Systems, and Technical Leadership",
       image: "/lovable-uploads/a8c1c489-0de5-4e86-91a0-699d1348e3cb.png" // Using existing placeholder
