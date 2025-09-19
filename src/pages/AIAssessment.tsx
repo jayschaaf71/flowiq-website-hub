@@ -6,7 +6,7 @@ const AIAssessment = () => {
   return (
     <>
       <Helmet>
-        <title>AI Readiness Assessment - FlowIQ</title>
+        <title>AI Readiness Assessment - SymAssist</title>
         <meta 
           name="description" 
           content="Get a comprehensive AI readiness assessment for your healthcare practice. Custom recommendations, implementation roadmap, and expert consultation included." 

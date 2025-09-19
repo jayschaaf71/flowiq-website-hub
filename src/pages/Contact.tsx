@@ -11,8 +11,8 @@ import { StructuredData } from "@/components/StructuredData";
 
 const Contact = () => {
   useMetaDescription(
-    "Contact FlowIQ to learn how our AI agents can transform your practice operations. Schedule a demo, get pricing information, or speak with our team about custom solutions.",
-    "Contact FlowIQ - Get Your AI Practice Automation Demo"
+    "Contact SymAssist to learn how our AI-powered property management assistant can transform your operations. Schedule a demo, get pricing information, or speak with our team about custom solutions.",
+    "Contact SymAssist - Get Your AI Property Management Demo"
   );
 
   return (
@@ -25,11 +25,11 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Get in Touch with FlowIQ
+              Get in Touch with SymAssist
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Ready to transform your practice operations? We're here to answer your questions 
-              and show you exactly how FlowIQ can solve your specific challenges.
+              and show you exactly how SymAssist can solve your specific property management challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -62,10 +62,10 @@ const Contact = () => {
       <section className="py-20 bg-gradient-to-br from-blue-600 to-teal-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to See FlowIQ in Action?
+            Ready to See SymAssist in Action?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Book a live demo and see exactly how FlowIQ can transform your practice operations.
+            Book a live demo and see exactly how SymAssist can transform your property management operations.
           </p>
           <Button 
             size="lg" 

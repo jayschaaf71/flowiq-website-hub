@@ -6,8 +6,8 @@ import { StructuredData } from "@/components/StructuredData";
 
 const LaunchChecklistPage = () => {
   useMetaDescription(
-    "FlowIQ Launch Checklist - Track your pre-launch progress across SEO, performance, legal compliance, and technical readiness.",
-    "FlowIQ Launch Checklist - Pre-Launch Progress Tracker"
+    "SymAssist Launch Checklist - Track your pre-launch progress across SEO, performance, legal compliance, and technical readiness.",
+    "SymAssist Launch Checklist - Pre-Launch Progress Tracker"
   );
 
   return (
@@ -23,7 +23,7 @@ const LaunchChecklistPage = () => {
               Launch Readiness Checklist
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Comprehensive pre-launch checklist ensuring your FlowIQ website is optimized, 
+              Comprehensive pre-launch checklist ensuring your SymAssist website is optimized, 
               compliant, and ready for production deployment.
             </p>
           </div>

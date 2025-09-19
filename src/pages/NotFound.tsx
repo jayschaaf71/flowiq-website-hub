@@ -10,8 +10,8 @@ const NotFound = () => {
   const location = useLocation();
 
   useMetaDescription(
-    "Page not found - The page you're looking for doesn't exist. Return to FlowIQ's homepage to explore our AI practice automation solutions.",
-    "404 - Page Not Found | FlowIQ"
+    "Page not found - The page you're looking for doesn't exist. Return to SymAssist's homepage to explore our AI property management solutions.",
+    "404 - Page Not Found | SymAssist"
   );
 
   useEffect(() => {

@@ -10,8 +10,8 @@ import { StructuredData } from "@/components/StructuredData";
 
 const About = () => {
   useMetaDescription(
-    "Learn about FlowIQ's mission to transform professional practices with AI automation. Meet our founder and discover how we're revolutionizing healthcare, dental, legal, and professional service operations.",
-    "About FlowIQ - Transforming Professional Practices with AI"
+    "Learn about SymAssist's mission to transform property management with AI automation and 24/7 human oversight. Meet our founder and discover how we're revolutionizing property operations.",
+    "About SymAssist - Transforming Property Management with AI"
   );
 
   return (

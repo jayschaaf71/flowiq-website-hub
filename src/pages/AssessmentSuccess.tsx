@@ -57,7 +57,7 @@ const AssessmentSuccess = () => {
   return (
     <>
       <Helmet>
-        <title>Assessment Purchase Confirmed - FlowIQ</title>
+        <title>Assessment Purchase Confirmed - SymAssist</title>
         <meta name="description" content="Your AI assessment purchase has been confirmed. Check your email for next steps." />
       </Helmet>
       

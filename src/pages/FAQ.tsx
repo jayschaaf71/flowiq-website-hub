@@ -10,8 +10,8 @@ import { StructuredData } from "@/components/StructuredData";
 
 const FAQ = () => {
   useMetaDescription(
-    "Get answers to frequently asked questions about FlowIQ's AI agents, implementation, security, HIPAA compliance, pricing, and support. 99.9% uptime, 24/7 support, 60-90 days to ROI.",
-    "FlowIQ FAQ - Everything You Need to Know About AI Practice Automation"
+    "Get answers to frequently asked questions about SymAssist's AI-powered property management, implementation, security, privacy compliance, pricing, and support. 24/7 human oversight, proven results.",
+    "SymAssist FAQ - Everything You Need to Know About AI Property Management"
   );
 
   const faqCategories = [
@@ -20,20 +20,20 @@ const FAQ = () => {
       title: "Getting Started",
       faqs: [
         {
-          question: "How long does it take to implement FlowIQ?",
-          answer: "Most practices are fully operational with FlowIQ within 2-4 weeks. Our implementation process includes discovery (1-2 weeks), setup and integration (1-2 weeks), and launch optimization (ongoing). We work around your schedule to minimize disruption."
+          question: "How long does it take to implement SymAssist?",
+          answer: "Most property management companies are fully operational with SymAssist within 2-4 weeks. Our implementation process includes discovery (1-2 weeks), setup and integration (1-2 weeks), and launch optimization (ongoing). We work around your schedule to minimize disruption."
         },
         {
-          question: "Do I need technical expertise to use FlowIQ?",
-          answer: "No technical expertise required. FlowIQ is designed to be intuitive for healthcare professionals. Our team handles all technical setup, and we provide comprehensive training for your staff. The AI agents work automatically in the background."
+          question: "Do I need technical expertise to use SymAssist?",
+          answer: "No technical expertise required. SymAssist is designed to be intuitive for property managers. Our team handles all technical setup, and we provide comprehensive training for your staff. The AI agents work automatically with 24/7 human oversight."
         },
         {
-          question: "Will FlowIQ work with my existing systems?",
-          answer: "Yes, FlowIQ integrates with most popular EMR systems, practice management software, and billing platforms. During our discovery phase, we'll assess your current systems and ensure seamless integration."
+          question: "Will SymAssist work with my existing systems?",
+          answer: "Yes, SymAssist integrates with most popular property management software, accounting platforms, and maintenance systems. During our discovery phase, we'll assess your current systems and ensure seamless integration."
         },
         {
-          question: "What if my practice is very small or very large?",
-          answer: "FlowIQ scales to fit practices of all sizes - from solo practitioners to large multi-location practices. Our AI agents adapt to your specific volume and complexity requirements."
+          question: "What if my portfolio is very small or very large?",
+          answer: "SymAssist scales to fit property portfolios of all sizes - from individual property owners to large multi-property management companies. Our AI agents adapt to your specific volume and complexity requirements."
         }
       ]
     },
@@ -42,20 +42,20 @@ const FAQ = () => {
       title: "Security & Compliance",
       faqs: [
         {
-          question: "Is FlowIQ HIPAA compliant?",
-          answer: "Yes, FlowIQ is fully HIPAA compliant and SOC 2 Type II certified. We use enterprise-grade encryption, secure data centers, and maintain strict access controls. All AI processing is done in secure, compliant environments."
+          question: "Is SymAssist secure and compliant?",
+          answer: "Yes, SymAssist is fully compliant with industry security standards and SOC 2 Type II certified. We use enterprise-grade encryption, secure data centers, and maintain strict access controls. All AI processing is done in secure, compliant environments."
         },
         {
           question: "Where is my data stored?",
-          answer: "Your data is stored in secure, HIPAA-compliant data centers within the United States. We use advanced encryption both in transit and at rest, and maintain regular security audits and compliance certifications."
+          answer: "Your data is stored in secure, compliant data centers within the United States. We use advanced encryption both in transit and at rest, and maintain regular security audits and compliance certifications."
         },
         {
-          question: "Who has access to my patient information?",
-          answer: "Only authorized personnel at your practice have access to patient information. FlowIQ staff cannot access PHI without explicit permission and signed BAAs. All access is logged and monitored for compliance."
+          question: "Who has access to my property information?",
+          answer: "Only authorized personnel at your company have access to property information. SymAssist staff cannot access your data without explicit permission and signed agreements. All access is logged and monitored for compliance."
         },
         {
           question: "How do you handle data backups and disaster recovery?",
-          answer: "We maintain automated daily backups with geographic redundancy. Our disaster recovery plan ensures 99.9% uptime with rapid failover capabilities to protect your practice operations."
+          answer: "We maintain automated daily backups with geographic redundancy. Our disaster recovery plan ensures 99.9% uptime with rapid failover capabilities to protect your property management operations."
         }
       ]
     },
@@ -64,20 +64,20 @@ const FAQ = () => {
       title: "Features & Functionality",
       faqs: [
         {
-          question: "Can the AI agents be customized for my specialty?",
-          answer: "Absolutely. Each AI agent is trained and customized for your specific practice type, terminology, and workflows. Whether you're in dental, medical, veterinary, or legal practice, the AI adapts to your specialty's unique requirements."
+          question: "Can the AI agents be customized for my property type?",
+          answer: "Absolutely. Each AI agent is trained and customized for your specific property types, terminology, and workflows. Whether you manage residential, commercial, or mixed-use properties, the AI adapts to your portfolio's unique requirements."
         },
         {
-          question: "What languages does FlowIQ support?",
-          answer: "FlowIQ currently supports English and Spanish, with additional languages planned based on customer demand. The AI can seamlessly switch between languages during patient interactions."
+          question: "What languages does SymAssist support?",
+          answer: "SymAssist currently supports English and Spanish, with additional languages planned based on customer demand. The AI can seamlessly switch between languages during tenant interactions."
         },
         {
-          question: "How accurate is the insurance verification?",
-          answer: "Our VerifyIQ agent achieves 95%+ accuracy in insurance verification by connecting directly to payer databases and real-time eligibility systems. This significantly reduces claim denials and improves revenue cycle efficiency."
+          question: "How accurate is the maintenance triage?",
+          answer: "Our AI achieves 95%+ accuracy in maintenance request classification and urgency assessment by analyzing request details, property history, and seasonal patterns. This significantly reduces response times and improves tenant satisfaction."
         },
         {
           question: "Can I control what the AI agents do and don't do?",
-          answer: "Yes, you have complete control over AI agent behavior through our admin dashboard. You can set boundaries, approve automated actions, and customize responses to match your practice's tone and policies."
+          answer: "Yes, you have complete control over AI agent behavior through our admin dashboard. You can set boundaries, approve automated actions, and customize responses to match your company's tone and policies."
         }
       ]
     },
@@ -86,8 +86,8 @@ const FAQ = () => {
       title: "Pricing & ROI",
       faqs: [
         {
-          question: "How much does FlowIQ cost?",
-          answer: "FlowIQ pricing is based on your practice size and selected modules. Most practices see ROI within 60-90 days through reduced staff time, fewer no-shows, and faster claims processing. Contact us for a custom quote."
+          question: "How much does SymAssist cost?",
+          answer: "SymAssist pricing is based on your portfolio size and selected modules. Most property managers see ROI within 60-90 days through reduced admin time, faster response times, and improved tenant retention. Contact us for a custom quote."
         },
         {
           question: "Is there a contract or can I cancel anytime?",
@@ -109,7 +109,7 @@ const FAQ = () => {
       faqs: [
         {
           question: "What kind of support do you provide?",
-          answer: "We provide comprehensive support including 24/7 technical support, dedicated customer success managers, regular check-ins, and continuous optimization. Our team is always available to help you maximize your FlowIQ investment."
+          answer: "We provide comprehensive support including 24/7 technical support, dedicated customer success managers, regular check-ins, and continuous optimization. Our team is always available to help you maximize your SymAssist investment."
         },
         {
           question: "How do you train my staff?",
@@ -148,8 +148,8 @@ const FAQ = () => {
               Frequently Asked Questions
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Everything you need to know about FlowIQ, our AI agents, implementation process, 
-              and how we can transform your practice operations.
+              Everything you need to know about SymAssist, our AI property management assistant, implementation process, 
+              and how we can transform your property operations.
             </p>
           </div>
         </div>
@@ -230,7 +230,7 @@ const FAQ = () => {
                 size="lg" 
                 variant="outline" 
                 className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-3 text-lg"
-                onClick={() => window.location.href = 'mailto:support@flowiq.com'}
+                onClick={() => window.location.href = 'mailto:support@symassist.com'}
               >
                 Email Support
               </Button>

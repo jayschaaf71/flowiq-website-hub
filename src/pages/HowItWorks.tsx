@@ -9,8 +9,8 @@ import { StructuredData } from "@/components/StructuredData";
 
 const HowItWorks = () => {
   useMetaDescription(
-    "Learn how FlowIQ transforms your practice in 30 days with our proven 3-step implementation process. Discover our integration approach, timeline, and 75% reduction in administrative tasks.",
-    "How FlowIQ Works - Practice Transformation in 30 Days"
+    "Learn how SymAssist transforms your property management in 30 days with AI automation and 24/7 human oversight. From tenant request to completion with 40% time savings.",
+    "How SymAssist Works - Property Management Automation"
   );
 
   const implementationSteps = [
@@ -90,11 +90,11 @@ const HowItWorks = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              How FlowIQ Transforms Your Practice
+              How SymAssist Works
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              From implementation to optimization, discover how our AI agents work together 
-              to create a seamless, efficient practice experience in just 30 days.
+              From tenant request to completion, SymAssist handles the entire workflow 
+              with AI efficiency and human reliability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -103,7 +103,7 @@ const HowItWorks = () => {
                 className="px-8 py-3 text-lg"
                 onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
               >
-                Start Your Transformation
+              Schedule Free Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
@@ -116,10 +116,10 @@ const HowItWorks = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              The FlowIQ Advantage
+              How SymAssist Works
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Built specifically for professional practices with cutting-edge AI technology.
+              From tenant request to completion with AI efficiency and human reliability.
             </p>
           </div>
           
@@ -144,7 +144,7 @@ const HowItWorks = () => {
           {/* ROI Metrics */}
           <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
-              Proven Results Within 30 Days
+              Proven Results for Property Managers
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {roiMetrics.map((item, index) => (
@@ -170,51 +170,42 @@ const HowItWorks = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Proven Implementation Process
+              How It Works
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Three simple steps to transform your practice operations with minimal disruption.
+              Four simple steps from tenant request to completion with 24/7 oversight.
             </p>
           </div>
           
           <div className="space-y-12">
-            {implementationSteps.map((step, index) => (
-              <div key={index} className="max-w-4xl mx-auto">
-                <Card className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <CardHeader className="text-center">
-                    <div className="mx-auto mb-4 p-4 bg-slate-50 rounded-full w-fit">
-                      {step.icon}
-                    </div>
-                    <CardTitle className="text-2xl md:text-3xl">{step.title}</CardTitle>
-                    <CardDescription className="text-lg text-gray-600">
-                      {step.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="space-y-3">
-                      {step.details.map((detail, detailIndex) => (
-                        <div key={detailIndex} className="flex items-center space-x-3">
-                          <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                          <span className="text-gray-700">{detail}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="pt-4 border-t border-gray-200">
-                      <div className="flex justify-between items-center">
-                        <div>
-                          <p className="text-sm font-medium text-gray-900">Timeline</p>
-                          <p className="text-sm text-gray-600">{step.timeline}</p>
-                        </div>
-                        <div className="text-right">
-                          <p className="text-sm font-medium text-gray-900">Deliverables</p>
-                          <p className="text-sm text-gray-600">{step.deliverables}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+            <div className="max-w-4xl mx-auto">
+              <div className="grid lg:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="text-6xl mb-4">📱</div>
+                  <div className="text-primary font-bold text-lg mb-2">01</div>
+                  <h3 className="text-xl font-semibold mb-3">Tenant Reports Issue</h3>
+                  <p className="text-gray-600">Via voice, SMS, or web form - SymAssist captures every request</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-6xl mb-4">🤖</div>
+                  <div className="text-primary font-bold text-lg mb-2">02</div>
+                  <h3 className="text-xl font-semibold mb-3">AI Analyzes & Triages</h3>
+                  <p className="text-gray-600">Intelligent classification determines urgency and required trade</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-6xl mb-4">🔧</div>
+                  <div className="text-primary font-bold text-lg mb-2">03</div>
+                  <h3 className="text-xl font-semibold mb-3">Smart Vendor Dispatch</h3>
+                  <p className="text-gray-600">Best-match vendor selected based on availability, rating, and location</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-6xl mb-4">👥</div>
+                  <div className="text-primary font-bold text-lg mb-2">04</div>
+                  <h3 className="text-xl font-semibold mb-3">Human Oversight</h3>
+                  <p className="text-gray-600">24/7 monitoring ensures quality and handles complex situations</p>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -226,7 +217,7 @@ const HowItWorks = () => {
             Ready to Start Your Transformation?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join hundreds of practices that have already revolutionized their operations with FlowIQ.
+            Join hundreds of property managers who have already revolutionized their operations with SymAssist.
           </p>
           <Button 
             size="lg" 

@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
 import HeroSection from "@/components/home/HeroSection";
+import StatsSection from "@/components/home/StatsSection";
 import StatusQuoSection from "@/components/home/StatusQuoSection";
 import FeaturesSection from "@/components/home/FeaturesSection";
 import UseCasesSection from "@/components/home/UseCasesSection";
@@ -23,6 +24,7 @@ const Index = () => {
       <StructuredData type="homepage" />
       <Navigation />
       <HeroSection />
+      <StatsSection />
       <StatusQuoSection />
       <FeaturesSection />
       <UseCasesSection />

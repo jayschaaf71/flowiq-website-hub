@@ -55,7 +55,7 @@ const Navigation = () => {
               size="sm"
               className="border-primary text-primary bg-primary/5 hover:bg-primary/10 hover:border-primary/80 font-semibold text-xs px-3"
             >
-              <Link to="/ai-assessment">AI Assessment</Link>
+              <Link to="/ai-assessment">AI Readiness Assessment</Link>
             </Button>
             
             <Button 
@@ -102,29 +102,6 @@ const Navigation = () => {
               
               {/* Action Buttons */}
               <div className="space-y-3 pt-4 border-t border-gray-100">
-                {/* Portal Buttons */}
-                <div className="grid grid-cols-2 gap-3 mb-3">
-                  <Button 
-                    asChild
-                    variant="outline"
-                    size="lg"
-                    className="h-12 border-teal-600 text-teal-700 hover:bg-teal-50 hover:border-teal-700 transition-all duration-200"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <Link to="/patient-portal">Patient Portal</Link>
-                  </Button>
-                  
-                  <Button 
-                    asChild
-                    variant="outline"
-                    size="lg"
-                    className="h-12 border-cyan-600 text-cyan-700 hover:bg-cyan-50 hover:border-cyan-700 transition-all duration-200"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <Link to="/provider-portal">Provider Portal</Link>
-                  </Button>
-                </div>
-                
                 <Button 
                   asChild
                   variant="outline"
@@ -134,7 +111,7 @@ const Navigation = () => {
                 >
                   <Link to="/ai-assessment">
                     <Brain className="mr-2 h-5 w-5" />
-                    AI Assessment
+                    AI Readiness Assessment
                   </Link>
                 </Button>
                 
@@ -143,12 +120,12 @@ const Navigation = () => {
                   size="lg"
                   className="w-full h-12 border-green-600 text-green-700 hover:bg-green-50 hover:border-green-700 transition-all duration-200"
                   onClick={() => {
-                    window.open('https://app.flow-iq.ai', '_blank');
+                    window.open('https://remarkable-flan-7ac120.netlify.app', '_blank');
                     setIsOpen(false);
                   }}
                 >
                   <Play className="mr-2 h-5 w-5" />
-                  Try Demo
+                  Try Live Demo
                 </Button>
                 
                 <Button 
