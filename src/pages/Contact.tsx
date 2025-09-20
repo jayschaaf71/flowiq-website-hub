@@ -21,15 +21,15 @@ const Contact = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 pb-16" style={{paddingTop: '144px'}}>
+      <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 pb-16 page-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Get in Touch with SymAssist
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Ready to transform your practice operations? We're here to answer your questions 
-              and show you exactly how SymAssist can solve your specific property management challenges.
+              Ready to transform your property management operations? We're here to answer your questions 
+              and show you exactly how SymAssist can solve your specific challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 

@@ -99,7 +99,7 @@ const FAQ = () => {
         },
         {
           question: "How quickly will I see ROI?",
-          answer: "Most practices see immediate time savings and efficiency gains. Measurable ROI typically occurs within 60-90 days through reduced administrative costs, improved collections, and increased patient capacity."
+          answer: "Most property managers see immediate time savings and efficiency gains. Measurable ROI typically occurs within 60-90 days through reduced administrative costs, improved operational efficiency, and higher tenant satisfaction."
         }
       ]
     },
@@ -140,7 +140,7 @@ const FAQ = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 pb-16" style={{paddingTop: '144px'}}>
+      <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 pb-16 page-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <HelpCircle className="h-16 w-16 text-blue-600 mx-auto mb-6" />
@@ -226,12 +226,12 @@ const FAQ = () => {
                 Schedule a Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="px-8 py-3 text-lg"
-                onClick={() => window.location.href = 'mailto:support@symassist.com'}
-              >
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="px-8 py-3 text-lg"
+              onClick={() => window.location.href = 'mailto:support@symassist.com'}
+            >
                 Email Support
               </Button>
             </div>

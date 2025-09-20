@@ -17,12 +17,12 @@ const ProductHero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              variant="brand-blue"
+              variant="cta-primary"
               className="px-8 py-3 text-lg"
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
-              <Brain className="mr-2 h-5 w-5" />
-              Book AI Readiness Assessment
+              Start Free 30-Day Trial
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button 
               size="lg" 
@@ -32,15 +32,6 @@ const ProductHero = () => {
             >
               <Play className="mr-2 h-5 w-5" />
               Try Live Demo
-            </Button>
-            <Button 
-              size="lg" 
-              variant="cta-primary"
-              className="px-8 py-3 text-lg"
-              onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
-            >
-              Book a Demo
-              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </div>

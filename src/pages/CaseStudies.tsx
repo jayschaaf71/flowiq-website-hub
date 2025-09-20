@@ -64,7 +64,7 @@ const CaseStudies = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 pb-16" style={{paddingTop: '144px'}}>
+      <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 pb-16 page-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -136,7 +136,11 @@ const CaseStudies = () => {
             Join these successful property managers and transform your operations with SymAssist.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary">
+            <Button 
+              size="lg" 
+              variant="cta-primary"
+              onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
+            >
               Start Free 30-Day Trial
             </Button>
             <Button 

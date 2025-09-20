@@ -4,7 +4,7 @@ import { ArrowRight, Brain, Play } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 pt-20 pb-16 sm:pb-24 lg:pb-32 page-hero">
+    <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 pb-16 sm:pb-24 lg:pb-32 page-hero">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">

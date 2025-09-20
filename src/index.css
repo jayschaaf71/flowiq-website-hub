@@ -147,6 +147,6 @@
 
   /* Page hero sections that need spacing from fixed nav */
   .page-hero {
-    padding-top: 80px; /* Updated for new 64px navigation height + buffer */
+    padding-top: 80px; /* Navigation height + buffer for all hero sections */
   }
 }
