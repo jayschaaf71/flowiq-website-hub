@@ -2,13 +2,15 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ROICalculator from "@/components/ROICalculator";
+import LeadCapture from "@/components/LeadCapture";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import { useMetaDescription } from "@/hooks/useMetaDescription";
 import { StructuredData } from "@/components/StructuredData";
 
 const ROICalculatorPage = () => {
   useMetaDescription(
-    "Calculate your ROI with FlowIQ's AI automation. See how much time and money you can save with automated scheduling, insurance verification, claims processing, and patient communication.",
-    "FlowIQ ROI Calculator - Calculate Your Practice Automation Savings"
+    "Calculate your ROI with SymAssist's AI automation. See how much time and money you can save with automated maintenance coordination, tenant communication, and property management operations.",
+    "SymAssist ROI Calculator - Calculate Your Property Management Automation Savings"
   );
 
   return (
@@ -16,6 +18,8 @@ const ROICalculatorPage = () => {
       <StructuredData type="roi-calculator" />
       <Navigation />
       <ROICalculator />
+      <LeadCapture />
+      <NewsletterSignup />
       <Footer />
     </div>
   );

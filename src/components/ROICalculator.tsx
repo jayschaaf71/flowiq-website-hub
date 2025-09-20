@@ -98,7 +98,7 @@ const ROICalculator = () => {
             <CardHeader>
               <CardTitle className="flex items-center">
                 <Users className="mr-2 h-5 w-5 text-blue-600" />
-                Practice Details
+                Property Portfolio Details
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -287,7 +287,7 @@ const ROICalculator = () => {
             </CardContent>
           </Card>
 
-          <div className="text-center">
+          <div className="text-center space-y-4">
             <Button 
               size="lg" 
               variant="brand-blue"
@@ -297,9 +297,24 @@ const ROICalculator = () => {
               <Brain className="mr-2 h-5 w-5" />
               Book AI Readiness Assessment
             </Button>
-            <p className="text-sm text-gray-600 mt-2">
+            <p className="text-sm text-gray-600">
               Get a personalized analysis of your property's automation potential
             </p>
+            
+            <div className="mt-8 p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg border">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Ready to Get Started?
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Download our comprehensive guide to property management automation and see real case studies from successful implementations.
+              </p>
+              <Button variant="outline" className="mr-3">
+                Download ROI Guide
+              </Button>
+              <Button variant="ghost">
+                View Case Studies
+              </Button>
+            </div>
           </div>
         </div>
       </div>
