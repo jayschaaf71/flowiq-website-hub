@@ -61,8 +61,8 @@ const ROICalculator = () => {
       potentialSavings: totalMonthlySavings,
       additionalRevenue: tenantRetentionValue,
       totalBenefit: totalMonthlyBenefit,
-      roiPercentage: roiPercentage,
-      paybackMonths: paybackMonths
+      roiPercentage: Math.round(roiPercentage),
+      paybackMonths: Math.max(paybackMonths, 0)
     });
   };
 
@@ -247,12 +247,17 @@ const ROICalculator = () => {
                 
                 <div className="flex justify-between items-center p-3 bg-orange-50 rounded-lg">
                   <span className="text-gray-700">SymAssist Monthly Cost</span>
-                  <span className="font-semibold text-orange-600">-{formatCurrency(symAssistMonthlyCost)}</span>
+                  <span className="font-semibold text-orange-600">{formatCurrency(symAssistMonthlyCost)}</span>
                 </div>
                 
                 <div className="flex justify-between items-center p-4 bg-gradient-primary text-white rounded-lg">
                   <span className="font-semibold">Net Monthly Benefit</span>
-                  <span className="text-xl font-bold">{formatCurrency(results.totalBenefit - symAssistMonthlyCost)}</span>
+                  <span className="text-xl font-bold">
+                    {results.totalBenefit - symAssistMonthlyCost >= 0 
+                      ? formatCurrency(results.totalBenefit - symAssistMonthlyCost)
+                      : `-${formatCurrency(Math.abs(results.totalBenefit - symAssistMonthlyCost))}`
+                    }
+                  </span>
                 </div>
               </div>
             </CardContent>
@@ -268,9 +273,14 @@ const ROICalculator = () => {
             <CardContent>
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span>Total Annual Savings:</span>
-                  <span className="font-bold text-green-600">{formatCurrency((results.totalBenefit - symAssistMonthlyCost) * 12)}</span>
-                </div>
+                   <span>Total Annual Savings:</span>
+                   <span className={`font-bold ${(results.totalBenefit - symAssistMonthlyCost) * 12 >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                     {(results.totalBenefit - symAssistMonthlyCost) * 12 >= 0 
+                       ? formatCurrency((results.totalBenefit - symAssistMonthlyCost) * 12)
+                       : `-${formatCurrency(Math.abs((results.totalBenefit - symAssistMonthlyCost) * 12))}`
+                     }
+                   </span>
+                 </div>
                 <div className="flex justify-between">
                   <span>Time Saved Per Year:</span>
                   <span className="font-bold text-blue-600">
