@@ -18,6 +18,13 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+			},
+			fontWeight: {
+				'bold': '700',
+				'semibold': '600',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -63,12 +70,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				brand: {
+					teal: 'hsl(var(--brand-teal))',
+					'teal-hover': 'hsl(var(--brand-teal-hover))',
 					blue: 'hsl(var(--brand-blue))',
 					'blue-hover': 'hsl(var(--brand-blue-hover))',
-					cyan: 'hsl(var(--brand-teal))',
-					'cyan-hover': 'hsl(var(--brand-teal-hover))',
-					orange: 'hsl(var(--accent))',
-					'orange-hover': 'hsl(var(--accent))',
+					dark: 'hsl(var(--brand-dark))',
 				}
 			},
 			backgroundImage: {

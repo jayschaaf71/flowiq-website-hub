@@ -7,124 +7,122 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 210 11% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 11% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 11% 15%;
 
-    /* Deep Blue, Bright Cyan, Warm Orange Theme */
-    --primary: 230 64% 33%;
+    /* SymAssist Brand Colors - From Brand Guide */
+    --primary: 183 37% 54%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 189 94% 43%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 210 11% 15%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 19% 27%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 38 92% 50%;
+    --accent: 213 30% 54%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 14% 96%;
-    --input: 220 14% 96%;
-    --ring: 230 64% 33%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 183 37% 54%;
 
     --radius: 0.5rem;
 
-    /* Brand Color Palette */
-    --brand-blue: 230 64% 33%;
-    --brand-blue-hover: 230 64% 23%;
-    --brand-teal: 189 94% 43%;
-    --brand-teal-hover: 189 94% 33%;
-    --brand-green: 38 92% 50%;
-    --brand-green-hover: 38 92% 40%;
+    /* SymAssist Brand Color Palette */
+    --brand-teal: 183 37% 54%;
+    --brand-teal-hover: 183 37% 48%;
+    --brand-blue: 213 30% 54%;
+    --brand-blue-hover: 213 30% 48%;
+    --brand-dark: 210 11% 15%;
 
     /* Gradient Definitions */
-    --gradient-primary: linear-gradient(135deg, hsl(230 64% 33%), hsl(189 94% 43%));
-    --gradient-secondary: linear-gradient(135deg, hsl(189 94% 43%), hsl(38 92% 50%));
-    --gradient-full: linear-gradient(135deg, hsl(230 64% 33%), hsl(189 94% 43%), hsl(38 92% 50%));
+    --gradient-primary: linear-gradient(135deg, hsl(183 37% 54%), hsl(213 30% 54%));
+    --gradient-secondary: linear-gradient(135deg, hsl(213 30% 54%), hsl(183 37% 54%));
+    --gradient-full: linear-gradient(135deg, hsl(183 37% 54%), hsl(213 30% 54%), hsl(210 11% 15%));
     
     /* Shadows */
-    --shadow-brand: 0 10px 30px -10px hsl(230 64% 33% / 0.3);
-    --shadow-glow: 0 0 40px hsl(189 94% 43% / 0.2);
+    --shadow-brand: 0 10px 30px -10px hsl(183 37% 54% / 0.3);
+    --shadow-glow: 0 0 40px hsl(213 30% 54% / 0.4);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 220 19% 27%;
-    --sidebar-primary: 230 64% 33%;
+    --sidebar-foreground: 210 11% 15%;
+    --sidebar-primary: 183 37% 54%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 220 14% 96%;
-    --sidebar-accent-foreground: 220 19% 27%;
-    --sidebar-border: 220 14% 91%;
-    --sidebar-ring: 230 64% 33%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 210 11% 15%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 183 37% 54%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 210 11% 15%;
+    --foreground: 0 0% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 11% 15%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 11% 15%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Dark Mode Deep Blue, Bright Cyan, Warm Orange Theme */
-    --primary: 230 64% 33%;
+    /* SymAssist Brand Colors - Dark Mode */
+    --primary: 183 37% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 189 94% 43%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 220 19% 15%;
-    --muted-foreground: 220 14% 80%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 38 92% 50%;
+    --accent: 213 30% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 220 19% 20%;
-    --input: 220 19% 20%;
-    --ring: 230 64% 33%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 183 37% 60%;
 
-    /* Brand Color Palette (same for dark mode) */
-    --brand-blue: 230 64% 33%;
-    --brand-blue-hover: 230 64% 23%;
-    --brand-teal: 189 94% 43%;
-    --brand-teal-hover: 189 94% 33%;
-    --brand-green: 38 92% 50%;
-    --brand-green-hover: 38 92% 40%;
+    /* SymAssist Brand Color Palette - Dark Mode */
+    --brand-teal: 183 37% 60%;
+    --brand-teal-hover: 183 37% 54%;
+    --brand-blue: 213 30% 60%;
+    --brand-blue-hover: 213 30% 54%;
+    --brand-dark: 0 0% 98%;
 
     /* Gradient Definitions */
-    --gradient-primary: linear-gradient(135deg, hsl(230 64% 33%), hsl(189 94% 43%));
-    --gradient-secondary: linear-gradient(135deg, hsl(189 94% 43%), hsl(38 92% 50%));
-    --gradient-full: linear-gradient(135deg, hsl(230 64% 33%), hsl(189 94% 43%), hsl(38 92% 50%));
+    --gradient-primary: linear-gradient(135deg, hsl(183 37% 60%), hsl(213 30% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(213 30% 60%), hsl(183 37% 60%));
+    --gradient-full: linear-gradient(135deg, hsl(183 37% 60%), hsl(213 30% 60%), hsl(0 0% 98%));
     
     /* Shadows */
-    --shadow-brand: 0 10px 30px -10px hsl(230 64% 33% / 0.3);
-    --shadow-glow: 0 0 40px hsl(189 94% 43% / 0.2);
+    --shadow-brand: 0 10px 30px -10px hsl(183 37% 60% / 0.4);
+    --shadow-glow: 0 0 40px hsl(213 30% 60% / 0.5);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 220 19% 10%;
     --sidebar-foreground: 220 14% 95%;
-    --sidebar-primary: 230 64% 33%;
+    --sidebar-primary: 183 37% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 19% 15%;
     --sidebar-accent-foreground: 220 14% 95%;
     --sidebar-border: 220 19% 15%;
-    --sidebar-ring: 230 64% 33%;
+    --sidebar-ring: 183 37% 60%;
   }
 }
 
@@ -136,8 +134,20 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
     margin: 0;
     padding: 0;
+  }
+
+  /* Typography - SymAssist Brand Guidelines */
+  h1, h2, h3, .headline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700; /* Inter Bold */
+  }
+
+  h4, h5, h6, .subheadline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; /* Inter Semi Bold */
   }
   
   /* Ensure proper spacing for fixed navigation */
