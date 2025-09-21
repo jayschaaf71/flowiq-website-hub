@@ -110,10 +110,10 @@ const ProviderPortal = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <Button asChild size="lg">
-                    <a href="/ai-assessment">Get AI Assessment</a>
+                    <a href="/contact">Contact Sales</a>
                   </Button>
                   <p className="text-sm text-muted-foreground">
-                    Start with our AI readiness assessment to prepare for the full portal experience.
+                    Get in touch with our team to learn more about the full provider portal experience.
                   </p>
                 </CardContent>
               </Card>

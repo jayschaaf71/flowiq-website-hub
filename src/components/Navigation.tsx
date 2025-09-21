@@ -52,15 +52,6 @@ const Navigation = () => {
           {/* Action Buttons */}
           <div className="hidden lg:flex items-center space-x-2">
             <Button 
-              asChild
-              variant="outline"
-              size="sm"
-              className="border-primary text-primary bg-primary/5 hover:bg-primary/10 hover:border-primary/80 font-semibold text-xs px-3"
-            >
-              <Link to="/ai-assessment">AI Readiness Assessment</Link>
-            </Button>
-            
-            <Button 
               size="sm"
               variant="brand-blue"
               className="text-xs px-4"
@@ -105,19 +96,6 @@ const Navigation = () => {
               
               {/* Action Buttons */}
               <div className="space-y-3 pt-4 border-t border-gray-100">
-                <Button 
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="w-full h-12 border-primary text-primary hover:bg-primary/10 hover:border-primary/80 transition-all duration-200"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <Link to="/ai-assessment">
-                    <Brain className="mr-2 h-5 w-5" />
-                    AI Readiness Assessment
-                  </Link>
-                </Button>
-                
                 <Button 
                   variant="brand-cyan"
                   size="lg"

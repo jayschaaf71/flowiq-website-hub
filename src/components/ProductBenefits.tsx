@@ -48,12 +48,12 @@ const ProductBenefits = () => {
                 </CardDescription>
                 <div className="space-y-3">
                   <Button 
-                    variant="brand-orange"
+                    variant="brand-blue"
                     className="w-full py-3"
                     onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
                   >
                     <Brain className="mr-2 h-5 w-5" />
-                    Book AI Readiness Assessment
+                    Book Demo Call
                   </Button>
                   <Button 
                     variant="brand-cyan"

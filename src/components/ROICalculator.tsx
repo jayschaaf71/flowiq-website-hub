@@ -305,7 +305,7 @@ const ROICalculator = () => {
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
               <Brain className="mr-2 h-5 w-5" />
-              Book AI Readiness Assessment
+              Book Strategy Call
             </Button>
             <p className="text-sm text-gray-600">
               Get a personalized analysis of your property's automation potential
