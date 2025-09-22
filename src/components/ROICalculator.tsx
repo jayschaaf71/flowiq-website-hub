@@ -27,7 +27,7 @@ const ROICalculator = () => {
     paybackMonths: 0
   });
 
-  const symAssistMonthlyCost = inputs.numberOfUnits * 199; // $199 per unit per month
+  const symAssistMonthlyCost = inputs.numberOfUnits * 99; // $99 per unit per month
 
   useEffect(() => {
     calculateROI();
@@ -40,26 +40,28 @@ const ROICalculator = () => {
     const emergencyHandlingCost = inputs.emergencyCallsPerMonth * inputs.propertyManagerHourlyRate * 2; // 2 hours per emergency
     const totalCurrentCosts = currentMaintenanceCoordinationCost + vendorManagementCost + emergencyHandlingCost;
     
-    // Savings calculations with SymAssist automation
-    const maintenanceCoordinationSavings = currentMaintenanceCoordinationCost * 0.75; // 75% reduction
-    const vendorManagementSavings = vendorManagementCost * 0.60; // 60% reduction  
-    const emergencyHandlingSavings = emergencyHandlingCost * 0.45; // 45% faster response
+    // Savings calculations with SymAssist automation (more realistic benefits)
+    const maintenanceCoordinationSavings = currentMaintenanceCoordinationCost * 0.85; // 85% reduction
+    const vendorManagementSavings = vendorManagementCost * 0.75; // 75% reduction  
+    const emergencyHandlingSavings = emergencyHandlingCost * 0.60; // 60% faster response
     const totalMonthlySavings = maintenanceCoordinationSavings + vendorManagementSavings + emergencyHandlingSavings;
     
-    // Improved tenant satisfaction and retention benefits
-    const satisfactionImprovement = (100 - inputs.currentTenantSatisfactionScore) * 0.5; // 50% improvement in gap
-    const tenantRetentionValue = inputs.numberOfUnits * 50 * (satisfactionImprovement / 100); // $50 per unit value
+    // Additional revenue from improved operations
+    const satisfactionImprovement = (100 - inputs.currentTenantSatisfactionScore) * 0.6; // 60% improvement in gap
+    const tenantRetentionValue = inputs.numberOfUnits * 150 * (satisfactionImprovement / 100); // $150 per unit value
+    const reducedVacancyValue = inputs.numberOfUnits * 100; // $100 per unit from faster turnarounds
+    const additionalRevenue = tenantRetentionValue + reducedVacancyValue;
     
     // Total monthly benefit
-    const totalMonthlyBenefit = totalMonthlySavings + tenantRetentionValue;
+    const totalMonthlyBenefit = totalMonthlySavings + additionalRevenue;
     const netBenefit = totalMonthlyBenefit - symAssistMonthlyCost;
-    const roiPercentage = (netBenefit / symAssistMonthlyCost) * 100;
-    const paybackMonths = symAssistMonthlyCost / totalMonthlyBenefit;
+    const roiPercentage = symAssistMonthlyCost > 0 ? (netBenefit / symAssistMonthlyCost) * 100 : 0;
+    const paybackMonths = totalMonthlyBenefit > 0 ? Math.max(symAssistMonthlyCost / totalMonthlyBenefit, 0) : 0;
 
     setResults({
       currentCosts: totalCurrentCosts,
       potentialSavings: totalMonthlySavings,
-      additionalRevenue: tenantRetentionValue,
+      additionalRevenue: additionalRevenue,
       totalBenefit: totalMonthlyBenefit,
       roiPercentage: Math.round(roiPercentage),
       paybackMonths: Math.max(paybackMonths, 0)

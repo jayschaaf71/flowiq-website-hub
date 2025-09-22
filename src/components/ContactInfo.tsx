@@ -15,8 +15,8 @@ const ContactInfo = () => {
       icon: <Mail className="h-6 w-6 text-teal-600" />,
       title: "Email",
       description: "Send us a message",
-      details: "jason@flow-iq.ai",
-      action: () => window.open('mailto:jason@flow-iq.ai', '_self')
+      details: "jason@symassist.com",
+      action: () => window.open('mailto:jason@symassist.com', '_self')
     },
     {
       icon: <Clock className="h-6 w-6 text-slate-600" />,

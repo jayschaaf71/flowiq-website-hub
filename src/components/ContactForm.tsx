@@ -65,7 +65,7 @@ const ContactForm = () => {
     } catch (error) {
       toast({
         title: "Error sending message",
-        description: "Please try again or contact us directly at jason@flow-iq.ai",
+        description: "Please try again or contact us directly at jason@symassist.com",
         variant: "destructive"
       });
     }
@@ -75,7 +75,7 @@ const ContactForm = () => {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
       <div>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-          Tell Us About Your Practice
+          Tell Us About Your Property Portfolio
         </h2>
         <p className="text-lg text-gray-600 mb-8">
           The more we know about your specific situation, the better we can tailor 
@@ -94,7 +94,7 @@ const ContactForm = () => {
             <CheckCircle className="w-5 h-5 text-green-600 mt-1" />
             <div>
               <h4 className="font-semibold text-gray-900">Custom ROI Analysis</h4>
-              <p className="text-gray-600">Get estimated savings based on your practice size</p>
+              <p className="text-gray-600">Get estimated savings based on your portfolio size</p>
             </div>
           </div>
           <div className="flex items-start space-x-4">
@@ -111,7 +111,7 @@ const ContactForm = () => {
         <CardHeader>
           <CardTitle className="text-2xl">Contact Form</CardTitle>
           <CardDescription>
-            Help us understand your practice so we can provide the most relevant information.
+            Help us understand your property management needs so we can provide the most relevant information.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -154,7 +154,7 @@ const ContactForm = () => {
                     <FormItem>
                       <FormLabel>Email *</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="john@yourpractice.com" {...field} />
+                        <Input type="email" placeholder="john@yourproperty.com" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -207,22 +207,22 @@ const ContactForm = () => {
                   name="practiceType"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Practice Type</FormLabel>
+                      <FormLabel>Property Type</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Select practice type" />
+                            <SelectValue placeholder="Select property type" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="dental">Dental Practice</SelectItem>
-                          <SelectItem value="medical">Medical Practice</SelectItem>
-                          <SelectItem value="therapy">Physical/Occupational Therapy</SelectItem>
-                          <SelectItem value="mental-health">Mental Health</SelectItem>
-                          <SelectItem value="veterinary">Veterinary</SelectItem>
-                          <SelectItem value="chiropractic">Chiropractic</SelectItem>
-                          <SelectItem value="dermatology">Dermatology</SelectItem>
-                          <SelectItem value="other">Other Healthcare</SelectItem>
+                          <SelectItem value="residential">Residential Apartments</SelectItem>
+                          <SelectItem value="condos">Condominiums</SelectItem>
+                          <SelectItem value="single-family">Single-Family Homes</SelectItem>
+                          <SelectItem value="commercial">Commercial Properties</SelectItem>
+                          <SelectItem value="mixed-use">Mixed-Use Properties</SelectItem>
+                          <SelectItem value="student-housing">Student Housing</SelectItem>
+                          <SelectItem value="senior-living">Senior Living</SelectItem>
+                          <SelectItem value="other">Other Property Types</SelectItem>
                         </SelectContent>
                       </Select>
                       <FormMessage />
@@ -234,19 +234,19 @@ const ContactForm = () => {
                   name="practiceSize"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Practice Size</FormLabel>
+                      <FormLabel>Portfolio Size</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Select practice size" />
+                            <SelectValue placeholder="Select portfolio size" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="solo">Solo practitioner</SelectItem>
-                          <SelectItem value="small">2-5 providers</SelectItem>
-                          <SelectItem value="medium">6-15 providers</SelectItem>
-                          <SelectItem value="large">16+ providers</SelectItem>
-                          <SelectItem value="enterprise">Multi-location enterprise</SelectItem>
+                          <SelectItem value="small">1-25 units</SelectItem>
+                          <SelectItem value="medium">26-100 units</SelectItem>
+                          <SelectItem value="large">101-500 units</SelectItem>
+                          <SelectItem value="enterprise">500+ units</SelectItem>
+                          <SelectItem value="multi-location">Multi-location portfolio</SelectItem>
                         </SelectContent>
                       </Select>
                       <FormMessage />
@@ -267,17 +267,17 @@ const ContactForm = () => {
                           <SelectValue placeholder="Select your main challenge" />
                         </SelectTrigger>
                       </FormControl>
-                      <SelectContent>
-                        <SelectItem value="scheduling">Appointment scheduling and management</SelectItem>
-                        <SelectItem value="no-shows">High no-show rates</SelectItem>
-                        <SelectItem value="insurance">Insurance verification delays</SelectItem>
-                        <SelectItem value="phone-calls">Too many phone calls disrupting workflow</SelectItem>
-                        <SelectItem value="follow-up">Patient follow-up and retention</SelectItem>
-                        <SelectItem value="reviews">Getting more positive reviews</SelectItem>
-                        <SelectItem value="staff-time">Staff spending too much time on admin tasks</SelectItem>
-                        <SelectItem value="after-hours">Handling inquiries after hours</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
-                      </SelectContent>
+                        <SelectContent>
+                          <SelectItem value="maintenance-coordination">Maintenance request coordination</SelectItem>
+                          <SelectItem value="vendor-management">Vendor scheduling and management</SelectItem>
+                          <SelectItem value="tenant-communication">Tenant communication and follow-up</SelectItem>
+                          <SelectItem value="emergency-response">Emergency maintenance response times</SelectItem>
+                          <SelectItem value="vacancy-turnovers">Property turnovers and vacancy management</SelectItem>
+                          <SelectItem value="rent-collection">Rent collection and financial management</SelectItem>
+                          <SelectItem value="staff-time">Staff spending too much time on repetitive tasks</SelectItem>
+                          <SelectItem value="after-hours">Handling tenant requests after hours</SelectItem>
+                          <SelectItem value="other">Other operational challenges</SelectItem>
+                        </SelectContent>
                     </Select>
                     <FormMessage />
                   </FormItem>
@@ -347,7 +347,7 @@ const ContactForm = () => {
               </Button>
               
               <p className="text-sm text-gray-500 text-center">
-                We'll respond within 4 hours with personalized information based on your practice details.
+                We'll respond within 4 hours with personalized information based on your property management details.
               </p>
             </form>
           </Form>
