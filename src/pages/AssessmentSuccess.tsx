@@ -20,18 +20,17 @@ const AssessmentSuccess = () => {
       }
 
       try {
-        // Update payment status to completed
-        const { data, error } = await supabase
-          .from('ai_assessments')
-          .update({ payment_status: 'completed' })
-          .eq('stripe_session_id', sessionId)
-          .select()
-          .single();
+        // Use secure function to update payment status
+        const { data, error } = await supabase.rpc('confirm_assessment_payment', {
+          session_id: sessionId
+        });
 
         if (error) {
           console.error('Error updating assessment:', error);
+        } else if (data && data.length > 0) {
+          setAssessment(data[0]);
         } else {
-          setAssessment(data);
+          console.error('No assessment found for session ID');
         }
       } catch (error) {
         console.error('Error:', error);

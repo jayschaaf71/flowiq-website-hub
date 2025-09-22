@@ -154,6 +154,32 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      confirm_assessment_payment: {
+        Args: { session_id: string }
+        Returns: {
+          amount: number
+          assessment_package: string
+          assessment_status: string | null
+          calendly_booking_url: string | null
+          company: string | null
+          completed_at: string | null
+          created_at: string | null
+          currency: string | null
+          current_challenges: string | null
+          email: string
+          id: string
+          name: string
+          notes: string | null
+          payment_status: string | null
+          phone: string | null
+          practice_size: string | null
+          practice_type: string | null
+          scheduled_at: string | null
+          stripe_payment_intent_id: string | null
+          stripe_session_id: string | null
+          updated_at: string | null
+        }[]
+      }
       get_assessment_by_session_and_email: {
         Args: { session_id: string; user_email: string }
         Returns: {
