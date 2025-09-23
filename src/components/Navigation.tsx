@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Play, Brain } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
@@ -20,41 +20,39 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header 
-      className="fixed top-0 left-0 right-0 z-50 bg-white border-b-4 border-blue-600 shadow-xl"
-      style={{ minHeight: '80px' }}
-    >
-      <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-20">
-        <div className="flex justify-between items-center h-full">
-          {/* Logo Section */}
-          <Link to="/" className="flex-shrink-0">
-            <div className="text-3xl font-bold text-blue-600">
-              SymAssist
-            </div>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg border-b border-gray-200">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link to="/" className="flex-shrink-0 flex items-center">
+            <img 
+              src="/symassist-logo.png" 
+              alt="SymAssist" 
+              className="h-8 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
                 className={`${
                   isActive(item.path)
-                    ? "text-blue-600 font-bold"
+                    ? "text-blue-600 font-semibold"
                     : "text-gray-700 hover:text-blue-600"
-                } text-lg font-medium transition-colors duration-200 whitespace-nowrap`}
+                } px-3 py-2 text-sm font-medium transition-colors duration-200`}
               >
                 {item.name}
               </Link>
             ))}
           </div>
-          
-          {/* Action Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
+
+          {/* Desktop CTA Button */}
+          <div className="hidden md:flex">
             <Button 
-              size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3"
+              className="bg-blue-600 hover:bg-blue-700 text-white"
               onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
             >
               Book Demo
@@ -62,43 +60,37 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-700 p-2 text-3xl"
+              className="text-gray-700 hover:text-blue-600 p-2"
             >
-              {isOpen ? <X size={32} /> : <Menu size={32} />}
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-2xl border-t-4 border-blue-600 z-50">
-            <div className="max-w-7xl mx-auto px-4 py-6">
-              {/* Navigation Links */}
-              <div className="space-y-4 mb-6">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.path}
-                    className={`${
-                      isActive(item.path)
-                        ? "text-blue-700 bg-blue-50 border-l-4 border-blue-600"
-                        : "text-gray-700 hover:text-blue-700 hover:bg-gray-50"
-                    } block px-4 py-4 text-xl font-medium rounded-r-lg transition-all duration-200`}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-              
-              {/* Action Button */}
-              <div className="pt-4 border-t border-gray-100">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-b border-gray-200">
+            <div className="px-4 py-4 space-y-2">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={`${
+                    isActive(item.path)
+                      ? "text-blue-600 bg-blue-50"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  } block px-3 py-2 text-base font-medium rounded-md transition-colors duration-200`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <div className="pt-4 border-t border-gray-200">
                 <Button 
-                  size="lg"
-                  className="w-full h-14 bg-blue-600 hover:bg-blue-700 text-white text-lg"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
                   onClick={() => {
                     window.open('https://calendly.com/jason-flow-iq', '_blank');
                     setIsOpen(false);
