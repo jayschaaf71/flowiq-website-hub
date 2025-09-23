@@ -25,11 +25,9 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo Section */}
           <Link to="/" className="flex-shrink-0">
-            <img 
-              src="/symassist-logo.png" 
-              alt="SymAssist" 
-              className="h-10 w-auto"
-            />
+            <div className="text-2xl font-bold text-brand-teal">
+              SymAssist
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
