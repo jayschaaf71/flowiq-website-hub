@@ -13,7 +13,6 @@ const LeadCapture = () => {
     lastName: "",
     email: "",
     company: "",
-    propertyCount: "",
     currentChallenges: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -134,28 +133,12 @@ const LeadCapture = () => {
               </div>
               
               <div>
-                <Label htmlFor="company">Company/Property Management Firm</Label>
+                <Label htmlFor="company">Company</Label>
                 <Input
                   id="company"
                   value={formData.company}
                   onChange={(e) => handleInputChange('company', e.target.value)}
                 />
-              </div>
-              
-              <div>
-                <Label htmlFor="propertyCount">Number of Properties/Units Managed</Label>
-                <Select onValueChange={(value) => handleInputChange('propertyCount', value)}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select range..." />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="1-10">1-10 properties</SelectItem>
-                    <SelectItem value="11-50">11-50 properties</SelectItem>
-                    <SelectItem value="51-100">51-100 properties</SelectItem>
-                    <SelectItem value="101-500">101-500 properties</SelectItem>
-                    <SelectItem value="500+">500+ properties</SelectItem>
-                  </SelectContent>
-                </Select>
               </div>
               
               <div className="flex justify-center pt-4">
