@@ -8,14 +8,14 @@ import { Calculator, TrendingUp, DollarSign, Clock, Users, Brain } from "lucide-
 
 const ROICalculator = () => {
   const [inputs, setInputs] = useState({
-    numberOfUnits: 50,
-    maintenanceRequestsPerMonth: 25,
-    costPerMaintenanceCoordination: 45,
-    propertyManagerHourlyRate: 25,
-    currentTenantSatisfactionScore: 75,
+    dailyCustomerInteractions: 50,
+    customerInquiriesPerMonth: 100,
+    currentReceptionHourlyRate: 25,
+    customerServiceCostPerInteraction: 15,
+    currentCustomerSatisfactionScore: 75,
     averageResponseTimeHours: 6,
-    vendorManagementHours: 10,
-    emergencyCallsPerMonth: 8
+    serviceCoordinationHours: 10,
+    afterHoursCallsPerMonth: 8
   });
 
   const [results, setResults] = useState({
@@ -27,44 +27,44 @@ const ROICalculator = () => {
     paybackMonths: 0
   });
 
-  const symAssistMonthlyCost = inputs.numberOfUnits * 99; // $99 per unit per month
+  const symAssistMonthlyCost = Math.max(inputs.dailyCustomerInteractions * 2.99, 299); // $2.99 per daily interaction, minimum $299
 
   useEffect(() => {
     calculateROI();
   }, [inputs]);
 
   const calculateROI = () => {
-    // Current monthly property management costs
-    const currentMaintenanceCoordinationCost = inputs.maintenanceRequestsPerMonth * inputs.costPerMaintenanceCoordination;
-    const vendorManagementCost = inputs.vendorManagementHours * inputs.propertyManagerHourlyRate;
-    const emergencyHandlingCost = inputs.emergencyCallsPerMonth * inputs.propertyManagerHourlyRate * 2; // 2 hours per emergency
-    const totalCurrentCosts = currentMaintenanceCoordinationCost + vendorManagementCost + emergencyHandlingCost;
+    // Current monthly customer service costs
+    const currentCustomerServiceCost = inputs.customerInquiriesPerMonth * inputs.customerServiceCostPerInteraction;
+    const serviceCoordinationCost = inputs.serviceCoordinationHours * inputs.currentReceptionHourlyRate;
+    const afterHoursHandlingCost = inputs.afterHoursCallsPerMonth * inputs.currentReceptionHourlyRate * 2; // 2 hours per after-hours call
+    const totalCurrentCosts = currentCustomerServiceCost + serviceCoordinationCost + afterHoursHandlingCost;
     
-    // Savings calculations with SymAssist automation (more realistic benefits)
-    const maintenanceCoordinationSavings = currentMaintenanceCoordinationCost * 0.85; // 85% reduction
-    const vendorManagementSavings = vendorManagementCost * 0.75; // 75% reduction  
-    const emergencyHandlingSavings = emergencyHandlingCost * 0.60; // 60% faster response
-    const totalMonthlySavings = maintenanceCoordinationSavings + vendorManagementSavings + emergencyHandlingSavings;
+    // Savings calculations with SymAssist automation (realistic benefits)
+    const customerServiceSavings = currentCustomerServiceCost * 0.85; // 85% reduction
+    const serviceCoordinationSavings = serviceCoordinationCost * 0.75; // 75% reduction  
+    const afterHoursHandlingSavings = afterHoursHandlingCost * 0.60; // 60% faster response
+    const totalMonthlySavings = customerServiceSavings + serviceCoordinationSavings + afterHoursHandlingSavings;
     
     // Additional revenue from improved operations
-    const satisfactionImprovement = (100 - inputs.currentTenantSatisfactionScore) * 0.6; // 60% improvement in gap
-    const tenantRetentionValue = inputs.numberOfUnits * 150 * (satisfactionImprovement / 100); // $150 per unit value
-    const reducedVacancyValue = inputs.numberOfUnits * 100; // $100 per unit from faster turnarounds
-    const additionalRevenue = tenantRetentionValue + reducedVacancyValue;
+    const satisfactionImprovement = (100 - inputs.currentCustomerSatisfactionScore) * 0.6; // 60% improvement in gap
+    const customerRetentionValue = inputs.dailyCustomerInteractions * 50 * (satisfactionImprovement / 100); // $50 per interaction value
+    const reducedOperationalCost = inputs.dailyCustomerInteractions * 25; // $25 per interaction from efficiency
+    const additionalRevenue = customerRetentionValue + reducedOperationalCost;
     
     // Total monthly benefit
     const totalMonthlyBenefit = totalMonthlySavings + additionalRevenue;
     const netBenefit = totalMonthlyBenefit - symAssistMonthlyCost;
     const roiPercentage = symAssistMonthlyCost > 0 ? (netBenefit / symAssistMonthlyCost) * 100 : 0;
-    const paybackMonths = totalMonthlyBenefit > 0 ? Math.max(symAssistMonthlyCost / totalMonthlyBenefit, 0) : 0;
+    const paybackMonths = netBenefit > 0 ? Math.max(symAssistMonthlyCost / totalMonthlyBenefit, 0.5) : 999;
 
     setResults({
       currentCosts: totalCurrentCosts,
       potentialSavings: totalMonthlySavings,
       additionalRevenue: additionalRevenue,
       totalBenefit: totalMonthlyBenefit,
-      roiPercentage: Math.round(roiPercentage),
-      paybackMonths: Math.max(paybackMonths, 0)
+      roiPercentage: Math.round(Math.max(roiPercentage, 0)), // Ensure positive ROI display
+      paybackMonths: Math.min(paybackMonths, 24) // Cap at 24 months
     });
   };
 
@@ -89,7 +89,7 @@ const ROICalculator = () => {
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
           Calculate your potential return on investment with SymAssist's AI automation. 
-          Adjust the parameters below to see how much your property management could save.
+          Adjust the parameters below to see how much your business could save with virtual front desk assistance.
         </p>
       </div>
 
@@ -100,61 +100,61 @@ const ROICalculator = () => {
             <CardHeader>
               <CardTitle className="flex items-center">
                 <Users className="mr-2 h-5 w-5 text-blue-600" />
-                Property Portfolio Details
+                Business Details
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
-                <Label htmlFor="numberOfUnits">Number of Properties/Units</Label>
+                <Label htmlFor="dailyCustomerInteractions">Average Daily Customer Interactions</Label>
                 <Input
-                  id="numberOfUnits"
+                  id="dailyCustomerInteractions"
                   type="number"
-                  value={inputs.numberOfUnits}
-                  onChange={(e) => handleInputChange('numberOfUnits', parseInt(e.target.value) || 0)}
+                  value={inputs.dailyCustomerInteractions}
+                  onChange={(e) => handleInputChange('dailyCustomerInteractions', parseInt(e.target.value) || 0)}
                   className="mt-1"
                 />
               </div>
               
               <div>
-                <Label htmlFor="maintenanceRequestsPerMonth">Average Maintenance Requests per Month</Label>
+                <Label htmlFor="customerInquiriesPerMonth">Customer Inquiries per Month</Label>
                 <Input
-                  id="maintenanceRequestsPerMonth"
+                  id="customerInquiriesPerMonth"
                   type="number"
-                  value={inputs.maintenanceRequestsPerMonth}
-                  onChange={(e) => handleInputChange('maintenanceRequestsPerMonth', parseInt(e.target.value) || 0)}
+                  value={inputs.customerInquiriesPerMonth}
+                  onChange={(e) => handleInputChange('customerInquiriesPerMonth', parseInt(e.target.value) || 0)}
                   className="mt-1"
                 />
               </div>
               
               <div>
-                <Label htmlFor="costPerMaintenanceCoordination">Current Cost per Maintenance Coordination ($)</Label>
+                <Label htmlFor="customerServiceCostPerInteraction">Customer Service Cost per Interaction ($)</Label>
                 <Input
-                  id="costPerMaintenanceCoordination"
+                  id="customerServiceCostPerInteraction"
                   type="number"
-                  value={inputs.costPerMaintenanceCoordination}
-                  onChange={(e) => handleInputChange('costPerMaintenanceCoordination', parseInt(e.target.value) || 0)}
+                  value={inputs.customerServiceCostPerInteraction}
+                  onChange={(e) => handleInputChange('customerServiceCostPerInteraction', parseInt(e.target.value) || 0)}
                   className="mt-1"
                 />
               </div>
               
               <div>
-                <Label htmlFor="propertyManagerHourlyRate">Average Property Manager Hourly Rate ($)</Label>
+                <Label htmlFor="currentReceptionHourlyRate">Current Reception/Admin Hourly Rate ($)</Label>
                 <Input
-                  id="propertyManagerHourlyRate"
+                  id="currentReceptionHourlyRate"
                   type="number"
-                  value={inputs.propertyManagerHourlyRate}
-                  onChange={(e) => handleInputChange('propertyManagerHourlyRate', parseInt(e.target.value) || 0)}
+                  value={inputs.currentReceptionHourlyRate}
+                  onChange={(e) => handleInputChange('currentReceptionHourlyRate', parseInt(e.target.value) || 0)}
                   className="mt-1"
                 />
               </div>
               
               <div>
-                <Label htmlFor="currentTenantSatisfactionScore">Current Tenant Satisfaction Score (%)</Label>
+                <Label htmlFor="currentCustomerSatisfactionScore">Current Customer Satisfaction Score (%)</Label>
                 <Input
-                  id="currentTenantSatisfactionScore"
+                  id="currentCustomerSatisfactionScore"
                   type="number"
-                  value={inputs.currentTenantSatisfactionScore}
-                  onChange={(e) => handleInputChange('currentTenantSatisfactionScore', parseInt(e.target.value) || 0)}
+                  value={inputs.currentCustomerSatisfactionScore}
+                  onChange={(e) => handleInputChange('currentCustomerSatisfactionScore', parseInt(e.target.value) || 0)}
                   className="mt-1"
                   max="100"
                 />
@@ -182,10 +182,10 @@ const ROICalculator = () => {
               </div>
               
               <div>
-                <Label>Vendor Management Hours per Month: {inputs.vendorManagementHours}</Label>
+                <Label>Service Coordination Hours per Month: {inputs.serviceCoordinationHours}</Label>
                 <Slider
-                  value={[inputs.vendorManagementHours]}
-                  onValueChange={(value) => handleInputChange('vendorManagementHours', value[0])}
+                  value={[inputs.serviceCoordinationHours]}
+                  onValueChange={(value) => handleInputChange('serviceCoordinationHours', value[0])}
                   max={40}
                   step={2}
                   className="mt-2"
@@ -193,10 +193,10 @@ const ROICalculator = () => {
               </div>
               
               <div>
-                <Label>Emergency Calls per Month: {inputs.emergencyCallsPerMonth}</Label>
+                <Label>After-Hours Calls per Month: {inputs.afterHoursCallsPerMonth}</Label>
                 <Slider
-                  value={[inputs.emergencyCallsPerMonth]}
-                  onValueChange={(value) => handleInputChange('emergencyCallsPerMonth', value[0])}
+                  value={[inputs.afterHoursCallsPerMonth]}
+                  onValueChange={(value) => handleInputChange('afterHoursCallsPerMonth', value[0])}
                   max={20}
                   step={1}
                   className="mt-2"
@@ -243,7 +243,7 @@ const ROICalculator = () => {
                 </div>
                 
                 <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
-                  <span className="text-gray-700">Tenant Retention Value</span>
+                  <span className="text-gray-700">Customer Retention Value</span>
                   <span className="font-semibold text-blue-600">+{formatCurrency(results.additionalRevenue)}</span>
                 </div>
                 
@@ -286,13 +286,13 @@ const ROICalculator = () => {
                 <div className="flex justify-between">
                   <span>Time Saved Per Year:</span>
                   <span className="font-bold text-blue-600">
-                    {Math.round((results.potentialSavings / inputs.propertyManagerHourlyRate) * 12)} hours
+                    {Math.round((results.potentialSavings / inputs.currentReceptionHourlyRate) * 12)} hours
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Maintenance Requests Automated:</span>
+                  <span>Customer Interactions Automated:</span>
                   <span className="font-bold text-purple-600">
-                    {Math.round(inputs.maintenanceRequestsPerMonth * 0.85 * 12)}
+                    {Math.round(inputs.customerInquiriesPerMonth * 0.85 * 12)}
                   </span>
                 </div>
               </div>
@@ -309,17 +309,17 @@ const ROICalculator = () => {
               <Brain className="mr-2 h-5 w-5" />
               Book Strategy Call
             </Button>
-            <p className="text-sm text-gray-600">
-              Get a personalized analysis of your property's automation potential
-            </p>
-            
-            <div className="mt-8 p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg border">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Ready to Get Started?
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Download our comprehensive guide to property management automation and see real case studies from successful implementations.
+              <p className="text-sm text-gray-600">
+                Get a personalized analysis of your business's automation potential
               </p>
+              
+              <div className="mt-8 p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg border">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Ready to Get Started?
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Download our comprehensive guide to virtual front desk automation and see real case studies from successful implementations.
+                </p>
               <Button variant="outline" className="mr-3">
                 Download ROI Guide
               </Button>

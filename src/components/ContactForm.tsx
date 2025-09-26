@@ -75,7 +75,7 @@ const ContactForm = () => {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
       <div>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-          Tell Us About Your Property Portfolio
+          Tell Us About Your Business
         </h2>
         <p className="text-lg text-gray-600 mb-8">
           The more we know about your specific situation, the better we can tailor 
@@ -87,14 +87,14 @@ const ContactForm = () => {
             <CheckCircle className="w-5 h-5 text-green-600 mt-1" />
             <div>
               <h4 className="font-semibold text-gray-900">Personalized Demo</h4>
-              <p className="text-gray-600">See SymAssist in action with examples from your property type</p>
+              <p className="text-gray-600">See SymAssist in action with examples from your business type</p>
             </div>
           </div>
           <div className="flex items-start space-x-4">
             <CheckCircle className="w-5 h-5 text-green-600 mt-1" />
             <div>
               <h4 className="font-semibold text-gray-900">Custom ROI Analysis</h4>
-              <p className="text-gray-600">Get estimated savings based on your portfolio size</p>
+              <p className="text-gray-600">Get estimated savings based on your business size and customer volume</p>
             </div>
           </div>
           <div className="flex items-start space-x-4">
@@ -111,7 +111,7 @@ const ContactForm = () => {
         <CardHeader>
           <CardTitle className="text-2xl">Contact Form</CardTitle>
           <CardDescription>
-            Help us understand your property management needs so we can provide the most relevant information.
+            Help us understand your business needs so we can provide the most relevant information.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -154,7 +154,7 @@ const ContactForm = () => {
                     <FormItem>
                       <FormLabel>Email *</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="john@yourproperty.com" {...field} />
+                        <Input type="email" placeholder="john@yourbusiness.com" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -206,51 +206,51 @@ const ContactForm = () => {
                   control={form.control}
                   name="practiceType"
                   render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Property Type</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select property type" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="residential">Residential Apartments</SelectItem>
-                          <SelectItem value="condos">Condominiums</SelectItem>
-                          <SelectItem value="single-family">Single-Family Homes</SelectItem>
-                          <SelectItem value="commercial">Commercial Properties</SelectItem>
-                          <SelectItem value="mixed-use">Mixed-Use Properties</SelectItem>
-                          <SelectItem value="student-housing">Student Housing</SelectItem>
-                          <SelectItem value="senior-living">Senior Living</SelectItem>
-                          <SelectItem value="other">Other Property Types</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
+                  <FormItem>
+                    <FormLabel>Business Type</FormLabel>
+                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select business type" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="medical-dental">Medical/Dental Practice</SelectItem>
+                        <SelectItem value="legal">Legal Firm</SelectItem>
+                        <SelectItem value="consulting">Consulting Services</SelectItem>
+                        <SelectItem value="home-services">Home Services (HVAC, Plumbing, Electrical)</SelectItem>
+                        <SelectItem value="professional">Professional Services</SelectItem>
+                        <SelectItem value="retail">Retail Business</SelectItem>
+                        <SelectItem value="restaurant-hospitality">Restaurant/Hospitality</SelectItem>
+                        <SelectItem value="other">Other Service Business</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
                   )}
                 />
                 <FormField
                   control={form.control}
                   name="practiceSize"
                   render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Portfolio Size</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select portfolio size" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="small">1-25 units</SelectItem>
-                          <SelectItem value="medium">26-100 units</SelectItem>
-                          <SelectItem value="large">101-500 units</SelectItem>
-                          <SelectItem value="enterprise">500+ units</SelectItem>
-                          <SelectItem value="multi-location">Multi-location portfolio</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
+                  <FormItem>
+                    <FormLabel>Business Size</FormLabel>
+                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select business size" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="solo">Solo practitioner</SelectItem>
+                        <SelectItem value="small">2-5 employees</SelectItem>
+                        <SelectItem value="medium">6-15 employees</SelectItem>
+                        <SelectItem value="large">16-50 employees</SelectItem>
+                        <SelectItem value="enterprise">50+ employees</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
                   )}
                 />
               </div>
@@ -268,14 +268,14 @@ const ContactForm = () => {
                         </SelectTrigger>
                       </FormControl>
                         <SelectContent>
-                          <SelectItem value="maintenance-coordination">Maintenance request coordination</SelectItem>
-                          <SelectItem value="vendor-management">Vendor scheduling and management</SelectItem>
-                          <SelectItem value="tenant-communication">Tenant communication and follow-up</SelectItem>
-                          <SelectItem value="emergency-response">Emergency maintenance response times</SelectItem>
-                          <SelectItem value="vacancy-turnovers">Property turnovers and vacancy management</SelectItem>
-                          <SelectItem value="rent-collection">Rent collection and financial management</SelectItem>
+                          <SelectItem value="missed-calls">Missed calls and lost customers while busy</SelectItem>
+                          <SelectItem value="inconsistent-service">Inconsistent customer service quality</SelectItem>
+                          <SelectItem value="after-hours">After-hours inquiries going unanswered</SelectItem>
+                          <SelectItem value="simple-questions">Simple questions taking up valuable time</SelectItem>
+                          <SelectItem value="complex-situations">Complex customer situations requiring expertise</SelectItem>
+                          <SelectItem value="appointment-scheduling">Appointment scheduling and management</SelectItem>
                           <SelectItem value="staff-time">Staff spending too much time on repetitive tasks</SelectItem>
-                          <SelectItem value="after-hours">Handling tenant requests after hours</SelectItem>
+                          <SelectItem value="customer-follow-up">Customer communication and follow-up</SelectItem>
                           <SelectItem value="other">Other operational challenges</SelectItem>
                         </SelectContent>
                     </Select>
@@ -347,7 +347,7 @@ const ContactForm = () => {
               </Button>
               
               <p className="text-sm text-gray-500 text-center">
-                We'll respond within 4 hours with personalized information based on your property management details.
+                We'll respond within 4 hours with personalized information based on your business details.
               </p>
             </form>
           </Form>

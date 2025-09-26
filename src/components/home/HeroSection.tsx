@@ -8,13 +8,13 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
-            The Property Management Platform That{" "}
+            The Virtual Front Desk Assistant That{" "}
             <span className="text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Thinks Like AI, Acts Like Humans
             </span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Revolutionary confidence-based AI automatically handles 85% of maintenance requests, while expert human agents seamlessly take over complex situations - delivering perfect service every time.
+            Revolutionary confidence-based AI automatically handles 85% of customer interactions, while expert human agents seamlessly take over complex situations - delivering perfect customer service every time.
           </p>
           
           {/* Key Differentiators */}

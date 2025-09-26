@@ -9,49 +9,49 @@ import { StructuredData } from "@/components/StructuredData";
 
 const CaseStudies = () => {
   useMetaDescription(
-    "Real results from property managers using SymAssist. See how Metro Apartments and Sunrise Properties achieved 78% time savings and 85% automation rates.",
-    "SymAssist Case Studies - Real Property Management Results"
+    "Real results from service businesses using SymAssist. See how Downtown Dental Practice and Elite Legal Services achieved 78% time savings and 85% automation rates.",
+    "SymAssist Case Studies - Real Service Business Results"
   );
 
   const caseStudies = [
     {
-      company: "Metro Apartments",
-      units: "150 units",
-      type: "Residential",
-      testimonial: "SymAssist handles 90% of our maintenance requests automatically, but when complex issues arise, their human team steps in seamlessly. Our tenants can't tell the difference.",
-      author: "Sarah Chen",
-      role: "Property Manager",
+      company: "Downtown Dental Practice",
+      units: "150 daily patient interactions",
+      type: "Medical Practice",
+      testimonial: "SymAssist handles 90% of our patient calls automatically, but when complex scheduling or insurance questions arise, their human team steps in seamlessly. Our patients can't tell the difference.",
+      author: "Dr. Sarah Chen",
+      role: "Practice Manager",
       results: [
-        { icon: Clock, metric: "78%", label: "Reduction in maintenance coordination time" },
-        { icon: Users, metric: "92%", label: "Tenant satisfaction improvement" },
+        { icon: Clock, metric: "78%", label: "Reduction in customer service coordination time" },
+        { icon: Users, metric: "92%", label: "Patient satisfaction improvement" },
         { icon: DollarSign, metric: "$2,400", label: "Monthly operational cost savings" },
         { icon: TrendingUp, metric: "15%", label: "Human intervention rate" }
       ]
     },
     {
-      company: "Sunrise Properties", 
-      units: "500 units",
-      type: "Mixed-Use Portfolio",
-      testimonial: "The confidence-based routing is genius. Simple requests get handled instantly by AI, while complex situations get expert human attention. It's the best of both worlds.",
+      company: "Elite Legal Services", 
+      units: "500 monthly client interactions",
+      type: "Legal Firm",
+      testimonial: "The confidence-based routing is genius. Simple inquiries get handled instantly by AI, while complex legal questions get expert human attention. It's the best of both worlds.",
       author: "Mike Rodriguez",
-      role: "Portfolio Director",
+      role: "Managing Partner",
       results: [
         { icon: TrendingUp, metric: "85%", label: "Full automation rate achieved in 3 months" },
-        { icon: Clock, metric: "45%", label: "Faster emergency response times" },
+        { icon: Clock, metric: "45%", label: "Faster client response times" },
         { icon: Users, metric: "99.8%", label: "Uptime during peak season" },
         { icon: DollarSign, metric: "6 weeks", label: "ROI achievement timeline" }
       ]
     },
     {
-      company: "Urban Living Management",
-      units: "300 units", 
-      type: "Commercial",
-      testimonial: "We've reduced our maintenance coordination costs by 40% while improving tenant satisfaction. The offshore human team is incredibly professional.",
+      company: "Premier Home Services",
+      units: "300 monthly service requests", 
+      type: "Home Services",
+      testimonial: "We've reduced our customer service costs by 40% while improving customer satisfaction. The offshore human team is incredibly professional.",
       author: "Lisa Thompson",
       role: "Operations Manager",
       results: [
-        { icon: DollarSign, metric: "40%", label: "Maintenance coordination cost reduction" },
-        { icon: Users, metric: "94%", label: "Tenant satisfaction score" },
+        { icon: DollarSign, metric: "40%", label: "Customer service cost reduction" },
+        { icon: Users, metric: "94%", label: "Customer satisfaction score" },
         { icon: Clock, metric: "<90s", label: "Average response time" },
         { icon: TrendingUp, metric: "88%", label: "AI automation rate" }
       ]
@@ -68,10 +68,10 @@ const CaseStudies = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Real Results from Real Property Managers
+              Real Results from Real Service Business Owners
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              See how leading property management companies are transforming their operations 
+              See how leading service businesses are transforming their customer operations 
               with SymAssist's AI-human integration platform.
             </p>
           </div>
@@ -133,7 +133,7 @@ const CaseStudies = () => {
             Ready to Get Similar Results?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join these successful property managers and transform your operations with SymAssist.
+            Join these successful service business owners and transform your operations with SymAssist.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 

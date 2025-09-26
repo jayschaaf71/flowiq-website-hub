@@ -8,37 +8,37 @@ import {
 
 export const agentCategories = [
   {
-    id: "property-management-assistants",
-    title: "PROPERTY MANAGEMENT ASSISTANTS",
+    id: "virtual-front-desk-assistants",
+    title: "VIRTUAL FRONT DESK AI ASSISTANTS",
     agents: [
       {
         icon: Stethoscope,
-        title: "Maintenance Assistant",
-        description: "Intelligent triage and coordination of maintenance requests, vendor dispatch, and work order management with 24/7 human oversight.",
+        title: "Customer Support Assistant",
+        description: "Intelligent triage and coordination of customer inquiries, service dispatch, and request management with 24/7 human oversight.",
         color: "text-blue-600"
       },
       {
         icon: MessageSquare,
         title: "Communication Assistant",
-        description: "Multi-channel tenant communication including maintenance updates, lease reminders, and automated messaging via voice, SMS, and email.",
+        description: "Multi-channel customer communication including service updates, appointment reminders, and automated messaging via voice, SMS, and email.",
         color: "text-green-600"
       },
       {
         icon: CreditCard,
-        title: "Financial Assistant",
-        description: "Rent collection automation, late fee processing, expense tracking, and financial reporting for property portfolios.",
+        title: "Scheduling Assistant",
+        description: "Appointment booking automation, scheduling optimization, payment processing, and customer billing management.",
         color: "text-purple-600"
       },
       {
         icon: Settings,
         title: "Operations Assistant",
-        description: "Vendor management, inspection scheduling, lease renewals, and operational workflow optimization across properties.",
+        description: "Service coordination, team scheduling, workflow optimization, and business process automation.",
         color: "text-slate-600"
       },
       {
         icon: TrendingUp,
         title: "Analytics Assistant",
-        description: "Property performance tracking, market analysis, occupancy optimization, and business intelligence for portfolio growth.",
+        description: "Customer interaction tracking, satisfaction analysis, service optimization, and business intelligence for growth.",
         color: "text-orange-600"
       }
     ]

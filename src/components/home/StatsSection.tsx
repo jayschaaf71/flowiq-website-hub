@@ -5,7 +5,7 @@ const StatsSection = () => {
     {
       value: "85%",
       label: "Full AI Automation",
-      description: "Most requests handled without human intervention"
+      description: "Most customer interactions handled without human intervention"
     },
     {
       value: "<2 Sec",
@@ -15,12 +15,12 @@ const StatsSection = () => {
     {
       value: "40%",
       label: "Cost Reduction",
-      description: "Offshore human expertise at scale"
+      description: "Compared to traditional receptionist costs"
     },
     {
       value: "99.2%",
       label: "System Uptime",
-      description: "Always-on maintenance coordination"
+      description: "Always-on customer service"
     }
   ];
 

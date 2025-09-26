@@ -18,8 +18,8 @@ const FeaturesSection = () => {
             Five AI Assistants, One Powerful System
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Each SymAssist agent specializes in automating a critical aspect of your property management operations, 
-            working together with 24/7 human oversight to deliver exceptional tenant experiences.
+            Each SymAssist agent specializes in automating a critical aspect of your customer service operations, 
+            working together with 24/7 human oversight to deliver exceptional customer experiences.
           </p>
         </div>
         
