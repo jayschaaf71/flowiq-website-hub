@@ -27,7 +27,7 @@ const FounderSection = () => {
             Meet Our Founders
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Bringing decades of leadership and technology expertise to transform property management.
+            Bringing decades of leadership and technology expertise to transform business operations.
           </p>
         </div>
         
