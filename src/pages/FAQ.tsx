@@ -10,8 +10,8 @@ import { StructuredData } from "@/components/StructuredData";
 
 const FAQ = () => {
   useMetaDescription(
-    "Get answers to frequently asked questions about SymAssist's AI-powered property management, implementation, security, privacy compliance, pricing, and support. 24/7 human oversight, proven results.",
-    "SymAssist FAQ - Everything You Need to Know About AI Property Management"
+    "Get answers to frequently asked questions about SymAssist's AI-powered business operations platform, implementation, security, privacy compliance, pricing, and support. 24/7 human oversight, proven results.",
+    "SymAssist FAQ - Everything You Need to Know About AI Business Automation"
   );
 
   const faqCategories = [
@@ -51,11 +51,11 @@ const FAQ = () => {
         },
         {
           question: "Who has access to my property information?",
-          answer: "Only authorized personnel at your company have access to property information. SymAssist staff cannot access your data without explicit permission and signed agreements. All access is logged and monitored for compliance."
+          answer: "Only authorized personnel at your company have access to business information. SymAssist staff cannot access your data without explicit permission and signed agreements. All access is logged and monitored for compliance."
         },
         {
           question: "How do you handle data backups and disaster recovery?",
-          answer: "We maintain automated daily backups with geographic redundancy. Our disaster recovery plan ensures 99.9% uptime with rapid failover capabilities to protect your property management operations."
+          answer: "We maintain automated daily backups with geographic redundancy. Our disaster recovery plan ensures 99.9% uptime with rapid failover capabilities to protect your business operations."
         }
       ]
     },
@@ -148,7 +148,7 @@ const FAQ = () => {
               Frequently Asked Questions
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Get answers to common questions about SymAssist's AI-human integration platform, confidence-based routing, implementation, security, and support for property management.
+              Get answers to common questions about SymAssist's AI-human integration platform, confidence-based routing, implementation, security, and support for business operations.
             </p>
           </div>
         </div>

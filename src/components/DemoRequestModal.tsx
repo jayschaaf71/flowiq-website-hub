@@ -94,7 +94,7 @@ const DemoRequestModal = ({ children }: DemoRequestModalProps) => {
             Request Your Personalized Demo
           </DialogTitle>
           <DialogDescription>
-            Tell us about your property management needs and we'll show you exactly how SymAssist can help.
+            Tell us about your business operations needs and we'll show you exactly how SymAssist can help.
           </DialogDescription>
         </DialogHeader>
 
@@ -269,7 +269,7 @@ const DemoRequestModal = ({ children }: DemoRequestModalProps) => {
                     <FormLabel>Current Challenges</FormLabel>
                     <FormControl>
                       <Textarea 
-                        placeholder="What are your biggest property management challenges? (optional)"
+                        placeholder="What are your biggest operational challenges? (optional)"
                         rows={3}
                         {...field}
                       />

@@ -153,7 +153,7 @@ const LeadCapture = () => {
               </div>
               
               <p className="text-sm text-muted-foreground text-center">
-                By submitting this form, you agree to receive communication from SymAssist about your property management automation needs.
+                By submitting this form, you agree to receive communication from SymAssist about your business automation needs.
               </p>
             </form>
           </CardContent>

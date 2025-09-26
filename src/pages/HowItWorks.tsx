@@ -10,8 +10,8 @@ import { Button } from "@/components/ui/button";
 
 const HowItWorks = () => {
   useMetaDescription(
-    "Discover how SymAssist's invisible intelligence works - AI confidence scoring, seamless human handoffs, and 24/7 offshore support for property management automation.",
-    "How It Works - SymAssist Property Management AI Platform"
+    "Discover how SymAssist's invisible intelligence works - AI confidence scoring, seamless human handoffs, and 24/7 offshore support for business operations automation.",
+    "How It Works - SymAssist Business Operations AI Platform"
   );
 
   return (

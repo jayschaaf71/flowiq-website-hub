@@ -20,7 +20,7 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
       "name": "SymAssist",
       "url": "https://symassist.com",
       "logo": "https://symassist.com/lovable-uploads/1dc3e303-8477-4a7e-813e-189d1d0aa011.png",
-      "description": "AI-Powered Property Management Assistant",
+      "description": "AI-Powered Business Operations Assistant",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "US"
@@ -44,14 +44,14 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
               ...baseOrganization,
               "offers": {
                 "@type": "Offer",
-                "description": "AI automation for property management including maintenance coordination, tenant communication, vendor dispatch, and financial management"
+                "description": "AI automation for business operations including service coordination, customer communication, vendor dispatch, and financial management"
               }
             },
             {
               "@type": "WebSite",
               "name": "SymAssist",
               "url": "https://symassist.com",
-              "description": "Transform your property management with SymAssist's AI-powered platform. Automate maintenance coordination, tenant communication, vendor dispatch, and operations with 24/7 human oversight.",
+              "description": "Transform your business operations with SymAssist's AI-powered platform. Automate service coordination, customer communication, vendor dispatch, and operations with 24/7 human oversight.",
               "publisher": {
                 "@type": "Organization",
                 "name": "SymAssist"
@@ -59,8 +59,8 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
             },
             {
               "@type": "Service",
-              "name": "AI Property Management Automation",
-              "description": "Comprehensive AI automation solutions for property management",
+              "name": "AI Business Operations Automation",
+              "description": "Comprehensive AI automation solutions for business operations",
               "provider": baseOrganization,
               "serviceType": "Software as a Service",
               "hasOfferCatalog": {
@@ -103,24 +103,24 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
           "@context": "https://schema.org",
           "@type": "Product",
           "name": "SymAssist AI Assistants",
-          "description": "5 specialized AI assistants for property management including maintenance coordination, tenant communication, vendor management, financial processing, and analytics",
+          "description": "5 specialized AI assistants for business operations including service coordination, customer communication, vendor management, financial processing, and analytics",
           "brand": baseOrganization,
-          "category": "Property Management Software",
+          "category": "Business Operations Software",
           "offers": {
             "@type": "Offer",
-            "description": "AI automation for property management",
+            "description": "AI automation for business operations",
             "seller": baseOrganization
           },
           "hasFeature": [
             {
               "@type": "Feature",
-              "name": "Automated Maintenance Coordination",
-              "description": "AI-powered maintenance triage and vendor dispatch"
+              "name": "Automated Service Coordination",
+              "description": "AI-powered service triage and vendor dispatch"
             },
             {
               "@type": "Feature", 
-              "name": "Tenant Communication",
-              "description": "Multi-channel automated tenant communication"
+              "name": "Customer Communication",
+              "description": "Multi-channel automated customer communication"
             },
             {
               "@type": "Feature",
@@ -177,7 +177,7 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
           "@context": "https://schema.org",
           "@type": "ContactPage",
           "name": "Contact SymAssist",
-          "description": "Contact SymAssist to learn how our AI assistants can transform your property operations",
+          "description": "Contact SymAssist to learn how our AI assistants can transform your business operations",
           "mainEntity": baseOrganization
         };
         break;
@@ -187,7 +187,7 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
           "@context": "https://schema.org",
           "@type": "AboutPage",
           "name": "About SymAssist",
-          "description": "Learn about SymAssist's mission to transform property management with AI automation",
+          "description": "Learn about SymAssist's mission to transform business operations with AI automation",
           "mainEntity": baseOrganization
         };
         break;
@@ -196,25 +196,25 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
         structuredData = {
           "@context": "https://schema.org",
           "@type": "HowTo",
-          "name": "How SymAssist Transforms Your Property Management",
-          "description": "Learn how SymAssist's AI assistants work together to transform property operations in 30 days",
+          "name": "How SymAssist Transforms Your Business Operations",
+          "description": "Learn how SymAssist's AI assistants work together to transform business operations in 30 days",
           "step": [
             {
               "@type": "HowToStep",
               "name": "Discovery & Assessment",
-              "text": "We analyze your current property management workflows and identify optimization opportunities tailored to your portfolio.",
+              "text": "We analyze your current business workflows and identify optimization opportunities tailored to your operations.",
               "position": 1
             },
             {
               "@type": "HowToStep", 
               "name": "Setup & Integration",
-              "text": "Our expert team seamlessly integrates SymAssist with your existing property management systems and processes.",
+              "text": "Our expert team seamlessly integrates SymAssist with your existing business systems and processes.",
               "position": 2
             },
             {
               "@type": "HowToStep",
               "name": "Launch & Optimization", 
-              "text": "Watch your property operations transform as SymAssist continuously learns and optimizes your workflows.",
+              "text": "Watch your business operations transform as SymAssist continuously learns and optimizes your workflows.",
               "position": 3
             }
           ],
@@ -242,7 +242,7 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
           "name": "SymAssist Technology Platform",
           "description": "Advanced AI technology stack with confidence scoring, offshore human infrastructure, and enterprise security",
           "publisher": baseOrganization,
-          "about": "AI and Machine Learning for Property Management"
+          "about": "AI and Machine Learning for Business Operations"
         };
         break;
 
@@ -251,13 +251,13 @@ export const StructuredData = ({ type }: StructuredDataProps) => {
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           "name": "SymAssist Case Studies",
-          "description": "Real results from property managers using SymAssist's AI automation platform",
+          "description": "Real results from business operators using SymAssist's AI automation platform",
           "publisher": baseOrganization,
           "hasPart": [
             {
               "@type": "Article",
               "name": "Metro Apartments Success Story",
-              "description": "78% reduction in maintenance coordination time with SymAssist"
+              "description": "78% reduction in service coordination time with SymAssist"
             },
             {
               "@type": "Article", 

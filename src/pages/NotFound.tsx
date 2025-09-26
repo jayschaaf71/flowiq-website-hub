@@ -10,7 +10,7 @@ const NotFound = () => {
   const location = useLocation();
 
   useMetaDescription(
-    "Page not found - The page you're looking for doesn't exist. Return to SymAssist's homepage to explore our AI property management solutions.",
+    "Page not found - The page you're looking for doesn't exist. Return to SymAssist's homepage to explore our AI business operations solutions.",
     "404 - Page Not Found | SymAssist"
   );
 

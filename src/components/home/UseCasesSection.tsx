@@ -120,16 +120,16 @@ const UseCasesSection = () => {
           </Card>
         </div>
 
-        {/* Property Management Type Examples */}
+        {/* Business Type Examples */}
         <div className="bg-white rounded-2xl p-8 shadow-lg">
           <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
-            Proven Results Across Property Types
+            Proven Results Across Business Types
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center p-4 bg-blue-50 rounded-lg">
               <Users className="h-8 w-8 text-blue-600 mx-auto mb-3" />
               <h4 className="font-semibold text-gray-900 mb-2">Multifamily</h4>
-              <p className="text-sm text-gray-600 mb-3">Avg. 40% reduction in maintenance coordination time</p>
+              <p className="text-sm text-gray-600 mb-3">Avg. 40% reduction in service coordination time</p>
               <div className="text-lg font-bold text-blue-600">95% satisfaction</div>
             </div>
             <div className="text-center p-4 bg-teal-50 rounded-lg">

@@ -9,8 +9,8 @@ import { StructuredData } from "@/components/StructuredData";
 
 const ROICalculatorPage = () => {
   useMetaDescription(
-    "Calculate your ROI with SymAssist's AI automation. See how much time and money you can save with automated maintenance coordination, tenant communication, and property management operations.",
-    "SymAssist ROI Calculator - Calculate Your Property Management Automation Savings"
+    "Calculate your ROI with SymAssist's AI automation. See how much time and money you can save with automated service coordination, customer communication, and business operations.",
+    "SymAssist ROI Calculator - Calculate Your Business Operations Automation Savings"
   );
 
   return (

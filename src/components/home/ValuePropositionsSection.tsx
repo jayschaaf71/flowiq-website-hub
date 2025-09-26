@@ -38,7 +38,7 @@ const ValuePropositionsSection = () => {
             Why SymAssist is Different
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            The first AI-native property management platform with invisible human intelligence
+            The first AI-native business operations platform with invisible human intelligence
           </p>
         </div>
 

@@ -9,7 +9,7 @@ import { StructuredData } from "@/components/StructuredData";
 const Technology = () => {
   useMetaDescription(
     "Discover SymAssist's advanced AI technology stack including confidence scoring, offshore human infrastructure, VTS platform integration, and enterprise security.",
-    "SymAssist Technology - AI-Human Property Management Platform"
+    "SymAssist Technology - AI-Human Business Operations Platform"
   );
 
   const techSections = [
@@ -38,7 +38,7 @@ const Technology = () => {
       title: "Integration Capabilities",
       items: [
         "VTS Platform (voice, SMS, scheduling)",
-        "Popular property management software",
+        "Popular business management software",
         "Vendor management systems", 
         "Accounting and payment platforms"
       ]
@@ -69,7 +69,7 @@ const Technology = () => {
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Advanced AI technology combined with human expertise infrastructure to deliver 
-              enterprise-grade property management automation.
+              enterprise-grade business operations automation.
             </p>
             <div className="flex flex-wrap justify-center gap-2 mb-8">
               <Badge variant="secondary">99.2% Uptime</Badge>

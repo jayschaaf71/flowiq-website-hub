@@ -10,7 +10,7 @@ const AboutCTA = () => {
           Ready to Join Our Success Story?
         </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-          Discover how SymAssist can transform your property management with a personalized demo.
+          Discover how SymAssist can transform your business operations with a personalized demo.
         </p>
         <Button 
           size="lg" 

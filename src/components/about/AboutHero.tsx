@@ -8,7 +8,7 @@ const AboutHero = () => {
             About SymAssist
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            We're on a mission to revolutionize property management through intelligent automation 
+            We're on a mission to revolutionize business operations through intelligent automation 
             and AI-powered solutions that drive real results.
           </p>
         </div>

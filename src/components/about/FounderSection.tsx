@@ -6,15 +6,15 @@ const FounderSection = () => {
     {
       name: "Jason Schaaf",
       title: "Co-Founder & CEO",
-      background: "After more than two decades leading sales for cutting-edge tech companies, Jason Schaaf saw a pattern: property managers were overwhelmed by clunky systems, missed opportunities, and manual workflows. That insight led to SymAssist — an AI-native platform designed for modern property management including residential, commercial, and mixed-use properties. Jason's mission is to replace busywork with automation so property managers can focus on growth, not chaos.",
+      background: "After more than two decades leading sales for cutting-edge tech companies, Jason Schaaf saw a pattern: business operators were overwhelmed by clunky systems, missed opportunities, and manual workflows. That insight led to SymAssist — an AI-native platform designed for modern business operations across multiple industries. Jason's mission is to replace busywork with automation so business leaders can focus on growth, not chaos.",
       expertise: "SAAS go-to-market leadership and emerging AI technology",
       image: "/lovable-uploads/a070fea9-ce42-4b65-9f49-197e02aa4ef0.png"
     },
     {
       name: "Jeremy Aspen",
       title: "Co-Founder, President & COO",
-      background: "Jeremy is an expert in the property management space and was previously co-founder of Anequim, which specializes in remote property management virtual assistants. With deep operational experience and technical expertise, Jeremy brings invaluable insights into the challenges property managers face daily, helping shape SymAssist's AI-native platform to deliver solutions that truly address real-world property management needs.",
-      expertise: "Property Management Operations, Virtual Assistant Solutions, and Business Strategy",
+      background: "Jeremy is an expert in business operations and was previously co-founder of Anequim, which specializes in remote virtual assistant solutions. With deep operational experience and technical expertise, Jeremy brings invaluable insights into the challenges business operators face daily, helping shape SymAssist's AI-native platform to deliver solutions that truly address real-world operational needs.",
+      expertise: "Business Operations, Virtual Assistant Solutions, and Strategic Process Optimization",
       image: "/lovable-uploads/jeremy-aspen.png"
     }
   ];

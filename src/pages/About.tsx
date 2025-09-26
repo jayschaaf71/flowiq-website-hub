@@ -10,8 +10,8 @@ import { StructuredData } from "@/components/StructuredData";
 
 const About = () => {
   useMetaDescription(
-    "Learn about SymAssist's mission to transform property management with AI automation and 24/7 human oversight. Meet our founder and discover how we're revolutionizing property operations.",
-    "About SymAssist - Transforming Property Management with AI"
+    "Learn about SymAssist's mission to transform business operations with AI automation and 24/7 human oversight. Meet our founders and discover how we're revolutionizing business automation.",
+    "About SymAssist - Transforming Business Operations with AI"
   );
 
   return (
