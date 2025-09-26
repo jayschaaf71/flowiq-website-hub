@@ -4,33 +4,33 @@ import { Star, Quote } from "lucide-react";
 
 const SocialProof = () => {
   const customerLogos = [
-    { name: "Metro Properties", logo: "/lovable-uploads/jeremy-aspen.png" },
-    { name: "Urban Living", logo: "/lovable-uploads/jeremy-aspen.png" },
-    { name: "Sunrise Properties", logo: "/lovable-uploads/jeremy-aspen.png" },
-    { name: "Elite Management", logo: "/lovable-uploads/jeremy-aspen.png" },
+    { name: "Metro Business Group", logo: "/lovable-uploads/jeremy-aspen.png" },
+    { name: "Urban Solutions", logo: "/lovable-uploads/jeremy-aspen.png" },
+    { name: "Sunrise Operations", logo: "/lovable-uploads/jeremy-aspen.png" },
+    { name: "Elite Business Solutions", logo: "/lovable-uploads/jeremy-aspen.png" },
   ];
 
   const testimonials = [
     {
-      quote: "SymAssist has transformed how we handle maintenance requests. The AI handles 90% automatically, but when complex issues arise, the human team steps in seamlessly.",
+      quote: "SymAssist has transformed how we handle service requests. The AI handles 90% automatically, but when complex issues arise, the human team steps in seamlessly.",
       author: "Sarah Chen",
-      role: "Property Manager, Metro Apartments",
+      role: "Operations Manager, Metro Business Group",
       rating: 5,
-      units: "150 units"
+      units: "150 locations"
     },
     {
       quote: "The confidence-based routing is genius. Simple requests get instant AI handling, while complex situations get expert human attention. Best of both worlds.",
       author: "Mike Rodriguez", 
-      role: "Operations Director, Sunrise Properties",
+      role: "Operations Director, Sunrise Operations",
       rating: 5,
-      units: "500 units"
+      units: "500 locations"
     },
     {
-      quote: "We've reduced coordination costs by 40% while improving tenant satisfaction. The offshore human team is incredibly professional and responsive.",
+      quote: "We've reduced coordination costs by 40% while improving customer satisfaction. The offshore human team is incredibly professional and responsive.",
       author: "Lisa Thompson",
-      role: "Owner/Manager, Urban Living",
+      role: "Owner/Manager, Urban Solutions",
       rating: 5,
-      units: "75 units"
+      units: "75 locations"
     }
   ];
 
@@ -47,7 +47,7 @@ const SocialProof = () => {
         {/* Customer Logos */}
         <div className="text-center mb-12">
           <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-8">
-            Trusted by Leading Property Management Companies
+            Trusted by Leading Business Operations Companies
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
             {customerLogos.map((customer, index) => (
@@ -65,7 +65,7 @@ const SocialProof = () => {
         {/* Testimonials */}
         <div className="mb-12">
           <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
-            What Property Managers Are Saying
+            What Business Operators Are Saying
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (

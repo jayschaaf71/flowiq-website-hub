@@ -13,12 +13,12 @@ const Footer = () => {
                 SymAssist
               </span>
               <div className="text-sm text-gray-400 font-medium tracking-wide">
-                AI-Powered Property Management Assistant
+                AI-Powered Business Operations Assistant
               </div>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              Transform your property management with SymAssist's AI-powered platform. 
-              Automate maintenance coordination, tenant communication, and operations.
+              Transform your business operations with SymAssist's AI-powered platform. 
+              Automate service coordination, customer communication, and operations.
             </p>
           </div>
           
@@ -34,7 +34,7 @@ const Footer = () => {
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <p className="text-gray-300 mb-2">Ready to transform your property management?</p>
+            <p className="text-gray-300 mb-2">Ready to transform your business operations?</p>
             <Button 
               variant="cta-primary"
               className="px-4 py-2 text-sm"

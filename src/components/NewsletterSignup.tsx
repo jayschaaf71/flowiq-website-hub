@@ -51,7 +51,7 @@ const NewsletterSignup = () => {
               Stay Updated with SymAssist
             </CardTitle>
             <CardDescription className="text-lg">
-              Get the latest insights on property management automation, industry trends, and product updates.
+              Get the latest insights on business operations automation, industry trends, and product updates.
             </CardDescription>
           </CardHeader>
           <CardContent>

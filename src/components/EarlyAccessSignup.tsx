@@ -92,7 +92,7 @@ const EarlyAccessSignup = () => {
             Get Early Access
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Be among the first to experience SymAssist's AI-powered property management platform. Limited spots available.
+            Be among the first to experience SymAssist's AI-powered business operations platform. Limited spots available.
           </p>
         </div>
 
@@ -103,7 +103,7 @@ const EarlyAccessSignup = () => {
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Priority Access</h3>
                 <p className="text-muted-foreground">
-                  Skip the waitlist and get immediate access to SymAssist when we launch your property management vertical.
+                  Skip the waitlist and get immediate access to SymAssist when we launch your business operations vertical.
                 </p>
               </div>
             </div>

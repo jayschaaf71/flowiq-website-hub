@@ -11,8 +11,8 @@ const ProductHero = () => {
             SymAssist Product Suite
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Five powerful AI assistants working together to automate your property operations. 
-            From maintenance coordination to tenant communication to vendor dispatch to financial management - SymAssist handles it all.
+            Five powerful AI assistants working together to automate your business operations. 
+            From service coordination to customer communication to vendor dispatch to financial management - SymAssist handles it all.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 

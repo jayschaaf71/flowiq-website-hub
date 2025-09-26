@@ -6,16 +6,16 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: "Sarah Chen",
-      title: "Property Manager",
-      practice: "Metro Property Group",
-      content: "SymAssist handles 90% of our maintenance requests automatically, but when complex issues arise, their human team steps in seamlessly. Our tenants can't tell the difference.",
+      title: "Operations Manager",
+      practice: "Metro Business Group",
+      content: "SymAssist handles 90% of our service requests automatically, but when complex issues arise, their human team steps in seamlessly. Our customers can't tell the difference.",
       rating: 5,
       avatar: "SC"
     },
     {
       name: "Mike Rodriguez",
-      title: "Portfolio Director", 
-      practice: "Sunrise Properties",
+      title: "Operations Director", 
+      practice: "Sunrise Operations",
       content: "The confidence-based routing is genius. Simple requests get handled instantly by AI, while complex situations get expert human attention. It's the best of both worlds.",
       rating: 5,
       avatar: "MR"
@@ -23,15 +23,15 @@ const Testimonials = () => {
     {
       name: "Lisa Thompson",
       title: "Operations Manager",
-      practice: "Urban Living Management",
-      content: "We've reduced our maintenance coordination costs by 40% while improving tenant satisfaction. The offshore human team is incredibly professional.",
+      practice: "Urban Solutions",
+      content: "We've reduced our service coordination costs by 40% while improving customer satisfaction. The offshore human team is incredibly professional.",
       rating: 5,
       avatar: "LT"
     }
   ];
 
   const stats = [
-    { number: "200+", label: "Properties Automated" },
+    { number: "200+", label: "Businesses Automated" },
     { number: "95%", label: "Customer Satisfaction" },
     { number: "80%", label: "Avg. Response Time Reduction" },
     { number: "70%", label: "Admin Time Saved" }
@@ -43,10 +43,10 @@ const Testimonials = () => {
         {/* Stats Section */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Trusted by Property Managers Nationwide
+            Trusted by Business Operators Nationwide
           </h2>
           <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            See the measurable impact SymAssist's AI assistants have made for properties just like yours.
+            See the measurable impact SymAssist's AI assistants have made for businesses just like yours.
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">

@@ -12,10 +12,10 @@ const StatusQuoSection = () => {
             <Brain className="h-6 w-6 text-blue-600" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Property Management is Overwhelming
+            Business Operations Are Overwhelming
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Property managers spend countless hours on maintenance coordination, tenant communication, 
+            Business operators spend countless hours on service coordination, customer communication, 
             and vendor management - time that could be better spent growing their business.
           </p>
         </div>
@@ -29,11 +29,11 @@ const StatusQuoSection = () => {
             </CardHeader>
             <CardContent className="text-center">
               <div className="text-3xl font-bold text-red-600 mb-2">60%</div>
-              <p className="text-sm text-gray-600 mb-4">of time spent on maintenance coordination</p>
+              <p className="text-sm text-gray-600 mb-4">of time spent on service coordination</p>
               <ul className="text-xs text-gray-600 space-y-1">
                 <li>• 3 hours vendor coordination</li>
-                <li>• 2 hours tenant communications</li>
-                <li>• 2 hours maintenance tracking</li>
+                <li>• 2 hours customer communications</li>
+                <li>• 2 hours service tracking</li>
                 <li>• 1 hour emergency calls</li>
               </ul>
             </CardContent>
@@ -46,9 +46,9 @@ const StatusQuoSection = () => {
             </CardHeader>
             <CardContent className="text-center">
               <div className="text-3xl font-bold text-blue-600 mb-2">30%</div>
-              <p className="text-sm text-gray-600 mb-4">average response delay to tenant requests</p>
+              <p className="text-sm text-gray-600 mb-4">average response delay to customer requests</p>
               <ul className="text-xs text-gray-600 space-y-1">
-                <li>• Tenant request processing: 8 hrs</li>
+                <li>• Customer request processing: 8 hrs</li>
                 <li>• Vendor coordination: 12 hrs</li>
                 <li>• Follow-up calls: 6 hrs</li>
                 <li>• Documentation: 4 hrs</li>
@@ -67,7 +67,7 @@ const StatusQuoSection = () => {
               <ul className="text-xs text-gray-600 space-y-1">
                 <li>• 30% faster issue resolution</li>
                 <li>• 40% reduction in emergency calls</li>
-                <li>• 50% improved tenant satisfaction</li>
+                <li>• 50% improved customer satisfaction</li>
                 <li>• 60% better vendor utilization</li>
               </ul>
             </CardContent>
@@ -85,28 +85,28 @@ const StatusQuoSection = () => {
             <div className="bg-red-50 rounded-xl p-6">
               <h4 className="text-lg font-semibold text-red-800 mb-4 flex items-center">
                 <AlertTriangle className="h-5 w-5 mr-2" />
-                Your Property Management Today
+                Your Business Operations Today
               </h4>
               <ul className="space-y-3 text-sm text-red-700">
                 <li className="flex items-start">
                   <span className="font-medium mr-2">8:00 AM:</span>
-                  <span>Already behind with overnight maintenance requests</span>
+                  <span>Already behind with overnight service requests</span>
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium mr-2">10:30 AM:</span>
-                  <span>Playing phone tag with vendors while tenants wait</span>
+                  <span>Playing phone tag with vendors while customers wait</span>
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium mr-2">2:00 PM:</span>
-                  <span>Emergency call interrupts scheduled inspections</span>
+                  <span>Emergency call interrupts scheduled operations</span>
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium mr-2">5:30 PM:</span>
-                  <span>Still coordinating repairs, no time for strategic planning</span>
+                  <span>Still coordinating services, no time for strategic planning</span>
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium mr-2">7:00 PM:</span>
-                  <span>Worried about unresolved tenant issues</span>
+                  <span>Worried about unresolved customer issues</span>
                 </li>
               </ul>
             </div>
@@ -115,7 +115,7 @@ const StatusQuoSection = () => {
             <div className="bg-green-50 rounded-xl p-6">
               <h4 className="text-lg font-semibold text-green-800 mb-4 flex items-center">
                 <Zap className="h-5 w-5 mr-2" />
-                Your Property Management with SymAssist
+                Your Business Operations with SymAssist
               </h4>
               <ul className="space-y-3 text-sm text-green-700">
                 <li className="flex items-start">
@@ -124,7 +124,7 @@ const StatusQuoSection = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium mr-2">10:30 AM:</span>
-                  <span>Vendors coordinated automatically, tenants updated via SMS</span>
+                  <span>Vendors coordinated automatically, customers updated via SMS</span>
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium mr-2">2:00 PM:</span>
@@ -132,7 +132,7 @@ const StatusQuoSection = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium mr-2">5:30 PM:</span>
-                  <span>All maintenance coordinated, time for portfolio growth</span>
+                  <span>All services coordinated, time for business growth</span>
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium mr-2">7:00 PM:</span>
@@ -149,7 +149,7 @@ const StatusQuoSection = () => {
             "But Implementation Must Be Complicated, Right?"
           </h3>
           <p className="text-lg text-gray-600 mb-6">
-            Wrong. SymAssist is designed for property managers who can't afford downtime or disruption.
+            Wrong. SymAssist is designed for business operators who can't afford downtime or disruption.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -174,7 +174,7 @@ const StatusQuoSection = () => {
             onClick={() => window.open('https://calendly.com/jason-flow-iq', '_blank')}
           >
             <Brain className="mr-2 h-5 w-5" />
-            Calculate Your Property Management Savings - Free Assessment
+            Calculate Your Business Operations Savings - Free Assessment
           </Button>
           <p className="text-xs text-gray-500 mt-2">See exactly how much manual coordination is costing you</p>
         </div>

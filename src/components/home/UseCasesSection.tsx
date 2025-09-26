@@ -7,15 +7,15 @@ const UseCasesSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Real Property Managers, Real Results
+            Real Business Operators, Real Results
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            See how SymAssist transforms property management companies with measurable outcomes in weeks, not months.
+            See how SymAssist transforms business operations companies with measurable outcomes in weeks, not months.
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {/* Property Management Case 1 */}
+          {/* Business Operations Case 1 */}
           <Card className="border-none shadow-lg">
             <CardHeader>
               <div className="flex items-center space-x-3 mb-4">
@@ -23,22 +23,22 @@ const UseCasesSection = () => {
                   <MessageSquare className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
-                  <CardTitle className="text-xl">Metro Property Group</CardTitle>
-                  <CardDescription>450-unit portfolio, Mixed residential/commercial</CardDescription>
+                  <CardTitle className="text-xl">Metro Business Group</CardTitle>
+                  <CardDescription>450-location network, Mixed service operations</CardDescription>
                 </div>
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="bg-red-50 p-4 rounded-lg">
                 <h4 className="font-semibold text-red-800 mb-2">The Challenge:</h4>
-                <p className="text-red-700 text-sm">Managing 80+ maintenance requests weekly, 3-hour average response time, tenants complaining about communication delays</p>
+                <p className="text-red-700 text-sm">Managing 80+ service requests weekly, 3-hour average response time, customers complaining about communication delays</p>
               </div>
               <div className="bg-green-50 p-4 rounded-lg">
                 <h4 className="font-semibold text-green-800 mb-2">SymAssist Solution:</h4>
                 <div className="space-y-2 text-sm text-green-700">
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4" />
-                    <span>AI triages 95% of maintenance requests automatically</span>
+                    <span>AI triages 95% of service requests automatically</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4" />
@@ -67,7 +67,7 @@ const UseCasesSection = () => {
             </CardContent>
           </Card>
 
-          {/* Property Management Case 2 */}
+          {/* Business Operations Case 2 */}
           <Card className="border-none shadow-lg">
             <CardHeader>
               <div className="flex items-center space-x-3 mb-4">
@@ -75,22 +75,22 @@ const UseCasesSection = () => {
                   <FileEdit className="h-6 w-6 text-teal-600" />
                 </div>
                 <div>
-                  <CardTitle className="text-xl">Riverside Apartments</CardTitle>
-                  <CardDescription>1,200-unit multifamily portfolio</CardDescription>
+                  <CardTitle className="text-xl">Riverside Operations</CardTitle>
+                  <CardDescription>1,200-location business network</CardDescription>
                 </div>
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="bg-red-50 p-4 rounded-lg">
                 <h4 className="font-semibold text-red-800 mb-2">The Challenge:</h4>
-                <p className="text-red-700 text-sm">Emergency calls interrupting operations, poor vendor coordination, 40% tenant satisfaction score</p>
+                <p className="text-red-700 text-sm">Emergency calls interrupting operations, poor vendor coordination, 40% customer satisfaction score</p>
               </div>
               <div className="bg-green-50 p-4 rounded-lg">
                 <h4 className="font-semibold text-green-800 mb-2">SymAssist Solution:</h4>
                 <div className="space-y-2 text-sm text-green-700">
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4" />
-                    <span>Multi-channel intake captures all tenant requests</span>
+                    <span>Multi-channel intake captures all customer requests</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4" />
@@ -98,7 +98,7 @@ const UseCasesSection = () => {
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4" />
-                    <span>Real-time updates keep tenants informed</span>
+                    <span>Real-time updates keep customers informed</span>
                   </div>
                 </div>
               </div>
@@ -109,7 +109,7 @@ const UseCasesSection = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-green-600">85%</div>
-                  <div className="text-xs text-gray-600">Tenant satisfaction</div>
+                  <div className="text-xs text-gray-600">Customer satisfaction</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-purple-600">$28K</div>

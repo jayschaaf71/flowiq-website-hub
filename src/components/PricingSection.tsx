@@ -8,11 +8,11 @@ const PricingSection = () => {
     {
       name: "Starter Plan",
       price: "$99",
-      period: "per property/month",
-      description: "Perfect for small property portfolios",
+      period: "per location/month",
+      description: "Perfect for small business operations",
       badge: null,
       features: [
-        "Up to 50 maintenance requests/month",
+        "Up to 50 service requests/month",
         "Basic AI triage and routing", 
         "Email and web portal intake",
         "Standard human backup (business hours)",
@@ -22,15 +22,15 @@ const PricingSection = () => {
     {
       name: "Professional Plan", 
       price: "$199",
-      period: "per property/month",
-      description: "Ideal for growing property management companies",
+      period: "per location/month",
+      description: "Ideal for growing business operations companies",
       badge: "Most Popular",
       features: [
-        "Unlimited maintenance requests",
+        "Unlimited service requests",
         "Full multi-channel intake (voice, SMS, email, web)",
         "24/7 human oversight and intervention", 
         "Advanced analytics and reporting",
-        "VTS platform integration",
+        "Platform integrations",
         "Confidence-based AI routing"
       ]
     },
@@ -38,10 +38,10 @@ const PricingSection = () => {
       name: "Enterprise Plan",
       price: "Custom",
       period: "pricing",
-      description: "Tailored solutions for large portfolios",
+      description: "Tailored solutions for large business networks",
       badge: "Best Value",
       features: [
-        "Multi-property portfolio management",
+        "Multi-location business management",
         "Custom integrations and workflows",
         "Dedicated human VA team assignment",
         "White-label options available",
@@ -59,7 +59,7 @@ const PricingSection = () => {
             Transparent, Performance-Based Pricing
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose the plan that fits your property portfolio size and automation needs.
+            Choose the plan that fits your business operations and automation needs.
           </p>
         </div>
 
